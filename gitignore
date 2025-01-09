@@ -1,9 +1,6 @@
 /.phpunit.cache
 npm-debug.log
 yarn-error.log
-/laravel-core/.env
-/laravel-core/vite.config.js
-/laravel-core/bootstrap/app.php
 /.fleet
 /.idea
 /.vscode
@@ -12,5 +9,3 @@ index.php
 sym.php
 xlsx/
 .cpanel.yml
-.env
-laravel-core/*.env

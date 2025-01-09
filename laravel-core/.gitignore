@@ -1,0 +1,4 @@
+/laravel-core/.env
+/laravel-core/vite.config.js
+/laravel-core/bootstrap/app.php
+!.gitignore
