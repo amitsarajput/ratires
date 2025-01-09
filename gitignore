@@ -13,4 +13,4 @@ sym.php
 xlsx/
 .cpanel.yml
 .env
-laravel-core/.env
+laravel-core/*.env
