@@ -1,4 +1,5 @@
 .env
+*.env
 vite.config.js
 /bootstrap/app.php
-!.gitignore
+
