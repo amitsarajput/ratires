@@ -1,0 +1,15 @@
+/.phpunit.cache
+npm-debug.log
+yarn-error.log
+/laravel-core/.env
+/laravel-core/vite.config.js
+/laravel-core/bootstrap/app.php
+/.fleet
+/.idea
+/.vscode
+workspace.code-workspace
+index.php
+sym.php
+xlsx/
+.cpanel.yml
+.env
