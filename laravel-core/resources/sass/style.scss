@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');/*|Raleway:300,400,500,600,700|Crete+Round:400i*/
+
+
+
+
+@import 'normalize.css/normalize.css';		/*normalize.css*/
+@import 'base/variables';		/*variables*/
+@import 'base/mixins';			/*Mixins*/
+@import 'base/placeholders';	/*Mixins*/
+@import 'base/fonts-icons';		/*Font Icons*/
+@import 'base/common';			/*Common styles used on all pages*/
+@import 'base/buttons';			/*Common styles used on all pages*/
+@import 'base/spacing';			/*Spacing margin padding*/
+@import 'base/form';			/*Common styles used on all pages*/
+@import 'base/header';
+@import 'base/sidepanel';
+@import 'base/top-search';
+@import 'base/footer';
+
+
+@import 'animate.css/animate.css';
+
+/* slider */
+@import 'base/slider';
+
+/*@standalone Modules used on websited */
+@import 'base/modules';
+
+/*@standalone Modules used on websited */
+@import 'base/svg-icons';
+
+
+
+/* import grid system */
+@import 'reflex-grid/scss/reflex.scss';
+
+.grid{
+	letter-spacing: normal;
+  word-spacing: normal;
+}

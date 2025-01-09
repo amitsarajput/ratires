@@ -1,0 +1,14 @@
+@use "sass:math";
+.s-icon{
+    width: 22px;
+    height: auto;
+    color: inherit;
+    @for $i from 1 through 10 {
+		&.dark-#{$i}0{
+			color: darken(#ffffff, math.percentage(0.1*$i));
+		}
+	}
+    &.red{
+        color: $primary;
+    }
+}

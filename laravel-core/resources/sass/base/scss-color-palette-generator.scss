@@ -1,0 +1,15 @@
+$secondary: #888888; 
+              
+// Light shades 
+$secondary-light-10: mix(white, $secondary, 10%);
+$secondary-light-20: mix(white, $secondary, 20%);
+$secondary-light-30: mix(white, $secondary, 30%);
+$secondary-light-40: mix(white, $secondary, 40%);
+$secondary-light-50: mix(white, $secondary, 50%);
+
+// Dark shades 
+$secondary-dark-10: mix(black, $secondary, 10%);
+$secondary-dark-20: mix(black, $secondary, 20%);
+$secondary-dark-30: mix(black, $secondary, 30%);
+$secondary-dark-40: mix(black, $secondary, 40%);
+$secondary-dark-50: mix(black, $secondary, 50%);

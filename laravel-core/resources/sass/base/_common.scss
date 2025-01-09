@@ -1,0 +1,232 @@
+@use "sass:math";
+a{text-decoration:none;color: $red;}
+
+*{
+    box-sizing: border-box;
+}
+
+img {
+    vertical-align: middle;
+    border-style: none;
+    max-width: 100%;
+}
+
+body,p{
+	font-family: $body-font;
+	line-height: 1.5;
+	font-size: $body-font-size;
+	text-align: left;
+	color: $text-color;
+	font-weight: 400;
+}
+
+p{
+	margin: 15px 0;
+	text-align: left;
+	line-height: 1.5;
+	&.left{text-align: left;}
+	&:first-child{margin-top: 0;}
+}
+hr {
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+	border: 0;
+	  border-top-width: 0px;
+	  border-top-style: none;
+	  border-top-color: currentcolor;
+	border-top: 1px solid $dark-10;
+  }
+
+
+[class^="col-"] p:first-child{margin-top: 0;}
+.bg-image,.bgimage{
+	@include bgimage()
+}
+.text-xs{
+	font-size:$xs-font-size;
+}
+.text-sm{
+	font-size:$sm-font-size;
+}
+.text-md{
+	font-size:$md-font-size;
+}
+.text-lead{
+	font-size:$lead-font-size;
+}
+.text-lg{
+	font-size:$lg-font-size;
+}
+
+ul{
+	li{
+		
+	}
+	&.disc{
+		list-style-type: disc;
+	}
+	&.circle{
+		list-style-type: circle;
+	}
+	&.bullet-inside{
+		list-style-position: inside;
+		padding-left: 0;
+	}
+	&.no-bullets{
+		list-style: none;
+		padding-left: 0;
+	}
+	&.li-icons{
+		li .s-icon{margin-right: 5px;}
+	}
+}
+ol{
+	&.numbered{
+		li{}
+	}
+	&.alphabetical{
+
+	}
+}
+
+
+@each $weight in $font-weight{
+	.t#{$weight}{
+		font-weight: #{$weight};
+	}
+}
+
+@for $i from 1 through 10 {
+	.dark-#{$i}0{
+		color: darken(#ffffff, math.percentage(0.1*$i));
+	}
+}
+/*Headings*/
+@for $i from 1 through 6 {
+  h#{$i},.h#{$i} {
+  	font-family : $heading-font;
+	font-weight: 500;
+	color:$red;
+    font-size: math.div($body-font-size * 6, $i);
+    line-height: math.div($body-font-size * 7, $i);
+    letter-spacing: 1px;
+    margin-top:math.div($section-spacing, $i);
+    margin-bottom:math.div($section-spacing , 2*$i);
+	@include until($widescreen){
+		font-size: math.div($body-font-size * 4, $i);
+		line-height: math.div($body-font-size * 5, $i);
+	}
+	&.no-top-margin{ margin-top: 0;}
+	&.no-bottom-margin{ margin-bottom: 0;}
+	&.black{color:$black;}
+	&.white{color:$white;}
+	&.pink{color:$pink;}
+	&.green{color:$green;}
+	&.body-font{font-family: $body-font;}
+	@each $weight in $font-weight{
+		&.t#{$weight}{
+			font-weight: #{$weight};
+		}
+	}
+	@for $i from 1 through 10 {
+		&.dark-#{$i}0{
+			color: darken(#ffffff, math.percentage(0.1*$i));
+		}
+	}
+  }
+}
+
+/*BG COLOR*/
+@for $i from 1 through 10 {
+	.bg-dark-#{$i}0{
+		background-color: darken(#ffffff, math.percentage(0.1*$i));
+	}
+}
+
+/*ELEMENT HEIGHT IN VH*/
+@for $i from 1 through 10 {
+	.el-height-#{$i}0{
+		height: #{$i}0vh;
+	}
+	.el-height-#{$i}0rem{
+			height: #{$i}0rem;
+	}
+}
+
+// Text color
+.pink{color:$pink;}
+.green{color:$green;}
+
+
+.body-overlay{
+	opacity: 0;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,.6);
+	z-index: -1;
+	pointer-events: none;
+	backface-visibility: hidden;
+	-webkit-backface-visibility: hidden;
+	-webkit-transition: opacity .3s ease;
+	-o-transition: opacity .3s ease;
+	transition: opacity .3s ease;
+}
+
+#main-wrapper{
+	position: relative;
+	right: 0;
+	float: none;
+	background-color: #FFF;
+	width: 100%;
+	margin: 0;
+	box-shadow: none;
+	-webkit-transition: right .4s ease;
+	-o-transition: right .4s ease;
+	transition: right .4s ease;
+}
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    white-space: nowrap;
+    -webkit-clip-path: inset(50%);
+    clip-path: inset(50%);
+    border: 0;
+}
+
+.one-page-arrow {
+    position: absolute;
+    z-index: 3;
+    bottom: 20px;
+    left: 50%;
+    margin-left: -16px;
+    width: 32px;
+    height: 32px;
+    font-size: 32px;
+    text-align: center;
+	color: #222;
+	&.dark i{color: #222;}
+	&.light i{color: $white;}
+}
+.deffont{
+	font-family: $body-font;
+	font-size: 16px;
+	vertical-align: top;
+	top: 0.5rem;}
+.center{text-align: center;}
+.tright{text-align: right;}
+.tleft{text-align: left;}
+.text-justify{text-align: justify;}
+.uppercase{text-transform: uppercase;}
+.lowercase{text-transform: lowercase;}
+.black{color:$black;}
+.red{color:$red;}
+.mx-auto{margin-left: auto;margin-right: auto;}
+.hidden{ display: none; }
+

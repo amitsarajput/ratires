@@ -1,0 +1,10 @@
+<?php
+use App\Http\Controllers\FormsController;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Route;
+
+
+Route::name('form.')->group(function () {
+    Route::post('contact/submit',[FormsController::class, 'form_contact'])->name('contact');
+    Route::post('dealerlocator/submit',[FormsController::class, 'form_dealerlocator'])->name('dealerlocator');
+});

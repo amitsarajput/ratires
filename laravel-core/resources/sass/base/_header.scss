@@ -1,0 +1,187 @@
+/*Header Styles*/
+#header-top{
+	background-color: $black;
+	height: 0;
+	opacity: 0;
+	display:none;
+	&.shown{
+		display: block;
+		opacity: 1;
+		height: $header-top-height;
+	}
+	.header-top-inner{
+		position: relative;
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+		width:90%;
+		height: 100%;
+		margin:auto;
+		padding: 10px 30px 0;
+		.select2-container {
+			border:1px solid #fff;
+			.select2-selection--single {
+				font-family: $heading-font;
+				font-weight: 600;
+				font-size: 16px;
+				letter-spacing: 3px;
+				height: 25px !important;
+				border: none;
+				border-radius: 0;
+				i{
+					font-size: 1.6rem;
+					width: 18px;
+					height: 18px;
+					overflow: hidden;
+					margin-bottom: 0;
+					margin-top: 0;
+					display: inline-block;
+				}
+				.select2-selection__rendered {
+					line-height: 25px !important;
+					color: $white;
+					background-color: $black;
+				}
+				.select2-selection__arrow {
+					height: 25px !important;
+					b{border-color: $white transparent transparent transparent;}
+				}
+			}
+		}
+	}
+}
+header{
+	background-color: $black;
+	color: $white;
+	font-size: 16px;
+	font-family: $heading-font;
+	font-weight: 500;
+	letter-spacing: 1px;
+	padding:0;
+	height: $header-height;
+	.inner-header{
+		position: relative;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		width:90%;
+		height: 100%;
+		margin:auto;
+		padding: 0 50px;
+		@include until($widescreen) { width:100%;padding: 0 15px;}
+		.logo,.side-panel-trigger{cursor: pointer;}
+	}
+	.logo{
+		line-height: 0;
+		a{display:block;}
+		img{
+			height:$logo-height;
+			@include mobile { height:25px; }
+		}
+	}
+	.right-menu-wrapper{
+		display: flex;
+		justify-content: flex-start;
+		align-items: center; 
+		@include mobile { justify-content: flex-end; }
+	}
+	#top-search{ margin-right: 15px;} 
+	.location-picker--small{ 
+		margin-right: 15px;
+		@include mobile{font-size: 14px;}
+	}
+	.menu{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		list-style: none;
+		margin: 0 15px 0 0; 
+		padding: 0;
+		@include transition(height,500ms);
+		@include until($widescreen) { 
+			flex-direction: column;
+			align-items: center;
+    		justify-content: space-around;
+			width: 100%;
+			height: 0;
+			overflow: hidden;
+			position: absolute;
+			top: 100%;
+			left: 0;
+			right: 0;
+			background-color: $dark-90;
+			z-index: 10;
+			.menu-item{opacity: 0;}
+			&.show-collapsed-menu{
+				height: 200px;
+				.menu-item{opacity: 1;}
+			}
+
+		}
+		.menu-item{
+			margin-right: 20px;
+			@include transition(opacity,300ms);
+			@include until($widescreen) { margin-right: 0;}
+			&:last-child{margin-right: 0;}
+			&.primary-color{ 
+				a{color:$primary;}
+			}
+			a{	text-decoration:none;
+				color:$menu-color;
+				font-family: $menu-font; 
+				font-size: $menu-font-size;
+				font-weight: $menu-font-weight;
+				text-transform: uppercase;
+				letter-spacing: $menu-font-ls;}
+		}
+	}
+	
+
+	.location-picker{
+		.select2-container{
+			width: 195px !important;
+			background-color: #101010;
+			padding: 10px 0;
+			border-radius: 4px;
+		}
+		.select2-container--default .select2-selection--single {
+			background-color: transparent;
+			border: none;
+			border-radius: 4px;
+		  }
+		  .select2-container--default .select2-selection--single .select2-selection__arrow{
+			height: 100%;
+		  }
+		  .select2-container--default .select2-selection--single .select2-selection__arrow b{
+			border-color: #fff transparent transparent transparent;
+		  }
+		  .select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow b {
+			border-color: transparent transparent #fff transparent;
+			border-width: 0 4px 5px 4px;
+		  }
+		.select2-container--default .select2-selection--single .select2-selection__rendered{ 
+			color: #fff;text-transform: uppercase;padding-right: 24px;
+			i{font-size: 20px;}
+		}
+	}
+	.small-location-picker{
+		.select2-container{
+			width: 0;
+			opacity: 0;
+			display: none;
+		}
+		&.shown{
+			.select2-container{
+				width: 195px !important;
+				@include mobile{width: 140px!important;}
+				opacity: 1;
+				display: block;
+			}
+		}
+	}
+	.side-panel-trigger{ margin-right: 0;}
+	.collapsed-menu-trigger{
+		cursor: pointer; 
+		@include from($widescreen){display: none;}
+	}
+}

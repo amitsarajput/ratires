@@ -1,0 +1,186 @@
+@use "sass:math";
+/*
+@package omni
+*/
+
+/*Header variables*/
+$header-height:80px;
+
+/*Header Top variables*/
+$header-top-height:30px;
+
+/*Logo variables*/
+$logo-height:40px;
+
+/*Colors*/
+$primary: #DA2224;
+$secondary: #888888; 
+              
+// Light shades 
+$secondary-light-20: mix(white, $secondary, 20%);
+$secondary-light-40: mix(white, $secondary, 40%);
+$secondary-light-60: mix(white, $secondary, 60%);
+$secondary-light-80: mix(white, $secondary, 80%);
+$secondary-light-90: mix(white, $secondary, 90%);
+$secondary-light-100: mix(white, $secondary, 100%);
+
+// Dark shades 
+$secondary-dark-20: mix(black, $secondary, 20%);
+$secondary-dark-40: mix(black, $secondary, 40%);
+$secondary-dark-60: mix(black, $secondary, 60%);
+$secondary-dark-80: mix(black, $secondary, 80%);
+$secondary-dark-100: mix(black, $secondary, 100%);
+
+$dark-10:darken(#ffffff, math.percentage(0.1));
+$dark-20:darken(#ffffff, math.percentage(0.2));
+$dark-30:darken(#ffffff, math.percentage(0.3));
+$dark-40:darken(#ffffff, math.percentage(0.4));
+$dark-50:darken(#ffffff, math.percentage(0.5));
+$dark-60:darken(#ffffff, math.percentage(0.6));
+$dark-70:darken(#ffffff, math.percentage(0.7));
+$dark-80:darken(#ffffff, math.percentage(0.8));
+$dark-90:darken(#ffffff, math.percentage(0.9));
+$dark-100:darken(#ffffff, math.percentage(1));
+
+$red:$primary;
+$white:#ffffff;
+$black: #000000;
+$pink:#ff43a2;
+$green:#71ba44;
+$subheading-color: $secondary-dark-80;
+$text-color: $secondary-dark-100;
+
+/**Typo**/
+$heading-font:'Gotham Condensed Medium', Arial, Helvetica, sans-serif;
+$body-font:'Lato', sans-serif;
+$heading-size:54px;
+
+/*font sizes*/
+$h1-font-size:80px;
+$h2-font-size:54px;
+$h3-font-size:34px;
+$h4-font-size:28px;
+$h5-font-size:22px;
+$h6-font-size:18px;
+$body-font-size:17px;
+
+// Body font size variations
+$xs-font-size:8px;
+$sm-font-size:12px;
+$md-font-size:18px;
+$lead-font-size:22px;
+$lg-font-size:26px;
+
+/*Menu variables*/
+$menu-color:#ffffff;
+$menu-font:'Gotham Condensed Medium', Arial, Helvetica, sans-serif;
+$menu-font-size:18px;
+$menu-font-weight:500;
+$menu-font-ls:1px;
+
+
+/*Side Panel variables*/
+$sidepanel-width:300px;
+$sidepanel-background:#000;
+$sidepanel-color:#BBB;
+$sidepanel-link-color:#BBB;
+$sidepanel-link-hover-color:$red;
+
+// Page title height
+$page-title-height:40vh;
+$page-title-height--sm:300px;
+
+/*Spacing*/
+$section-spacing-xxs:10px;
+$section-spacing-xs:20px;
+$section-spacing-sm:30px;
+$section-spacing:60px;
+$section-spacing-md:80px;
+$section-spacing-lg:100px;
+$section-spacing-xl:120px;
+
+
+/*sizes table*/
+$table-width-small:60%;
+$table-width:75%;
+$table-width-medium:85%;
+$table-width-full:100%;
+
+
+$font-weight:(
+    '100',
+    '200',
+    '300',
+    '400',
+    '500',
+    '600',
+    '700',
+    '800',
+    '900',
+);
+
+// Location bubble
+$location-bubble-height:120px;
+$location-closed-bubble-height:44px;
+
+
+// Responsive Breakpoints
+// Responsiveness
+
+// The container horizontal gap, which acts as the offset for breakpoints
+$gap: 32px !default;
+
+// 960, 1152, and 1344 have been chosen because they are divisible by both 12 and 16
+$tablet: 769px !default;
+
+// 960px container + 4rem
+$desktop: 960px + 2 * $gap !default;
+
+// 1152px container + 4rem
+$widescreen: 1152px + 2 * $gap !default;
+$widescreen-enabled: true !default;
+
+// 1344px container + 4rem
+$fullhd: 1344px + 2 * $gap !default;
+$fullhd-enabled: true !default;
+$breakpoints: (
+  "mobile": (
+    "until": $tablet,
+  ),
+  "tablet": (
+    "from": $tablet,
+  ),
+  "tablet-only": (
+    "from": $tablet,
+    "until": $desktop,
+  ),
+  "touch": (
+    "from": $desktop,
+  ),
+  "desktop": (
+    "from": $desktop,
+  ),
+  "desktop-only": (
+    "from": $desktop,
+    "until": $widescreen,
+  ),
+  "until-widescreen": (
+    "until": $widescreen,
+  ),
+  "widescreen": (
+    "from": $widescreen,
+  ),
+  "widescreen-only": (
+    "from": $widescreen,
+    "until": $fullhd,
+  ),
+  "until-fullhd": (
+    "until": $fullhd,
+  ),
+  "fullhd": (
+    "from": $fullhd,
+  ),
+) !default;
+
+
+

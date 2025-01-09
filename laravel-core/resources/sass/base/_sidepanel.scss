@@ -1,0 +1,111 @@
+
+/*Side Panel Styles*/
+#side-panel{
+	position: fixed;
+	top: 0;
+	right: -$sidepanel-width;
+	z-index: 399;
+	width: $sidepanel-width;
+	height: 100%;
+	background-color: $sidepanel-background;
+	color: $sidepanel-color;
+	overflow: hidden;
+	-webkit-backface-visibility: hidden;
+	-webkit-transition: right .4s ease;
+	-o-transition: right .4s ease;
+	transition: right .4s ease;
+	border-left: solid 1px #383838;
+	background-color: $black;
+
+	#side-panel-trigger-close a {
+	    background-color: rgba(0,0,0,.2);
+	    color: #FFF;
+	    display: none;
+	}
+	.side-panel-wrap {
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		width: 330px;
+		height: 100%;
+		overflow: auto;
+		padding: 50px 70px 50px 40px;
+
+		.side-panel-logo {
+		    margin-bottom: 30px;
+		    padding-bottom: 30px;
+		    display: block;
+		    border-bottom: solid 1px #444;
+		    img{max-width: 132px;}
+		}
+		.closebtn {
+		  position: absolute;
+		  top: 0;
+		  right: 25px;
+		  font-size: 36px;
+		  margin-left: 50px;
+		}
+		.nav-tree {
+		    position: relative;
+		    margin-bottom: 0;
+
+		    ul{
+		    	margin: 0;
+		    	padding: 0;
+		    	list-style: none;
+
+		    	li{
+		    		position: relative;
+					line-height: 1.2em;
+
+					a{
+						display: block;
+						padding: 10px 0;
+						color: #BBB;
+						text-transform: uppercase;
+						font-size: 13px;
+						font-weight: 700;
+						letter-spacing: 2px;
+						font-family: 'Raleway',sans-serif;
+						&:hover{color: $red;}
+					}
+					&.active > a{color: $red;}
+
+
+		    	}
+
+		    	ul{ display: none; 
+		    		li {
+		    			a{
+		    				font-size: 12px;
+							padding: 6px 0 6px 20px;
+							letter-spacing: 1px;
+							font-family: 'Lato',sans-serif;
+							&:hover{color: $red;}
+		    			}
+		    			&.active > a{color: $red;}
+		    		}
+		    	}
+		    }
+		}
+	}
+	
+}
+
+body.sidpanel-opened{
+	#side-panel{
+		right: 0;
+	}
+	.body-overlay{
+		opacity: 1;
+		z-index: 298;
+		pointer-events: auto;
+		&:hover{
+			cursor:url(../images/icons/close.png) 15 15,default;
+		}
+	}
+	#main-wrapper{
+		right: $sidepanel-width;
+	}
+} 

@@ -1,0 +1,190 @@
+/*
+@package omnitheme
+
+*/
+@use "sass:math";
+@mixin transition($attr, $time, $easing:null){
+  -webkit-transition: $attr $time $easing;
+  -moz-transition:    $attr $time $easing;
+  -o-transition:      $attr $time $easing;
+  transition:         $attr $time $easing;
+}
+
+@mixin transform($val){
+  -webkit-transform: $val;
+  -moz-transform:    $val;
+  -o-transform:      $val;
+  transform:         $val;
+}
+
+@mixin bgimage($size:cover, $position:center center, $repeat:no-repeat){
+  background-size:$size;
+  background-position:$position;
+  background-repeat:$repeat;
+}
+
+@mixin rowMachine($numPerRow, $margin) {
+  width: ((100% - (($numPerRow - 1) * $margin)) / $numPerRow);
+  &:nth-child(n) {
+    margin-bottom: 0;
+    margin-right: $margin;
+  }
+  &:nth-of-type(#{$numPerRow}n) {
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+}
+
+// Spacing 
+@mixin el-spacing() {
+  @for $i from 0 through 10 {
+    // Margins
+    &.ma-#{$i}{margin:#{0+$i}rem;}
+    &.mt-#{$i}{margin-top:#{0+$i}rem;}
+    &.mr-#{$i}{margin-right:#{0+$i}rem;}
+    &.mb-#{$i}{margin-bottom:#{0+$i}rem;}
+    &.ml-#{$i}{margin-left:#{0+$i}rem;}
+    &.mx-#{$i}{margin-left:#{0+$i}rem;margin-right:#{0+$i}rem;}
+    &.my-#{$i}{margin-top:#{0+$i}rem;margin-bottom:#{0+$i}rem;}
+    // Paddings
+    &.pa-#{$i}{padding:#{0+$i}rem;}
+    &.pt-#{$i}{padding-top:#{0+$i}rem;}
+    &.pr-#{$i}{padding-right:#{0+$i}rem;}
+    &.pb-#{$i}{padding-bottom:#{0+$i}rem;}
+    &.pl-#{$i}{padding-left:#{0+$i}rem;}
+    &.px-#{$i}{padding-left:#{0+$i}rem;padding-right:#{0+$i}rem;}
+    &.py-#{$i}{padding-top:#{0+$i}rem;padding-bottom:#{0+$i}rem;}
+    // Borders
+    &.ba-#{$i}{border:#{0+$i}px solid;}
+    &.bl-#{$i}{border-left:#{0+$i}px solid;}
+    &.br-#{$i}{border-right:#{0+$i}px solid;}
+    &.bt-#{$i}{border-top:#{0+$i}px solid;}
+    &.bb-#{$i}{border-bottom:#{0+$i}px solid;}
+    // Border Colors
+    &.bc-dark-#{$i}0{
+      border-color: darken(#ffffff, math.percentage(0.1*$i));
+    }
+  }
+}
+
+// 
+// Responsiveness
+
+@mixin from($device) {
+  @media screen and (min-width: $device) {
+    @content;
+  }
+}
+
+@mixin until($device) {
+  @media screen and (max-width: ($device - 1px)) {
+    @content;
+  }
+}
+
+@mixin between($from, $until) {
+  @media screen and (min-width: $from) and (max-width: ($until - 1px)) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media screen and (max-width: ($tablet - 1px)) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (min-width: $tablet), print {
+    @content;
+  }
+}
+
+@mixin tablet-only {
+  @media screen and (min-width: $tablet) and (max-width: ($desktop - 1px)) {
+    @content;
+  }
+}
+
+@mixin touch {
+  @media screen and (max-width: ($desktop - 1px)) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (min-width: $desktop) {
+    @content;
+  }
+}
+
+@mixin desktop-only {
+  @if $widescreen-enabled {
+    @media screen and (min-width: $desktop) and (max-width: ($widescreen - 1px)) {
+      @content;
+    }
+  }
+}
+
+@mixin until-widescreen {
+  @if $widescreen-enabled {
+    @media screen and (max-width: ($widescreen - 1px)) {
+      @content;
+    }
+  }
+}
+
+@mixin widescreen {
+  @if $widescreen-enabled {
+    @media screen and (min-width: $widescreen) {
+      @content;
+    }
+  }
+}
+
+@mixin widescreen-only {
+  @if $widescreen-enabled and $fullhd-enabled {
+    @media screen and (min-width: $widescreen) and (max-width: ($fullhd - 1px)) {
+      @content;
+    }
+  }
+}
+
+@mixin until-fullhd {
+  @if iv.$fullhd-enabled {
+    @media screen and (max-width: (iv.$fullhd - 1px)) {
+      @content;
+    }
+  }
+}
+
+@mixin fullhd {
+  @if iv.$fullhd-enabled {
+    @media screen and (min-width: iv.$fullhd) {
+      @content;
+    }
+  }
+}
+
+@mixin breakpoint($name) {
+  $breakpoint: map-get($breakpoints, $name);
+
+  @if $breakpoint {
+    $from: map-get($breakpoint, "from");
+    $until: map-get($breakpoint, "until");
+
+    @if $from and $until {
+      @include between($from, $until) {
+        @content;
+      }
+    } @else if $from {
+      @include from($from) {
+        @content;
+      }
+    } @else if $until {
+      @include until($until) {
+        @content;
+      }
+    }
+  }
+}
