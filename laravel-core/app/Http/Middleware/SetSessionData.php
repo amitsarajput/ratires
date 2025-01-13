@@ -29,8 +29,8 @@ class SetSessionData
                 'available_locales'=>[],
                 'preffered_location'=>'',
                 'user_location'=>'',
-                'default_location'=>'US',
-                'default_locale'=>'en_US',
+                'default_location'=>'',//US
+                'default_locale'=>'',//en_US
                 'region'=>'us',
                 'country'=>'us',
                 'brand'=>'radar',
@@ -41,6 +41,13 @@ class SetSessionData
             $omnidata['available_locations']=$all_countries->pluck('code','name')->toArray();
             $omnidata['available_locales']=$all_countries->pluck('locale_code','code')->toArray();
             $omnidata['slugs']=$all_countries->pluck('slug','code')->toArray();
+
+            //set default location and locale
+            $default_country=$all_countries->firstWhere('c_default', 1)->toArray();
+            $omnidata['default_location']=$default_country['code'];
+            $omnidata['default_locale']=$default_country['locale_code'];
+            //End set default location and locale
+
             session(['omni_data' => $omnidata]);//Set Session
             session(['locale' => $omnidata['default_locale']]);//Set default locale
             
