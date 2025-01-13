@@ -121,10 +121,13 @@ class CountryController extends Controller
             'code' => strtoupper($request->code),
             'locale_code' => $request->locale_code,
             'slug' => strtolower($request->slug),
-            'published'=>0,
+            'forward' => $request->forward!==''?strtolower($request->forward):NULL,
+            'c_default'=>$request->c_default?1:0,
+            'published'=>$request->published?1:0,
             'order' => $request->order,
         ];
-        if ($request->published) { $updataarray['published']=1;}
+        //if ($request->published) { $updataarray['published']=1;}
+        //if ($request->c_default) { $updataarray['c_default']=1;}
         $countri->update($updataarray);
         $t_brand=[];
         foreach ($request->brand as $key => $value) { 

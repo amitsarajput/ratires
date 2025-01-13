@@ -40,7 +40,7 @@
                     <h2 class="tyre--title uppercase mt-0">{!! htmlspecialchars_decode($tyre->preview_name) !!}</h2>
                     <h5 class="black">{{ implode(" | ", json_decode($tyre->tyre_categories->pluck('name'))) }}</h5>
                     <div class="tyre--description">
-                        <p>{!! htmlspecialchars_decode($tyre->description) !!}</p>
+                        {!!preg_replace_array('/:url[a-z_-]+/', [route('pages.warranty')], htmlspecialchars_decode($tyre->description))!!}
                     </div>
                     @php
                         $tyre_icons=$tyre->icons;

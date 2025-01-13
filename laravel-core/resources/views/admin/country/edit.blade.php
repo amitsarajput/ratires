@@ -42,22 +42,53 @@
                     <label>Region</label>
                     {{ Form::select('region', $region, $countri->region->id, ['class'=>'form-control','placeholder' => 'Pick a region...']) }}
                 </div>
-              <div class="form-group">
-                <label for="exampleInputEmail1">Name</label>
-                {{ Form::text('name', $countri->name, ['class'=>'form-control','placeholder'=>'Enter Name'] ) }}
+              
+              
+              <div class="row align-items-center">                
+                <div class="form-group  col-6">
+                  <label for="exampleInputEmail1">Name</label>
+                  {{ Form::text('name', $countri->name, ['class'=>'form-control','placeholder'=>'Enter Name'] ) }}
+                </div>
+                <div class="form-group col-2 offset-1">
+                  <label for="published"></label> <br>
+                  <label for="published">Publish</label>
+                  {{ Form::checkbox('published', 1, $countri->published, ['id'=>'published']) }}
+                </div>
+                
+                <div class="form-group col-2">
+                  <label for="c_default"></label> <br>
+                  <label for="c_default">Default</label>
+                  {{ Form::checkbox('c_default', 1, $countri->c_default, ['id'=>'c_default']) }}
+                </div>
               </div>
-              <div class="form-group">
-                <label for="exampleInputPassword1">Code</label>
-                {{ Form::text('code', $countri->code, ['class'=>'form-control','placeholder'=>'Enter CODE'] ) }}
+
+              <div class="row">
+                <div class="form-group  col-6">
+                  <label for="exampleInputPassword1">Code</label>
+                  {{ Form::text('code', $countri->code, ['class'=>'form-control','placeholder'=>'Enter CODE'] ) }}
+                </div>
+                <div class="form-group  col-6">
+                  <label for="exampleInputPassword1">Locale Code</label>
+                  {{ Form::text('locale_code', $countri->locale_code, ['class'=>'form-control','placeholder'=>'Enter Locale CODE'] ) }}
+                </div>
               </div>
-              <div class="form-group">
-                <label for="exampleInputPassword1">Locale Code</label>
-                {{ Form::text('locale_code', $countri->locale_code, ['class'=>'form-control','placeholder'=>'Enter Locale CODE'] ) }}
+
+              <div class="row">
+                <div class="form-group col-4">
+                  <label for="exampleInputPassword1">Slug</label>
+                  {{ Form::text('slug', $countri->slug, ['class'=>'form-control','placeholder'=>'Enter Slug'] ) }}
+                </div>
+                <div class="form-group col-4">
+                  <label for="forward">Forward</label>
+                  {{ Form::text('forward', $countri->forward, ['id'=>'forward', 'class'=>'form-control','placeholder'=>'Enter forwarding url null by default'] ) }}
+                </div>
+                <div class="form-group col-4">
+                  <label for="order">Order</label>
+                  {{ Form::number('order', $countri->order, ['id'=>'order','class'=>'form-control','placeholder'=>'Enter Slug'] ) }}
+                </div>
               </div>
-              <div class="form-group">
-                <label for="exampleInputPassword1">Slug</label>
-                {{ Form::text('slug', $countri->slug, ['class'=>'form-control','placeholder'=>'Enter Slug'] ) }}
-              </div>
+
+              
               <div class="form-group">
                   <label>Brand</label>
                   <div class="select2-purple sortable-option" data-options="{{$brand}}" data-selected-options="{{$countri->brands->pluck('id')}}">
@@ -70,15 +101,7 @@
                   {{ Form::select('search_tags[]', $search_tags_all, $countri->search_tags, ['multiple'=>'true','class'=>'form-control select2', 'data-dropdown-css-class'=>'select2-purple'] ) }}
                 </div>
               </div>
-              <div class="form-group">
-                <label for="order">Order</label>
-                {{ Form::number('order', $countri->order, ['id'=>'order','class'=>'form-control','placeholder'=>'Enter Slug'] ) }}
-              </div>
-              
-              <div class="form-group col-3">
-                <label for="published">Publish</label>
-                {{ Form::checkbox('published', 1, $countri->published, ['id'=>'published']) }}
-              </div>
+
             </div>
             <!-- /.card-body -->
 

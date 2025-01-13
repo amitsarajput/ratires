@@ -5,7 +5,7 @@
             <div class="grid">
                 <div class="col-sm-6">
                     <div class="footer--logo">
-                    <img src="{{asset('images/logos/radar-tyres-light-red.svg')}}" alt=""></div>
+                    <img src="{{asset('images/logos/radar-tires-light-red.svg')}}" alt=""></div>
                 </div>
                 <div class="col-sm-6">
                     <div class="footer-socials">

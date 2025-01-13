@@ -50,8 +50,11 @@ class FormsController extends Controller
 
     public function omni_redirect($to_url){
         switch ($to_url) {
-            case "us":
-                $url='https://www.omni-united.com/radar-us';
+            case "eu":
+                $url='https://radartyres.com/eu/';
+                break;
+            case "apac":
+                $url='https://radartyres.com/apac/';
                 break;
             case "ca":
                 $url='https://www.omni-united.com/radar-ca';

@@ -2,7 +2,7 @@
 <header id="header">
     <div class="inner-header "><!-- search-opened -->
         <div class="logo">
-            <a href="{{route('home')}}"><img src="{{asset('images/logos/radar-tyres-light-red.svg')}}" alt="Radar Tyres"></a>
+            <a href="{{route('home')}}"><img src="{{asset('images/logos/radar-tires-light-red.svg')}}" alt="Radar Tyres"></a>
         </div>
         <div class="right-menu-wrapper">
             <ul class="menu">
