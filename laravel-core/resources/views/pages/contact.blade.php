@@ -21,7 +21,7 @@
 							@php 
 								$caddress=[ [
 									'title'=>"SINGAPORE (HQ)", 
-									'address'=>"<b>Omni United (S) Pte Ltd</b><br> 4 Shenton Way<br> #08-02 SGX Centre II<br> Singapore - 068807" ,
+									'address'=>"<b>Omni United (S) Pte Ltd</b><br>2 Central Boulevard, <br>#08-04A West Tower, <br>101 Central Boulevard, <br>Singapore 018916" ,
 									'phone'=>"T: +65 6423 1431 <br>F: +65 6423 0938" ,
 									'workingHours'=>"Business Hrs: 0900 – 1800 (UTC+8)<br> Monday – Friday" 
 									]
