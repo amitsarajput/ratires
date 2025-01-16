@@ -16,7 +16,8 @@ class SetSessionData
      */
     public function handle(Request $request, Closure $next): Response
     {
-        session()->forget(['omni_data','locale']);
+        //session()->invalidate();
+        //session()->forget(['omni_data','locale']);
         if(!session()->has('omni_data') || 
         empty(session('omni_data')) || 
         empty(session('omni_data.available_locations')) || 
@@ -43,11 +44,11 @@ class SetSessionData
             $omnidata['slugs']=$all_countries->pluck('slug','code')->toArray();
 
             //set default location and locale
-            $default_country=$all_countries->firstWhere('c_default', 1)->toArray();
+            $default_country=$all_countries->firstWhere('c_default', 1);
             $omnidata['default_location']=$default_country['code'];
             $omnidata['default_locale']=$default_country['locale_code'];
             //End set default location and locale
-
+            dd($omnidata);
             session(['omni_data' => $omnidata]);//Set Session
             session(['locale' => $omnidata['default_locale']]);//Set default locale
             
