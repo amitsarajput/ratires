@@ -16,7 +16,7 @@ class SetSessionData
      */
     public function handle(Request $request, Closure $next): Response
     {
-        //session()->forget(['omni_data','locale']);
+        session()->forget(['omni_data','locale']);
         if(!session()->has('omni_data') || 
         empty(session('omni_data')) || 
         empty(session('omni_data.available_locations')) || 
