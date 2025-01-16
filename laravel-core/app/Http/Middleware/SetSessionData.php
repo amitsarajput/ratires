@@ -47,8 +47,8 @@ class SetSessionData
             $default_country=$all_countries->firstWhere('c_default', 1);
             $omnidata['default_location']=$default_country['code'];
             $omnidata['default_locale']=$default_country['locale_code'];
+            //dd($omnidata);            
             //End set default location and locale
-            dd($omnidata);
             session(['omni_data' => $omnidata]);//Set Session
             session(['locale' => $omnidata['default_locale']]);//Set default locale
             
