@@ -44,11 +44,13 @@ class SetSessionData
             $omnidata['slugs']=$all_countries->pluck('slug','code')->toArray();
 
             //set default location and locale
-            $default_country=$all_countries->firstWhere('c_default', 1);
+            $default_country=$all_countries->firstWhere('c_default', 1)->toArray();
+            //dd($default_country);
             $omnidata['default_location']=$default_country['code'];
             $omnidata['default_locale']=$default_country['locale_code'];
             //dd($omnidata);            
             //End set default location and locale
+
             session(['omni_data' => $omnidata]);//Set Session
             session(['locale' => $omnidata['default_locale']]);//Set default locale
             
