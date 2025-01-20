@@ -27,8 +27,8 @@
                     <p>We offer a wide selection of tires for different driving conditions, including summer, winter, all-season, high performance, and off-road fitments. Whether driving an everyday family car, sports car, an SUV, or tackling extreme off-road conditions, Radar has the right tires for you.</p>
                 </div>
                 <div class="col-md-6">
-                    <h4 class="dark-100 uppercase">Radar Protect Programme </h4>
-                    <p>We ensure peace of mind with the Radar Protect Programme​, which is available through participating Radar RED(Radar Elite Dealers) Partners. This may include a 30-day satisfaction promise and a limited road hazard warranty in select countries only. Terms and conditions apply. </p>
+                    <h4 class="dark-100 uppercase">Radar Protect Program </h4>
+                    <p>We ensure peace of mind with the Radar Protect Program​, which is available through participating Radar RED(Radar Elite Dealers) Partners. This may include a 30-day satisfaction promise and a limited road hazard warranty in select countries only. Terms and conditions apply. </p>
                 </div>
 
                 
