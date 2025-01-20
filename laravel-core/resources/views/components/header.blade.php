@@ -2,18 +2,18 @@
 <header id="header">
     <div class="inner-header "><!-- search-opened -->
         <div class="logo">
-            <a href="{{route('home')}}"><img src="{{asset('images/logos/radar-tires-light-red.svg')}}" alt="Radar Tyres"></a>
+            <a href="{{route('home')}}"><img src="{{asset('images/logos/radar-tires-light-red.svg')}}" alt="Radar Tires"></a>
         </div>
         <div class="right-menu-wrapper">
             <ul class="menu">
                 <li class="menu-item"><a 
                                 @if( request()->routeIs('home') )
-                                    href="#tyres" 
-                                    scroll-to="#tyres" 
+                                    href="#tires" 
+                                    scroll-to="#tires" 
                                 @else
-                                    href="{{ route('home').'#tyres'}}"
+                                    href="{{ route('home').'#tires'}}"
                                 @endif
-                                >Tyres</a></li>
+                                >Tires</a></li>
                 <li class="menu-item"><a href="{{ route('pages.why-radar')}}">Why Radar</a></li>
                 <li class="menu-item"><a 
                                         @if( request()->routeIs('home') )

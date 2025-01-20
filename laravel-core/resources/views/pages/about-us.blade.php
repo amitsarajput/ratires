@@ -1,7 +1,7 @@
 <x-guest-layout>
     <!-- Page Title
     ============================================= -->
-    <x-page-title image-url="{{ asset('images/about-us--banner.webp') }}" container="true" page-title="<span class='red'>THEY SAY PREMIUM TYRES ARE EXPENSIVE.</span><br><span class='black'>WE SAY, NOT WHEN YOU ROLL WITH US.</span>" class="page-title--center el-height-70 uppercase" />
+    <x-page-title image-url="{{ asset('images/about-us--banner.webp') }}" container="true" page-title="<span class='red'>THEY SAY PREMIUM TIRES ARE EXPENSIVE.</span><br><span class='black'>WE SAY, NOT WHEN YOU ROLL WITH US.</span>" class="page-title--center el-height-70 uppercase" />
     
     <!-- Content
     ============================================= -->
@@ -9,8 +9,8 @@
         <div class="container">
             <div class="grid">
                 <div class="col-md-12 col-bleed-y">
-                    <h3 class="no-top-margin dark-100">AT RADAR TYRES, WE BELIEVE THAT BOTH DEALERS AND CONSUMERS SHOULD HAVE THE RIGHT TO ACCESS TOP-QUALITY PREMIUM TYRES AT AFFORDABLE PRICES.</h3>
-                    <p>We are committed to providing exceptional value through lean operations, efficient manufacturing and streamlined supply chains. For consumers, Radar Tyres offers a high-quality, affordable alternative to expensive premium brands. For dealers, Radar Tyres offers a profitable business opportunity with fair margins, a comprehensive product range, reliable availability and outstanding customer support.</p>
+                    <h3 class="no-top-margin dark-100">AT RADAR TIRES, WE BELIEVE THAT BOTH DEALERS AND CONSUMERS SHOULD HAVE THE RIGHT TO ACCESS TOP-QUALITY PREMIUM TIRES AT AFFORDABLE PRICES.</h3>
+                    <p>We are committed to providing exceptional value through lean operations, efficient manufacturing and streamlined supply chains. For consumers, Radar Tires offers a high-quality, affordable alternative to expensive premium brands. For dealers, Radar Tires offers a profitable business opportunity with fair margins, a comprehensive product range, reliable availability and outstanding customer support.</p>
                 </div>
             </div>
             <div class="grid">
@@ -24,7 +24,7 @@
                 </div>
                 <div class="col-md-6">
                     <h4 class="dark-100">INNOVATION</h4>
-                    <p>We are at the forefront of tyre technology, continuously innovating to bring our customers the latest advancements in performance, safety, and design.</p>
+                    <p>We are at the forefront of tire technology, continuously innovating to bring our customers the latest advancements in performance, safety, and design.</p>
                 </div>
                 <div class="col-md-6">
                     <h4 class="dark-100">CUSTOMER FIRST</h4>
@@ -33,8 +33,8 @@
             </div>
             <div class="grid">
                 <div class="col-md-12">
-                    <p>Radar Tyres, the flagship brand of Omni United, is committed to providing premium, high-quality tyres that are accessible to everyone. Our mission is to bridge the gap between superior performance and affordability. We offer a diverse range of tyres designed and engineered for all seasons and different driving needs, serving passenger cars, SUVs, 4x4s, vans and commercial vehicles, including trucks and buses.</p>
-                    <p>As a part of the Omni United group, we have deep rooted values of social responsibility. Since 2011, Radar Tyres has been an active supporter of the Breast Cancer Research Foundation, and sustainability is central to our values. Our tyres have been manufactured carbon-neutral since 2013, reflecting our dedication to combating climate change and inspiring positive change.</p>
+                    <p>Radar Tires, the flagship brand of Omni United, is committed to providing premium, high-quality tires that are accessible to everyone. Our mission is to bridge the gap between superior performance and affordability. We offer a diverse range of tires designed and engineered for all seasons and different driving needs, serving passenger cars, SUVs, 4x4s, vans and commercial vehicles, including trucks and buses.</p>
+                    <p>As a part of the Omni United group, we have deep rooted values of social responsibility. Since 2011, Radar Tires has been an active supporter of the Breast Cancer Research Foundation, and sustainability is central to our values. Our tires have been manufactured carbon-neutral since 2013, reflecting our dedication to combating climate change and inspiring positive change.</p>
                 </div>  
             </div>
         </div>

@@ -29,12 +29,12 @@
                 <!-- <div class="title">ABOUT US</div> -->
                 <a class="radar_link" 
                                 @if( request()->routeIs('home') )
-                                    href="#tyres" 
-                                    scroll-to="#tyres" 
+                                    href="#tires" 
+                                    scroll-to="#tires" 
                                 @else
-                                    href="{{ route('home').'#tyres'}}"
+                                    href="{{ route('home').'#tires'}}"
                                 @endif
-                                >TYRES</a>
+                                >TIRES</a>
                 <a  href="{{ route('pages.why-radar')}}">WHY RADAR</a>
                 <a  
                     @if( request()->routeIs('home') )

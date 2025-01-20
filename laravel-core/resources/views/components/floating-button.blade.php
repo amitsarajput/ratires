@@ -1,12 +1,12 @@
 <div class="floating-buttons">
 <a 
     @if( request()->routeIs('home') )
-        href="#tyres" 
-        scroll-to="#tyres" 
+        href="#tires" 
+        scroll-to="#tires" 
     @else
-        href="{{ route('home').'#tyres'}}"
+        href="{{ route('home').'#tires'}}"
     @endif
-        class="black"><x-icon-tyre-line-2/>TYRES</a>
+        class="black"><x-icon-tyre-line-2/>TIRES</a>
 <a 
     @if( request()->routeIs('home') )
         href="#dealer-locator" 

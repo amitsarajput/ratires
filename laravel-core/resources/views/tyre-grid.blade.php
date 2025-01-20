@@ -7,7 +7,7 @@
     <!-- Implement Slider From Brand Database -->
     <!-- Page Title
     ============================================= -->
-    <x-page-title image-url="{{ asset('images/tyre-grid-banner.webp') }}" container="true" page-title="EVERYONE SHOULD HAVE THE RIGHT<br>TO ACCESS PREMIUM TYRES AT<br>AFFORDABLE PRICES" button="true" button-text="READ MORE ABOUT RADAR TYRES" button-Link="{{ route('pages.about-us') }}" class="page-title--left el-height-60 uppercase mb-0" />
+    <x-page-title image-url="{{ asset('images/tyre-grid-banner.webp') }}" container="true" page-title="EVERYONE SHOULD HAVE THE RIGHT<br>TO ACCESS PREMIUM TIRES AT<br>AFFORDABLE PRICES" button="true" button-text="READ MORE ABOUT RADAR TIRES" button-Link="{{ route('pages.about-us') }}" class="page-title--left el-height-60 uppercase mb-0" />
     
     <!-- Content -->
     <section id="content">
@@ -41,7 +41,7 @@
                     <div class="ma-xxs-2 mx-lg-7">
                         <h5>MESSAGE FROM CEO</h5>
                         <h2 class="dark-100 no-top-margin">
-                            OUR MISSION IS TO OFFER PREMIUM HIGH-QUALITY TYRES THAT ARE AFFORDABLE FOR ALL
+                            OUR MISSION IS TO OFFER PREMIUM HIGH-QUALITY TIRES THAT ARE AFFORDABLE FOR ALL
                         </h2>
                         <a  class="knopf red heading-font sharp ls-1" href="{{route('pages.ceo-message')}}">READ MORE</a>
                     </div>
@@ -63,8 +63,8 @@
 			</div>
         </div> -->
         <!-- Tyres widget -->
-        <div class="section bg-white no-padding" id="tyres">
-            <div class="container "><h2 class="center uppercase black mb-2">TYRES</h2></div>
+        <div class="section bg-white no-padding" id="tires">
+            <div class="container "><h2 class="center uppercase black mb-2">TIRES</h2></div>
             <div class="container ">
                 <div id="tabs" class="navs-with-text">
                     <div class="tabs-navigation">
@@ -145,7 +145,7 @@
                     <div class="col-md-6 col-sm-12">
                         <div class="ma-xxs-0 ma-xs-0 ma-sm-0 ml-md-2">
                             <h5 class="dark-100 mt-0 uppercase">SOCIAL RESPONSIBILITY</h5>
-                            <p>We have always believed in giving back and this is one of the pillars that Radar Tyres has been built on. It was these beliefs that led us to partner with the Breast Cancer Research Foundation (BCRF) in 2011, the leading and highest-rated breast cancer organisation in the US. We have been supporting BCRF in their mission to prevent and cure breast cancer by advancing the world’s most promising research.</p>
+                            <p>We have always believed in giving back and this is one of the pillars that Radar Tires has been built on. It was these beliefs that led us to partner with the Breast Cancer Research Foundation (BCRF) in 2011, the leading and highest-rated breast cancer organization in the US. We have been supporting BCRF in their mission to prevent and cure breast cancer by advancing the world’s most promising research.</p>
                             <a class="knopf red heading-font sharp ls-1" href="{{ route('pages.responsibility-social') }}">READ MORE</a>
                         </div>
                     </div>
@@ -157,7 +157,7 @@
                     <div class="col-md-6 col-sm-12">
                         <div class="ma-xxs-0 ma-xs-0 ma-sm-0 mr-md-2">
                             <h5 class="dark-100 mt-0 uppercase">ENVIRONMENT</h5>
-                            <p>{{ __("We continually strive to minimise our impact through sustainable practices. By late 2013, Radar Tyres became the first carbon-neutral tyre brand. We have extended this commitment to carbon neutrality from cradle to grave for certain products and geographies, aiming to remain carbon neutral until 2030, in line with requirements of PAS 2060.") }}</p>
+                            <p>{{ __("We continually strive to minimise our impact through sustainable practices. By late 2013, Radar Tires became the first carbon-neutral tyre brand. We have extended this commitment to carbon neutrality from cradle to grave for certain products and geographies, aiming to remain carbon neutral until 2030, in line with requirements of PAS 2060.") }}</p>
                             <a class="knopf red heading-font sharp ls-1" href="{{ route('pages.responsibility-environment') }}">READ MORE</a>
                         </div>
                     </div>
