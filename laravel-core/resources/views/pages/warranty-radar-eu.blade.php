@@ -1,9 +1,8 @@
 <x-guest-layout>
 <!-- Page Title
     ============================================= -->
-    <x-page-title image-url="{{ asset('images/Warranty-Banner--radar-eu.webp') }}" container="true" page-title="" class="page-title--left el-height-60 uppercase" />
+    <x-page-title image-url="{{ asset('images/Warranty-Banner--radar-us.webp') }}" container="true" page-title="" class="page-title--left el-height-60 uppercase" />
     
-	
 
 	<!-- Content
 	============================================= -->
@@ -11,18 +10,20 @@
 		<div class="section bg-white pt-0">
 			<div class="container">
 				<div class="grid ">
-					<div class="col-md-12 col-bleed-y center"><h2>LIMITED WARRANTY - EUROPE</h2></div>
+					<div class="col-md-12 col-bleed-y center"><h2>LIMITED WARRANTY - NORTH AMERICA</h2></div>
 				</div>
 			</div>
 			<div class="container">
 				<div class="grid">
 					<div class="col-md-12 col-bleed-y ">
-						<h3 class="dark-100">LIMITED WARRANTY - EUROPE</h3>
+						<h3 class="dark-100">THE RADAR PROTECT PROGRAM OFFERS THE BELOW BENEFITS:</h3>
 						<ul class="text-md bullet-inside ">
 							<li class="mb-xxs-1">Workmanship and Materials Limited Warranty</li>
-							<li>Road Hazard Warranty<sup>1</sup></li>
+							<li>Treadwear Limited Warranty<sup>1</sup></li>
+							<li>Road hazard warranty<sup>1</sup></li>
+							<li>30-Day Satisfaction Guarantee<sup>1</sup></li>
 						</ul>
-						<p class="text-sm"><sup>1</sup> These warranties are offered on selected ranges. Please refer to the Buyers Warranty Guide for the most updated list of eligible ranges.</p>
+						<p class="text-sm"><sup>1</sup>  These warranties are offered on selected ranges. Please refer to the Quick Reference Guide for the most updated list of eligible ranges.</p>
 					</div>
 				</div>
 			</div>
@@ -33,10 +34,37 @@
 					<div class="col-md-12 col-bleed-y ">
 						<h3 class=" dark-100">WARRANTY INFORMATION</h3>
 						<ul class="text-md no-bullets li-icons">
-							<li class="mb-xxs-1"><a href="{{ asset('storage/colletrals/Radar_Tyres_Quick_Reference_Guide_A5--radar-eu.pdf') }}"><x-icon-download-ico /> Buyers Warranty Guide</a> – Passenger and Light Truck replacement tyres purchased after 1<sup>st</sup>	 January, 2024</li>
-							<li class="mb-xxs-1"><a href="{{ asset('storage/colletrals/Radar_Tyres_Limited_Warranty_Booklet--radar-eu.pdf') }}"><x-icon-download-ico /> Limited Warranty Booklet</a> - Passenger and Light Truck replacement tyres purchased after 1<sup>st</sup> January, 2024</li>
-							<li><a href="{{ asset('storage/colletrals/Claim_Form - CL01_RA-EU_Tyres--radar-eu.pdf') }}"><x-icon-download-ico /> Claim Form</a> - Passenger and Light Truck replacement tyres purchased after  1<sup>st</sup> January, 2024</li>
+							<li class="mb-xxs-1"><a href="{{ asset('storage/colletrals/Radar_Quick_Reference_Guide_202406.pdf') }}"><x-icon-download-ico /> Limited Warranty Quick Reference Guide</a> – Passenger and Light Truck replacement tires purchased after October 1, 2020</li>
+							<li class="mb-xxs-1"><a href="{{ asset('storage/colletrals/Radar_Warranty_Flyer.pdf') }}"><x-icon-download-ico /> Limited Warranty Booklet</a> - Passenger and Light Truck replacement tires purchased after October 1, 2020</li>
+							<li><a href="{{ asset('storage/colletrals/Claim_Form - CL01_RA-EU_Tyres--radar-eu.pdf') }}"><x-icon-download-ico /> Limited Warranty</a> - Passenger and Light Truck replacement tires purchased before October 1, 2020</li>
 						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="section bg-white">
+			<div class="container">
+				<div class="grid">
+					<div class="col-md-12 col-bleed-y ">
+						<h3 class=" dark-100 uppercase">Download center</h3>
+						<ul class="text-md no-bullets li-icons">
+							<li class="mb-xxs-1"><a href="{{ asset('storage/colletrals/Radar_Limited Warranty Manual.pdf') }}"><x-icon-download-ico /> Limited Warranty Manual</a></li>
+							<li class="mb-xxs-1"><a href="{{ asset('storage/colletrals/3Retailer Registration Form_Radar Protect Program_REG01 (RANA).xlsx') }}"><x-icon-download-ico /> 30-Day Satisfaction Guarantee_Retailer Registration Form_REG01(RA/NA)</a></li>
+							<li class="mb-xxs-1"><a href="{{ asset('storage/colletrals/Tire Installation Form - IN01 (NARA).pdf') }}"><x-icon-download-ico /> Tire Installation Form_IN01(RA/NA)</a></li>
+							<li class="mb-xxs-1"><a href="{{ asset('storage/colletrals/Tire Mounting & Rotation Service Form - RR01 (NARA).pdf') }}"><x-icon-download-ico /> Tire Mounting and Rotation Form_RR01(RA/NA)</a></li>
+							<li class="mb-xxs-1"><a href="{{ asset('storage/colletrals/Claim Form - CL01 (NARA).pdf') }}"><x-icon-download-ico /> Claim Form_CL01(RA/NA)</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="section bg-gray">
+			<div class="container">
+				<div class="grid">
+					<div class="col-md-12 col-bleed-y ">
+						<h3 class=" dark-100 uppercase">Contact Us</h3>
+						<p>For any additional assistance, you can contact us via email at <a href="mailto:claims@omni-united.com">claims@omni-united.com</a> or call us at 800-725-1482 (Business Hrs 9am - 6pm, Monday – Friday)</p>
 					</div>
 				</div>
 			</div>
