@@ -28,6 +28,13 @@
 			justify-content: flex-end;
 			.page-title-wrapper{text-align: right;}
 		}
+	}  
+	&.page-title--bottom{
+		align-items: flex-end;
+		.container .grid{
+			align-items: flex-end;
+			.page-title-wrapper{text-align: center;}
+		}
 	} 
 	.page-title-wrapper{
 		padding: 0;
