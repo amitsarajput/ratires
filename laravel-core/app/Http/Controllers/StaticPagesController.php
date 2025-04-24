@@ -42,7 +42,7 @@ class StaticPagesController extends Controller
             $this->data['page']='contact';
         }
         if ($request_path === 'warranty') {
-            $this->data['page'] = $country=='apac'?'warranty-radar-apac':'warranty-radar-eu';
+            $this->data['page'] = $country=='apac'?'warranty-radar-apac':'warranty-radar-us';
         }
         if ($request_path === 'premium-collection') {
             $this->data['page'] = $request_path;
@@ -72,6 +72,20 @@ class StaticPagesController extends Controller
                 abort(404);  
             }
         }
+
+        if ($request_path === 'real-people-group') {
+            $this->data['page'] = $request_path;
+        }
+        if ($request_path === 'olli-seppala') {
+            $this->data['page'] = 'real-people--olli-sipala';
+        }
+        if ($request_path === 'stephane-clepkens') {
+            $this->data['page'] = 'real-people--stephane-clepkens';
+        }
+        if ($request_path === 'fabrizio-giugiaro') {
+            $this->data['page'] = 'real-people--fabrizio-giugiaro';
+        }
+
         if (View::exists('pages/'.$this->data['page'])) {
             return view('pages/' . $this->data['page'], ['data'=>$this->data]);
         }else {

@@ -18,7 +18,7 @@
 					<div class="col-md-12 col-bleed-y ">
 						<h3 class="dark-100">THE RADAR PROTECT PROGRAM OFFERS THE BELOW BENEFITS:</h3>
 						<ul class="text-md bullet-inside ">
-							<li class="mb-xxs-1">Workmanship and Materials Limited Warranty</li>
+							<li class="">Workmanship and Materials Limited Warranty</li>
 							<li>Treadwear Limited Warranty<sup>1</sup></li>
 							<li>Road hazard warranty<sup>1</sup></li>
 							<li>30-Day Satisfaction Guarantee<sup>1</sup></li>
@@ -34,9 +34,11 @@
 					<div class="col-md-12 col-bleed-y ">
 						<h3 class=" dark-100">WARRANTY INFORMATION</h3>
 						<ul class="text-md no-bullets li-icons">
-							<li class="mb-xxs-1"><a href="{{ asset('storage/colletrals/Radar_Quick_Reference_Guide_202406.pdf') }}"><x-icon-download-ico /> Limited Warranty Quick Reference Guide</a> – Passenger and Light Truck replacement tires purchased after October 1, 2020</li>
-							<li class="mb-xxs-1"><a href="{{ asset('storage/colletrals/Radar_Warranty_Flyer.pdf') }}"><x-icon-download-ico /> Limited Warranty Booklet</a> - Passenger and Light Truck replacement tires purchased after October 1, 2020</li>
-							<li><a href="{{ asset('storage/colletrals/Claim_Form - CL01_RA-EU_Tyres--radar-eu.pdf') }}"><x-icon-download-ico /> Limited Warranty</a> - Passenger and Light Truck replacement tires purchased before October 1, 2020</li>
+							<li class="mb-xxs-1"><a href="{{ asset('storage/colletrals/Warranty_Quick-Ref-Guide_North-America.pdf') }}"><x-icon-download-ico /> Limited Warranty Quick Reference Guide</a>  – Passenger and Light Truck replacement tires purchased after <b>February 1, 2025</b></li>
+							<li class="mb-xxs-1"><a href="{{ asset('storage/colletrals/Radar-Warranty-Flyer-2025.pdf') }}"><x-icon-download-ico /> Limited Warranty Booklet</a>  - Passenger and Light Truck replacement tires purchased after <b>February 1, 2025</b></li>
+							<li class="mb-xxs-1"><a href="{{ asset('storage/colletrals/Radar_Quick_Reference_Guide_202406.pdf') }}"><x-icon-download-ico /> Limited Warranty Quick Reference Guide</a>  – Passenger and Light Truck replacement tires purchased after <b>October 1, 2020</b></li>
+							<li class="mb-xxs-1"><a href="{{ asset('storage/colletrals/Radar_Warranty_Flyer.pdf') }}"><x-icon-download-ico /> Limited Warranty Booklet</a>   - Passenger and Light Truck replacement tires purchased after  <b>October 1, 2020</b></li>
+							<li class="mb-xxs-1"><a href="{{ asset('storage/colletrals/RADAR_PASSENGER AND LIGHT TRUCK TIRE_Warranty 2016.pdf') }}"><x-icon-download-ico /> Limited Warranty</a> - Passenger and Light Truck replacement tires purchased before <b>October 1, 2020</b></li>
 						</ul>
 					</div>
 				</div>
@@ -49,7 +51,7 @@
 						<h3 class=" dark-100 uppercase">Download center</h3>
 						<ul class="text-md no-bullets li-icons">
 							<li class="mb-xxs-1"><a href="{{ asset('storage/colletrals/Radar_Limited Warranty Manual.pdf') }}"><x-icon-download-ico /> Limited Warranty Manual</a></li>
-							<li class="mb-xxs-1"><a href="{{ asset('storage/colletrals/3Retailer Registration Form_Radar Protect Program_REG01 (RANA).xlsx') }}"><x-icon-download-ico /> 30-Day Satisfaction Guarantee_Retailer Registration Form_REG01(RA/NA)</a></li>
+							<li class="mb-xxs-1"><a href="{{ asset('storage/colletrals/Retailer Registration Form_Radar Protect Program_REG01 (RANA).xlsx') }}"><x-icon-download-ico /> 30-Day Satisfaction Guarantee_Retailer Registration Form_REG01(RA/NA)</a></li>
 							<li class="mb-xxs-1"><a href="{{ asset('storage/colletrals/Tire Installation Form - IN01 (NARA).pdf') }}"><x-icon-download-ico /> Tire Installation Form_IN01(RA/NA)</a></li>
 							<li class="mb-xxs-1"><a href="{{ asset('storage/colletrals/Tire Mounting & Rotation Service Form - RR01 (NARA).pdf') }}"><x-icon-download-ico /> Tire Mounting and Rotation Form_RR01(RA/NA)</a></li>
 							<li class="mb-xxs-1"><a href="{{ asset('storage/colletrals/Claim Form - CL01 (NARA).pdf') }}"><x-icon-download-ico /> Claim Form_CL01(RA/NA)</a></li>

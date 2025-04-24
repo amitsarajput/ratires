@@ -404,6 +404,10 @@ html {
       background-color: $red;
       color: $white;
     }
+    &.link.red{
+      background-color: transparent;
+      color: $red;
+    }
     &.hover-black-80:hover{
       background-color: $dark-80;
       color: $white;

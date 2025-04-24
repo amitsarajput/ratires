@@ -47,6 +47,20 @@
                     </div>
                 </div>
             </div>
+            <div class="grid grid-bleed align-center">
+                <div class="col-md-6 col-sm-12">
+                    <a href="{{ route('pages.premium-collection') }}">
+                        <img src="{{asset('images/tyre-grid/group-t.webp')}}" alt="">
+                    </a>
+                </div>
+                <div class="col-md-6 col-sm-12">
+                    <div class="ma-xxs-2 ma-xs-2 ma-sm-2 ma-md-2 mx-lg-7">
+                        <h5>{{ __("REAL PEOPLE. REAL PERFORMANCE.") }}</h5>
+                        <h2 class="dark-100  no-top-margin">{{ __("MEET THE EXPERTS DRIVING RADAR TYRES TO THE NEXT LEVEL") }}</h2>
+                        <a  class="knopf red heading-font sharp ls-1" href="{{ route('pages.real-people') }}">{{__('READ MORE')}}</a>
+                    </div>
+                </div>
+            </div>
         </div>
         <!-- Implement This Text From Brand Database -->
         <!-- <div class="section bg-gray">
@@ -150,7 +164,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="grid align-center">
+                <!-- <div class="grid align-center">
                     <div class="col-md-6 col-sm-12 col-bleed order-md-2">
                         <img src="{{asset('images/tyre-grid/environmental-responsibility.webp')}}" alt="Environmental Responsibility">
                     </div>
@@ -161,7 +175,7 @@
                             <a class="knopf red heading-font sharp ls-1" href="{{ route('pages.responsibility-environment') }}">READ MORE</a>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </section>
