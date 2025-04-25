@@ -16,7 +16,7 @@ return [
     |
     */
 
-    'name' => env('APP_NAME', 'Radar Tyres'),
+    'name' => env('APP_NAME', 'Radar Tires'),
 
     /*
     |--------------------------------------------------------------------------
