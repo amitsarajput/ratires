@@ -37,16 +37,14 @@ class SetSessionData
         $defaultLocale = 'en';
         $defaultBrand = 'radar';
 
-        $allContinents = Region::with(['countries' => function ($query) {
-            $query->where('published', 1);
-        }])->orderBy('order', 'asc')->get();
-
-        // try {
-        //     //$allCountries = Country::where('published', 1)->orderBy('order', 'asc')->get();
-            
-        // } catch (\Exception $e) {
-        //     abort(500, 'Error on the server. Please check after refreshing the page.');
-        // }
+        try {
+            //$allCountries = Country::where('published', 1)->orderBy('order', 'asc')->get();
+            $allContinents = Region::with(['countries' => function ($query) {
+                $query->where('published', 1);
+            }])->orderBy('order', 'asc')->get();
+        } catch (\Exception $e) {
+            abort(500, 'Error on the server. Please check after refreshing the page.');
+        }
 
         $omniData = [
             'all_continents' => $allContinents->toArray(),
