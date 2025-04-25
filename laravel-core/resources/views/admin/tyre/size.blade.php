@@ -80,6 +80,11 @@
                   <div class="form-group col-4">
                       <label for="exampleInputPassword1">Sizes</label>
                       {{ Form::file('sizes', ['class'=>'form-control','placeholder'=>'Enter Description'] ) }}
+                      <div class="form-group col-12">
+                        <label for="exampleInputEmail1">Empty: </label>
+                        <label class="mt-3" for="empty">{{ Form::checkbox('empty', 'empty', '', ['id'=>'empty']); }} Remove All Sizes</label>
+                      </div>
+
                   </div>
                 </div>
               <div class="row">

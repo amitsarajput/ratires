@@ -70,7 +70,6 @@ class Localization
             // Fallback: use default locale and location
             Session::put('locale', $defaultLocale);
             App::setLocale($defaultLocale);
-
             session()->put('omni_data.preffered_location', $defaultLocation);
         }
         

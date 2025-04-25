@@ -76,9 +76,10 @@ class FormsController extends Controller
 
     public function omni_redirect($to_url){
         return match ($to_url) {
-            'us' => redirect()->to('https://www.omni-united.com/radar-us')->send(),
+            'eu' => redirect()->to('https://radartyres.com/eu')->send(),
+            'eu/es' => redirect()->to('https://radartyres.com/eu/es')->send(),
+            'apac' => redirect()->to('https://radartyres.com/apac')->send(),
             'ca' => redirect()->to('https://www.omni-united.com/radar-ca')->send(),
-            'mea', 'row' => redirect()->to('https://www.omni-united.com/radar')->send(),
             default => false,
         };
     }

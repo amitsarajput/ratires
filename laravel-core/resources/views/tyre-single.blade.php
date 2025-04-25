@@ -70,7 +70,11 @@
                         @php
                             $features=json_decode($tyre->features_benifits )
                         @endphp
-                        <x-tyre-fb-slider class="tyre--fb-slider"  :slides="$features" />
+                        @if(!empty($features))
+                            <x-tyre-fb-slider class="tyre--fb-slider"  :slides="$features" />
+                        @else
+                            <p class="center mb-5">Coming Soon</p>
+                        @endif
                     </div>
                 </div>
             </div>

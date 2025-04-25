@@ -435,6 +435,7 @@ class TyreController extends Controller
                 'sizes' => ['file','mimes:xlsx','max:6024'],
                 'extra_cols'=>['array'],
                 'extra_cols.*'=>['string'],
+                'empty'=>['string'],
                 'legends'=>['string']
             ]);
             
@@ -466,14 +467,19 @@ class TyreController extends Controller
             if(htmlspecialchars($request->legends)!==$tyre_legends){                
                 $tyre_array['legends']=htmlspecialchars($request->legends);
             }
-            if ($request->hasFile('sizes')&& $request->file('sizes')->isValid()) {
-                $sizes=XlsxController::readxlfile($request->sizes,'sizes');
-                //dd($sizes);
-                if ($tyre_array['sizes']!==$sizes) {
-                    $tyre_array['sizes']=$sizes;
-                }
-            }
             
+            if ($request->empty===null) {
+                if ($request->hasFile('sizes')&& $request->file('sizes')->isValid()) {
+                    $sizes=XlsxController::readxlfile($request->sizes,'sizes');
+                    //dd($sizes);
+                    if ($tyre_array['sizes']!==$sizes) {
+                        $tyre_array['sizes']=$sizes;
+                    }
+                }
+            }else {
+                $tyre_array['sizes']=[];
+                //dd($tyre_array['sizes'], $request->empty);
+            }
             $tyre_array=json_encode($tyre_array);
             $tyre->sizes=$tyre_array;
             $tyre->save();
@@ -542,27 +548,32 @@ class TyreController extends Controller
         if($request->method()=='POST'|| $request->method()=='PUT'){
             $request->validate([
                 'title' => ['array'],
-                'title.*' => ['required','string','max:6024'],
+                'title.*' => ['nullable','string','max:6024'],
                 'description' => ['array'],
-                'description.*' => ['required','string','max:6024'],
+                'description.*' => ['nullable','string','max:6024'],
                 'image' => ['array'],
-                'image.*' => ['file','mimes:webp,jpg,png','max:6024'],
+                'image.*' => ['nullable','file','mimes:webp,jpg,png','max:6024'],
             ]);
             $f=json_decode($tyre->features_benifits,true);
             $req_f=[];
-            foreach ($request->title as $key => $value) {
-                $req_f[$key]['title']=htmlspecialchars($value);
-                $req_f[$key]['description']=htmlspecialchars($request->description[$key]);
-                if (isset($request->image) && !empty($request->image)) {
-                    if(array_key_exists($key,$request->image)){
-                        $req_f[$key]['image']=$this->handlefile($request->image[$key],$this->feature_path);
+            if ($request->title!=null) {
+                foreach ($request->title as $key => $value) {
+                    $req_f[$key]['title']=htmlspecialchars($value);
+                    $req_f[$key]['description']=htmlspecialchars($request->description[$key]);
+                    if (isset($request->image) && !empty($request->image)) {
+                        if(array_key_exists($key,$request->image)){
+                            $req_f[$key]['image']=$this->handlefile($request->image[$key],$this->feature_path);
+                        }else{
+                            $req_f[$key]['image']=$f[$key]['image'];
+                        }
                     }else{
                         $req_f[$key]['image']=$f[$key]['image'];
-                    }
-                }else{
-                    $req_f[$key]['image']=$f[$key]['image'];
-                }                
+                    }                
+                }
+            }else {
+                $req_f=[];
             }
+            
             //Update tyre
             $tyre_array=json_encode($req_f);
             $tyre->features_benifits=$tyre_array;

@@ -4,6 +4,7 @@ $classes = ( $bubbleclosed == 1 )
             : 'location-bubble';
 $location_locale=[
 	'eu'=>'European',
+	'es'=>'Spanish',
 	'apac'=>'Asian',
 	'mea'=>'Middle East and Africa',
 	'us'=>'American',
