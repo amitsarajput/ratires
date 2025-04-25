@@ -3,9 +3,13 @@ html {
        Color
        ========================================================================== */
   
-    --knopf-hue: 357;
-    --knopf-saturation: 87%;
-    --knopf-luminosity: 92%;
+    // --knopf-hue: 357;
+    // --knopf-saturation: 87%;
+    // --knopf-luminosity: 92%;
+  
+    --knopf-hue: 359;
+    --knopf-saturation: 84%;
+    --knopf-luminosity: 85%;
   
     /* ==========================================================================
        Sizes
@@ -327,7 +331,7 @@ html {
     --knopf-font-size: null;
   
     /* Text decoration */
-    --knopf-text-decoration-line: underline;
+    // --knopf-text-decoration-line: underline;
     --knopf-text-decoration-color: hsl(var(--knopf-color) / 40%);
     --knopf-hover-text-decoration-color: hsl(var(--knopf-color-dark));
     --knopf-active-text-decoration-color: hsl(var(--knopf-color-darker));

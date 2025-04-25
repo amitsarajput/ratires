@@ -3,12 +3,12 @@ $classes = ( $bubbleclosed == 1 )
             ? 'location-bubble location-bubble--closed'
             : 'location-bubble';
 $location_locale=[
-	'EU'=>'European',
-	'APAC'=>'Asian',
-	'MEA'=>'Middle East and Africa',
-	'US'=>'American',
-	'CA'=>'Canadian',
-	'ROW'=>'Rest of the World'
+	'eu'=>'European',
+	'apac'=>'Asian',
+	'mea'=>'Middle East and Africa',
+	'us'=>'American',
+	'ca'=>'Canadian',
+	'row'=>'Rest of the World'
 	];
 @endphp
 

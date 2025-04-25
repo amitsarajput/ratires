@@ -37,7 +37,7 @@
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
             <li class="nav-item">
-            <a href="{{ route('admin.region.index') }}" class="nav-link {{request()->routeIs('admin.region.*')?'active':''}}">
+            <a href="{{ route('admin.rgn.index') }}" class="nav-link {{request()->routeIs('admin.rgn.*')?'active':''}}">
               <i class="fas fa-circle nav-icon text-warning"></i>
               <p>
                 Region

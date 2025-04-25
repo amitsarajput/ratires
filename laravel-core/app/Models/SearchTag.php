@@ -5,6 +5,7 @@ namespace App\Models;
 use App\Models\Brand;
 use App\Models\Icon;
 use App\Models\Tyre;
+use App\Models\Region;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
@@ -20,6 +21,11 @@ class SearchTag extends Model
     public function countries()
     {
         return $this->belongsToMany(Country::class, 'country_search_tag', 'search_tag_id', 'country_id')->withPivot('kram')->orderByPivot('kram', 'asc');
+    }
+
+    public function regions()
+    {
+        return $this->belongsToMany(Region::class, 'region_search_tag', 'search_tag_id', 'region_id')->withPivot('kram')->orderByPivot('kram', 'asc');
     }
 
     public function brands():BelongsToMany

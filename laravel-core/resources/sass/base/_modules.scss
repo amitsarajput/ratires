@@ -28,7 +28,7 @@
 			justify-content: flex-end;
 			.page-title-wrapper{text-align: right;}
 		}
-	}  
+	} 
 	&.page-title--bottom{
 		align-items: flex-end;
 		.container .grid{
@@ -68,10 +68,9 @@
 	background-color: #f7f7f7;
 	&.no-padding{padding: 0;}
 	&.top-padding{padding: $section-spacing 0 0; }
-	&.bg-white{
-		background-color: $white;
-	}
-	&.bg-gray{background-color: $secondary-light-90;}
+	&.bg-white{ background-color: $white; }
+	&.bg-gray{ background-color: $secondary-light-90; }
+	&.bg-black{ background-color: $dark-100; }
 	@include el-spacing()
 }
 /*Heading Block Module*/
@@ -702,6 +701,7 @@
 		letter-spacing: 1px;
 		margin-top: 0;
 		font-size: 36px;
+		margin-bottom: 5px;
 		a{color: $primary !important;}
 		
 		sup{
@@ -720,24 +720,24 @@
 	}
 	.image{
 		position: relative;
-		margin-top: 90px;
+		margin-top: 75px;
 		border-bottom: 1px solid #aaa;
 		img{
 			width: 238px;
 			margin: auto;
 		}
-		&.carbon-n:after{
-			content: "";
-			width: 40px;
-			height: 40px;
-			background-image: url('https://www.omni-united.com/assets/img/carbon-neutral-icon.png');
-			background-size: contain;
-			background-repeat: no-repeat;
-			position: absolute;
-			left: calc(50% - 20px);
-			bottom: 2%;
-			transform: translateX(400%);
-		}
+		// &.carbon-n:after{
+		// 	content: "";
+		// 	width: 40px;
+		// 	height: 40px;
+		// 	background-image: url('https://www.omni-united.com/assets/img/carbon-neutral-icon.png');
+		// 	background-size: contain;
+		// 	background-repeat: no-repeat;
+		// 	position: absolute;
+		// 	left: calc(50% - 20px);
+		// 	bottom: 2%;
+		// 	transform: translateX(400%);
+		// }
 
 	}
 	.link{
@@ -760,8 +760,8 @@
 		.arrow{width: 12px;}
 	}
 	&.premium_tyre{
-		.image{margin-top: 40px;}
-		.premium-tyre--badge{margin-top: 15px;color: #fff;}
+		.image{margin-top: 35px;}
+		.premium-tyre--badge{margin-top: 5px;color: #fff;}
 		
 	}
 }
@@ -1041,6 +1041,7 @@ ol.breadcrumb {
 	padding: 30px;
 	background: #f2f2f2;
 	font-family: $heading-font;
+	&.bg-transparent{background: transparent;}
 	h4{margin: 0 0 15px;}
 	.error{
 		font-family: $body-font;
@@ -1269,6 +1270,10 @@ ol.breadcrumb {
 		letter-spacing: 1px;
 		text-shadow: none;
 		word-spacing: -2px;
+		.select2-results__option--group{
+			.select2-results__group{padding: 0;}
+			.select2-results__options--nested{}
+		}
 	}
 }
 
@@ -1513,7 +1518,9 @@ ol.breadcrumb {
 	right: 0;
 	top: 50%;
 	transform: translateY(-50%);
+	line-height: 1.2;
 	z-index: 10;
+	@include touch{ width: 70px; }
 	a{
 		font-family: $heading-font;
 		letter-spacing: 1px;
@@ -1521,9 +1528,11 @@ ol.breadcrumb {
 		padding:15% 10%;
 		color: #fff;
 		text-align: center;
+		@include touch{ font-size: 10px;padding:12% 5%; }
 		&.red{background-color: $red;}
 		&.black{background-color: $dark-100;}
-		.s-icon{ display:block;width: 40px;margin: auto;}
+		.s-icon{ display:block;width: 40px;margin: auto;
+			@include touch{ width: 25px; }}
 	}
 }
 
@@ -1595,26 +1604,26 @@ ol.breadcrumb {
 
 /*Product Image Slider*/
 .tyre--image-slider{
-	&.carbon-n:after{
-		content: "";
-		width: 50px;
-		height: 50px;
-		background-image: url('https://www.omni-united.com/assets/img/carbon-neutral-icon.png');
-		background-size: contain;
-		background-repeat: no-repeat;
-		position: absolute;
-		// left: calc(50% - 20px);
-		right: 9.15%;
-		bottom: 9.15%;
-		// transform: translateX(400%);
-		z-index: 2;
-		@include mobile{
-			width: 40px;
-			height: 40px;
-			right: 6.15%;
-			bottom: 6.15%;
-		}
-	}
+	// &.carbon-n:after{
+	// 	content: "";
+	// 	width: 50px;
+	// 	height: 50px;
+	// 	background-image: url('https://www.omni-united.com/assets/img/carbon-neutral-icon.png');
+	// 	background-size: contain;
+	// 	background-repeat: no-repeat;
+	// 	position: absolute;
+	// 	// left: calc(50% - 20px);
+	// 	right: 9.15%;
+	// 	bottom: 9.15%;
+	// 	// transform: translateX(400%);
+	// 	z-index: 2;
+	// 	@include mobile{
+	// 		width: 40px;
+	// 		height: 40px;
+	// 		right: 6.15%;
+	// 		bottom: 6.15%;
+	// 	}
+	// }
 	.swiper-button-next:after,.swiper-button-prev:after{
 		display: none;
 	}
@@ -1666,6 +1675,7 @@ ol.breadcrumb {
 			opacity: 0.6;
 			margin:0 30px 0 30px!important;
 			background: $white;
+			@include touch{ margin:0 10px 0 10px!important; }
 			&:hover{
 				opacity: 0.8;
 			}
@@ -1676,6 +1686,7 @@ ol.breadcrumb {
 	}
 	
 	p{line-height: 1.35;}
+	// p,.h5{max-width: 650px;}
 	br{
 		@include touch{
 			display: none;

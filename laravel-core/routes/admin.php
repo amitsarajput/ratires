@@ -30,7 +30,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::middleware(['auth', 'verified'])->prefix('admin')->name('admin.')->group(function () {
-    Route::resource('region', RegionController::class);
+    Route::resource('rgn', RegionController::class);
     Route::resource('countri', CountryController::class);
     Route::resource('brand', BrandController::class);
     Route::resource('searchtag', SearchTagController::class);

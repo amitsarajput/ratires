@@ -74,7 +74,7 @@ Route::get('/',[TyreController::class, 'tyre_grid'])->name('home');
 
 
 //Locale routes
-Route::prefix('{country:slug}')->where(['country'=>'[a-zA-Z]{2,4}'])->group(function () {
+Route::geo(function () {
     Route::get('/',[TyreController::class, 'tyre_grid'])->name('home');
     Route::get('/{brand:slug}', [TyreController::class, 'tyre_grid'])->where(['brand'=>'[a-zA-Z\-]{3,}'])->name('tyre.grid');
     Route::get('/{brand:slug}/{tyre:slug}', [TyreController::class, 'tyre_single'])->where(['brand'=>'[a-zA-Z\-]{3,}','tyre'=>'[a-zA-Z0-9\-]{3,}'])->name('tyre.single');

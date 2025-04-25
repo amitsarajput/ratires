@@ -178,11 +178,17 @@ return [
          * Application Service Providers...
          */
         App\Providers\AppServiceProvider::class,
+
+        GeoRouter\GeoRouterServiceProvider::class,
+
         App\Providers\AuthServiceProvider::class,
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
+        
         App\Providers\RouteServiceProvider::class,
         
+        
+
         //Excel 
         //Maatwebsite\Excel\ExcelServiceProvider::class,
 

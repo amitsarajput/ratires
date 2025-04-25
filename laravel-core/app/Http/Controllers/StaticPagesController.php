@@ -19,15 +19,23 @@ class StaticPagesController extends Controller
             $request_path=$request->path();
         }
         return $request_path;
-        
     }
-    public function index(Request $request, $country=null){
+    public function index(Request $request, $region=null, ? string $country=null){
+        //$omnidata=session('omni_data');
+        //dd($omnidata);
+        //dd($region,$country);
         //print_r('StaticPagesController');
         //$request->fullUrl(); $request->path(); $request->root();
 
         $request_path=$this->get_request_path($request, $country);
+
+        if ($region!==null) {
+            $request_path=str_replace($region.'/','',$request_path);
+        }
+        if ($country!==null) {
+            $request_path=str_replace($country.'/','',$request_path);
+        }
         
-        //dd($country,$request_path);
         $this->data=[];
         if ($request_path==='about-us') {
             $this->data['page']=$request_path;
@@ -42,7 +50,7 @@ class StaticPagesController extends Controller
             $this->data['page']='contact';
         }
         if ($request_path === 'warranty') {
-            $this->data['page'] = $country=='apac'?'warranty-radar-apac':'warranty-radar-us';
+            $this->data['page'] = $region=='apac'?'warranty-radar-apac':'warranty-radar-eu';
         }
         if ($request_path === 'premium-collection') {
             $this->data['page'] = $request_path;
@@ -59,6 +67,9 @@ class StaticPagesController extends Controller
         if ($request_path === 'red-partner') {
             $this->data['page'] = $request_path;
         }
+        if ($request_path === 'red') {
+            $this->data['page'] = $request_path;
+        }
         if ($request_path === 'environmental-responsibility') {
             $this->data['page'] = 'responsibility-environmental';
         }
@@ -66,13 +77,12 @@ class StaticPagesController extends Controller
             $this->data['page'] = 'responsibility-social';
         }
         if ($request_path === 'new-european-tyre-labeling') {
-            if ($country=='eu') {
+            if ($region=='eu') {
                 $this->data['page'] = $request_path;
             }else{
                 abort(404);  
             }
         }
-
         if ($request_path === 'real-people-group') {
             $this->data['page'] = $request_path;
         }
@@ -85,7 +95,6 @@ class StaticPagesController extends Controller
         if ($request_path === 'fabrizio-giugiaro') {
             $this->data['page'] = 'real-people--fabrizio-giugiaro';
         }
-
         if (View::exists('pages/'.$this->data['page'])) {
             return view('pages/' . $this->data['page'], ['data'=>$this->data]);
         }else {

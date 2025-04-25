@@ -39,13 +39,18 @@
                             </ul>
                         </div>
                     @endif
-                <div class="row">
+              <div class="row">
+                <div class="form-group col-6">
+                  <label>Region</label>
+                  {{ Form::select('region', $region, '', ['class'=>'form-control','placeholder' => 'Select region...']) }}
+                </div>
+                <div class="form-group col-6">
+                    <label>Country</label>
+                    {{ Form::select('country', $country, '', ['class'=>'form-control','placeholder' => 'Select Country...']) }}
+                </div>
+              </div>
+              <div class="row">
 
-                  <div class="form-group col-3">
-                      <label>Country</label>
-
-                      {{ Form::select('country', $country, '', ['class'=>'form-control','placeholder' => 'Select Country...']) }}
-                  </div>
                   <div class="form-group  col-3">
                       <label>Brand</label>
                       {{ Form::select('brand', $brand, '', ['class'=>'form-control','placeholder' => 'Select Brand...']) }}
@@ -59,7 +64,7 @@
                       {{ Form::select('season', $season, '', ['class'=>'form-control','placeholder' => 'Select Search Tag...']) }}
                   </div>
 
-                </div>
+              </div>
               <div class="row">
                   <div class="form-group col-6">
                     <label for="exampleInputEmail1">Category</label>

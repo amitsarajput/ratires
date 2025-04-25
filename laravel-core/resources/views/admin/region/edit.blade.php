@@ -8,7 +8,7 @@
             <h3 class="card-title">Quick Example</h3>
             <div class="card-tools">
                 <button type="button" class="btn btn-tool" data-card-widget="collapse">
-                  <i class="fas fa-minus"></i>
+                  <i class="fas fa-minus"></i> 
                 </button>
                 <div class="btn-group">
                   <button type="button" class="btn btn-tool dropdown-toggle" data-toggle="dropdown">
@@ -28,7 +28,7 @@
           <!-- /.card-header -->
           
           <!-- form start -->
-          {!! Form::open(['route'=>['admin.region.update', $region->id],'method' => 'put',]) !!}
+          {!! Form::open(['route'=>['admin.rgn.update', $rgn],'method' => 'put']) !!}
             <div class="card-body">
               @if ($errors->any())
                   <div class="alert alert-danger">
@@ -41,23 +41,43 @@
               @endif
               <div class="form-group">
                 <label for="exampleInputEmail1">Name</label>
-                {{ Form::text('name', $region->name, ['class'=>'form-control','placeholder'=>'Enter Name'] ) }}
+                {{ Form::text('name', $rgn->name, ['class'=>'form-control','placeholder'=>'Enter Name'] ) }}
               </div>
               <div class="form-group">
                 <label for="exampleInputPassword1">Code</label>
-                {{ Form::text('code', $region->code, ['class'=>'form-control','placeholder'=>'Enter CODE'] ) }}
+                {{ Form::text('code', $rgn->code, ['class'=>'form-control','placeholder'=>'Enter CODE'] ) }}
+              </div>
+              <div class="form-group">
+                <label for="exampleInputPassword1">Locale Code</label>
+                {{ Form::text('locale_code', $rgn->locale_code, ['class'=>'form-control','placeholder'=>'Enter Locale CODE'] ) }}
               </div>
               <div class="form-group">
                 <label for="exampleInputPassword1">Slug</label>
-                {{ Form::text('slug', $region->slug, ['class'=>'form-control','placeholder'=>'Enter Slug'] ) }}
+                {{ Form::text('slug', $rgn->slug, ['class'=>'form-control','placeholder'=>'Enter Slug'] ) }}
               </div>
+              <div class="form-group">
+                <label for="exampleInputPassword1">Search Tags</label>
+                <div class="select2-purple sortable-option"  data-options="{{$search_tags_all}}" data-selected-options="{{$rgn->search_tags->pluck('id')}}">
+                  {{ Form::select('search_tags[]', $search_tags_all, $rgn->search_tags, ['multiple'=>'true','class'=>'form-control select2', 'data-dropdown-css-class'=>'select2-purple'] ) }}
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="order">Order</label>
+                {{ Form::number('order', $rgn->order, ['id'=>'order','class'=>'form-control','placeholder'=>'Enter Slug'] ) }}
+              </div>
+              
+              <div class="form-group col-3">
+                <label for="published">Publish</label>
+                {{ Form::checkbox('published', 1, $rgn->published, ['id'=>'published']) }}
+              </div>
+
             </div>
             <!-- /.card-body -->
 
             <div class="card-footer">
                 
                 {{ Form::submit('Submit',['class'=>"btn btn-primary"]); }}
-                <a href="{{ route('admin.region.index') }}" class="btn btn-warning">Cancel</a>
+                <a href="{{ route('admin.rgn.index') }}" class="btn btn-warning">Cancel</a>
               
             </div>
             {!! Form::close() !!}

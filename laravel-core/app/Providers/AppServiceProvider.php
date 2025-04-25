@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\Facades\Route;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -15,6 +16,7 @@ class AppServiceProvider extends ServiceProvider
         $this->app->bind('path.public', function() {
             return base_path('../');
         });
+        
     }
 
     /**
@@ -22,5 +24,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
+        //dd(Route::hasMacro('geo'));
+        
     }
 }

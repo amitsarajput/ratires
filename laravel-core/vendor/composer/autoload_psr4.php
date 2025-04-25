@@ -89,6 +89,7 @@ return array(
     'GuzzleHttp\\Promise\\' => array($vendorDir . '/guzzlehttp/promises/src'),
     'GuzzleHttp\\' => array($vendorDir . '/guzzlehttp/guzzle/src'),
     'GrahamCampbell\\ResultType\\' => array($vendorDir . '/graham-campbell/result-type/src'),
+    'GeoRouter\\' => array($baseDir . '/packages/GeoRouter'),
     'GeoIp2\\' => array($vendorDir . '/geoip2/geoip2/src'),
     'Fruitcake\\Cors\\' => array($vendorDir . '/fruitcake/php-cors/src'),
     'Faker\\' => array($vendorDir . '/fakerphp/faker/src/Faker'),

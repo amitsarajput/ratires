@@ -30,7 +30,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-Route::prefix('{country:slug}')->where(['country'=>'[a-zA-Z]{2,4}'])->name('pages.')->group(function(){
+Route::geo(function(){
 	Route::get('/about-us', [StaticPagesController::class,'index'])->name('about-us');
 	Route::get('/why-radar', [StaticPagesController::class,'index'])->name('why-radar');
 	Route::get('/dealer-locator', [StaticPagesController::class,'index'])->name('dealer-locator');
@@ -50,7 +50,7 @@ Route::prefix('{country:slug}')->where(['country'=>'[a-zA-Z]{2,4}'])->name('page
 	Route::get('/stephane-clepkens', [StaticPagesController::class,'index'])->name('stephane-clepkens');
 	Route::get('/fabrizio-giugiaro', [StaticPagesController::class,'index'])->name('fabrizio-giugiaro');
 	
-});
+},'pages.');
 
 //Routes without country.
 Route::name('pages.')->group(function(){

@@ -28,7 +28,7 @@
           <!-- /.card-header -->
           
           <!-- form start -->
-          {!! Form::open(['route'=>'admin.region.store']) !!}
+          {!! Form::open(['route'=>'admin.rgn.store']) !!}
             <div class="card-body">
               @if ($errors->any())
                   <div class="alert alert-danger">
@@ -51,13 +51,33 @@
                 <label for="exampleInputPassword1">Slug</label>
                 {{ Form::text('slug', '', ['class'=>'form-control','placeholder'=>'Enter Slug'] ) }}
               </div>
+              <div class="form-group">
+                <label for="exampleInputPassword1">Locale Code</label>
+                {{ Form::text('locale_code', '', ['class'=>'form-control','placeholder'=>'Enter Locale CODE'] ) }}
+              </div>
+              
+              <div class="form-group">
+                <label for="exampleInputPassword1">Search Tags</label>
+                <div class="select2-purple sortable-option"  data-options="{{$search_tags_all}}" data-selected-options="">
+                  {{ Form::select('search_tags[]', $search_tags_all, null, ['multiple'=>'true','class'=>'form-control select2', 'data-dropdown-css-class'=>'select2-purple'] ) }}
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="order">Order</label>
+                {{ Form::number('order', 0, ['id'=>'order','class'=>'form-control','placeholder'=>'Enter Slug'] ) }}
+              </div>
+              
+              <div class="form-group col-3">
+                <label for="published">Publish</label>
+                {{ Form::checkbox('published', 1, '', ['id'=>'published']) }}
+              </div>
             </div>
             <!-- /.card-body -->
 
             <div class="card-footer">
                 
                 {{ Form::submit('Submit',['class'=>"btn btn-primary"]); }}
-                <a href="{{ route('admin.region.index') }}" class="btn btn-warning">Cancel</a>
+                <a href="{{ route('admin.rgn.index') }}" class="btn btn-warning">Cancel</a>
               
             </div>
             {!! Form::close() !!}

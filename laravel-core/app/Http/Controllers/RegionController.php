@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Region;
+use App\Models\SearchTag;
 use Illuminate\Http\Request;
 
 class RegionController extends Controller
@@ -17,8 +18,8 @@ class RegionController extends Controller
 
     public function index()
     {
-        $region=Region::all();
-        return view('admin.region.index' ,compact('region'));
+        $rgn=Region::all();
+        return view('admin.region.index' ,compact('rgn'));
     }
 
     /**
@@ -26,7 +27,8 @@ class RegionController extends Controller
      */
     public function create()
     {
-        return view('admin.region.create');
+        $search_tags_all=SearchTag::all()->pluck('name','id');
+        return view('admin.region.create', compact('search_tags_all'));
     }
 
     /**
@@ -37,14 +39,30 @@ class RegionController extends Controller
         $request->validate([
             'name' => ['required', 'string', 'max:255'],
             'code' => ['required', 'string', 'max:255'],
-            'slug' => ['required', 'string', 'max:255', 'unique:'.Region::class]
+            'locale_code' => ['required', 'string', 'max:255'],
+            'slug' => ['required', 'string', 'max:255','unique:'.Region::class],
+            'search_tags' => ['required','array'],
+            'search_tags.*' => ['string', 'max:255'],
+            'order' => ['required'],
         ]);
-
-        $region = Region::create([
+        $updataarray=[
             'name' => $request->name,
-            'code' => strtoupper($request->code),
+            'code' => strtolower($request->code),
+            'locale_code' => strtolower($request->locale_code),
             'slug' => strtolower($request->slug),
-        ]);
+            'published'=>0,
+            'order' => $request->order,
+        ];
+        if ($request->published) { $updataarray['published']=1;}
+
+        $region = Region::create($updataarray);
+
+        $b_search_tags=[];
+        foreach ($request->search_tags as $key => $value) {
+            $b_search_tags[$value]=['kram'=>$key];
+        }
+        $region->search_tags()->sync($b_search_tags);
+
         return redirect()->back();
     }
 
@@ -59,42 +77,57 @@ class RegionController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Region $region)
+    public function edit(Region $rgn) 
     {
         //
         //$region=Region::all()->toArray();
-        return view('admin.region.edit' ,compact('region'));
+        $search_tags_all=SearchTag::all()->pluck('name','id');
+        return view('admin.region.edit' ,compact('rgn','search_tags_all'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Region $region)
+    public function update(Request $request, Region $rgn)
     {
         //
         
         $request->validate([
             'name' => ['required', 'string', 'max:255'],
             'code' => ['required', 'string', 'max:255'],
-            'slug' => ['required', 'string', 'max:255']
+            'locale_code' => ['required', 'string', 'max:255'],
+            'slug' => ['required', 'string', 'max:255'],
+            'search_tags' => ['required','array'],
+            'search_tags.*' => ['string', 'max:255'],
+            'order' => ['required'],
         ]);
-
-        $region ->update([
+        $updataarray=[
             'name' => $request->name,
-            'code' => strtoupper($request->code),
+            'code' => strtolower($request->code),
+            'locale_code' => strtolower($request->locale_code),
             'slug' => strtolower($request->slug),
-        ]);
+            'published'=>0,
+            'order' => $request->order,
+        ];
+        if ($request->published) { $updataarray['published']=1;}
+        $rgn ->update($updataarray);
+
+        $b_search_tags=[];
+        foreach ($request->search_tags as $key => $value) {
+            $b_search_tags[$value]=['kram'=>$key];
+        }
+        $rgn->search_tags()->sync($b_search_tags);
         return redirect()->back();
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Region $region)
+    public function destroy(Region $rgn)
     {
-        if($region->id){
-            $region->delete();
-            return redirect()->route('admin.region.index')->with('status','Region deleted');
+        if($rgn->id){
+            $rgn->delete();
+            return redirect()->route('admin.rgn.index')->with('status','Region deleted');
         }
     }
 }

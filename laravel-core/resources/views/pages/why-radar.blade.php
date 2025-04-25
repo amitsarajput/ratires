@@ -30,12 +30,7 @@
                     <h4 class="dark-100 uppercase">Radar Protect Program </h4>
                     <p>We ensure peace of mind with the Radar Protect Program​, which is available through participating Radar RED(Radar Elite Dealers) Partners. This may include a 30-day satisfaction promise and a limited road hazard warranty in select countries only. Terms and conditions apply. </p>
                 </div>
-
                 
-                <div class="col-md-6">
-                    <h4 class="dark-100 uppercase">Commitment to Sustainability</h4>
-                    <p>We are proud to be a pioneer in sustainability, being the first tire brand to manufacture carbon-neutral tires. By choosing Radar Tires, you are not only investing in quality product but also in a brand that is committed to reducing its environmental impact through sustainable practices.</p>
-                </div>
                 <div class="col-md-6">
                     <h4 class="dark-100 uppercase">Social Responsibility</h4>
                     <p>Giving back has always been in our DNA. Since 2011, we have supported the Breast Cancer Research Foundation (BCRF), raising awareness and funding critical life-saving research. When you choose Radar Tires, you help contribute to this important cause.</p>

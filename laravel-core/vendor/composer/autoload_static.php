@@ -43,6 +43,7 @@ class ComposerStaticInit06135a36131bf073f39b3aa122d07a4c
         'ec07570ca5a812141189b1fa81503674' => __DIR__ . '/..' . '/phpunit/phpunit/src/Framework/Assert/Functions.php',
         'eed9c7469f94573c0d97cc45de79b754' => __DIR__ . '/..' . '/spatie/laravel-html/src/helpers.php',
         '320163ac6b93aebe3dc25b60a0533d56' => __DIR__ . '/..' . '/spatie/laravel-ignition/src/helpers.php',
+        'b4e3f29b106af37a2bb239f73cdf68c7' => __DIR__ . '/../..' . '/app/helpers.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -164,6 +165,7 @@ class ComposerStaticInit06135a36131bf073f39b3aa122d07a4c
             'GuzzleHttp\\Promise\\' => 19,
             'GuzzleHttp\\' => 11,
             'GrahamCampbell\\ResultType\\' => 26,
+            'GeoRouter\\' => 10,
             'GeoIp2\\' => 7,
         ),
         'F' => 
@@ -543,6 +545,10 @@ class ComposerStaticInit06135a36131bf073f39b3aa122d07a4c
         array (
             0 => __DIR__ . '/..' . '/graham-campbell/result-type/src',
         ),
+        'GeoRouter\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/packages/GeoRouter',
+        ),
         'GeoIp2\\' => 
         array (
             0 => __DIR__ . '/..' . '/geoip2/geoip2/src',
@@ -659,17 +665,21 @@ class ComposerStaticInit06135a36131bf073f39b3aa122d07a4c
         'App\\Http\\Controllers\\MotorsportController' => __DIR__ . '/../..' . '/app/Http/Controllers/MotorsportController.php',
         'App\\Http\\Controllers\\ProfileController' => __DIR__ . '/../..' . '/app/Http/Controllers/ProfileController.php',
         'App\\Http\\Controllers\\RegionController' => __DIR__ . '/../..' . '/app/Http/Controllers/RegionController.php',
+        'App\\Http\\Controllers\\SearchController' => __DIR__ . '/../..' . '/app/Http/Controllers/SearchController.php',
         'App\\Http\\Controllers\\SearchTagController' => __DIR__ . '/../..' . '/app/Http/Controllers/SearchTagController.php',
         'App\\Http\\Controllers\\SeasonController' => __DIR__ . '/../..' . '/app/Http/Controllers/SeasonController.php',
         'App\\Http\\Controllers\\StaticPagesController' => __DIR__ . '/../..' . '/app/Http/Controllers/StaticPagesController.php',
         'App\\Http\\Controllers\\TyreCategoryController' => __DIR__ . '/../..' . '/app/Http/Controllers/TyreCategoryController.php',
         'App\\Http\\Controllers\\TyreController' => __DIR__ . '/../..' . '/app/Http/Controllers/TyreController.php',
+        'App\\Http\\Controllers\\XlsxController' => __DIR__ . '/../..' . '/app/Http/Controllers/XlsxController.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
         'App\\Http\\Middleware\\Authenticate' => __DIR__ . '/../..' . '/app/Http/Middleware/Authenticate.php',
         'App\\Http\\Middleware\\EncryptCookies' => __DIR__ . '/../..' . '/app/Http/Middleware/EncryptCookies.php',
         'App\\Http\\Middleware\\Localization' => __DIR__ . '/../..' . '/app/Http/Middleware/Localization.php',
+        'App\\Http\\Middleware\\NormalizeDoubleSlashes' => __DIR__ . '/../..' . '/app/Http/Middleware/NormalizeDoubleSlashes.php',
         'App\\Http\\Middleware\\PreventRequestsDuringMaintenance' => __DIR__ . '/../..' . '/app/Http/Middleware/PreventRequestsDuringMaintenance.php',
         'App\\Http\\Middleware\\RedirectIfAuthenticated' => __DIR__ . '/../..' . '/app/Http/Middleware/RedirectIfAuthenticated.php',
+        'App\\Http\\Middleware\\SetDefaultLocaleForUrls' => __DIR__ . '/../..' . '/app/Http/Middleware/SetDefaultLocaleForUrls.php',
         'App\\Http\\Middleware\\SetSessionData' => __DIR__ . '/../..' . '/app/Http/Middleware/SetSessionData.php',
         'App\\Http\\Middleware\\TrimStrings' => __DIR__ . '/../..' . '/app/Http/Middleware/TrimStrings.php',
         'App\\Http\\Middleware\\TrustHosts' => __DIR__ . '/../..' . '/app/Http/Middleware/TrustHosts.php',
@@ -696,12 +706,14 @@ class ComposerStaticInit06135a36131bf073f39b3aa122d07a4c
         'App\\Providers\\BroadcastServiceProvider' => __DIR__ . '/../..' . '/app/Providers/BroadcastServiceProvider.php',
         'App\\Providers\\CookiesServiceProvider' => __DIR__ . '/../..' . '/app/Providers/CookiesServiceProvider.php',
         'App\\Providers\\EventServiceProvider' => __DIR__ . '/../..' . '/app/Providers/EventServiceProvider.php',
+        'App\\Providers\\RecaptchaServiceProvider' => __DIR__ . '/../..' . '/app/Providers/RecaptchaServiceProvider.php',
         'App\\Providers\\RouteServiceProvider' => __DIR__ . '/../..' . '/app/Providers/RouteServiceProvider.php',
         'App\\View\\Components\\Admin\\Form\\Input' => __DIR__ . '/../..' . '/app/View/Components/Admin/Form/Input.php',
         'App\\View\\Components\\AppLayout' => __DIR__ . '/../..' . '/app/View/Components/AppLayout.php',
         'App\\View\\Components\\ContactAddress' => __DIR__ . '/../..' . '/app/View/Components/ContactAddress.php',
         'App\\View\\Components\\ContactusForm' => __DIR__ . '/../..' . '/app/View/Components/ContactusForm.php',
         'App\\View\\Components\\DealerLocatorForm' => __DIR__ . '/../..' . '/app/View/Components/DealerLocatorForm.php',
+        'App\\View\\Components\\DealerLocatorWidget' => __DIR__ . '/../..' . '/app/View/Components/DealerLocatorWidget.php',
         'App\\View\\Components\\GuestLayout' => __DIR__ . '/../..' . '/app/View/Components/GuestLayout.php',
         'App\\View\\Components\\ImageBox' => __DIR__ . '/../..' . '/app/View/Components/ImageBox.php',
         'App\\View\\Components\\SeasonNavs' => __DIR__ . '/../..' . '/app/View/Components/SeasonNavs.php',
@@ -1691,6 +1703,9 @@ class ComposerStaticInit06135a36131bf073f39b3aa122d07a4c
         'GeoIp2\\Record\\Traits' => __DIR__ . '/..' . '/geoip2/geoip2/src/Record/Traits.php',
         'GeoIp2\\Util' => __DIR__ . '/..' . '/geoip2/geoip2/src/Util.php',
         'GeoIp2\\WebService\\Client' => __DIR__ . '/..' . '/geoip2/geoip2/src/WebService/Client.php',
+        'GeoRouter\\GeoRouterServiceProvider' => __DIR__ . '/../..' . '/packages/GeoRouter/GeoRouterServiceProvider.php',
+        'GeoRouter\\Middleware\\SetGeoContext' => __DIR__ . '/../..' . '/packages/GeoRouter/Middleware/SetGeoContext.php',
+        'GeoRouter\\Support\\GeoHelper' => __DIR__ . '/../..' . '/packages/GeoRouter/Support/GeoHelper.php',
         'GrahamCampbell\\ResultType\\Error' => __DIR__ . '/..' . '/graham-campbell/result-type/src/Error.php',
         'GrahamCampbell\\ResultType\\Result' => __DIR__ . '/..' . '/graham-campbell/result-type/src/Result.php',
         'GrahamCampbell\\ResultType\\Success' => __DIR__ . '/..' . '/graham-campbell/result-type/src/Success.php',

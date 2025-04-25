@@ -34,7 +34,7 @@
             <div class="grid">
                 <div class="col-md-12">
                     <p>Radar Tires, the flagship brand of Omni United, is committed to providing premium, high-quality tires that are accessible to everyone. Our mission is to bridge the gap between superior performance and affordability. We offer a diverse range of tires designed and engineered for all seasons and different driving needs, serving passenger cars, SUVs, 4x4s, vans and commercial vehicles, including trucks and buses.</p>
-                    <p>As a part of the Omni United group, we have deep rooted values of social responsibility. Since 2011, Radar Tires has been an active supporter of the Breast Cancer Research Foundation, and sustainability is central to our values. Our tires have been manufactured carbon-neutral since 2013, reflecting our dedication to combating climate change and inspiring positive change.</p>
+                    <p>As a part of the Omni United group, we have deep rooted values of social responsibility. Since 2011, Radar Tyres has been an active supporter of the Breast Cancer Research Foundation, and sustainability is central to our values.</p>
                 </div>  
             </div>
         </div>

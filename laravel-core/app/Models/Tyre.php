@@ -4,6 +4,7 @@ namespace App\Models;
 
 use App\Models\Brand;
 use App\Models\Country;
+use App\Models\Region;
 use App\Models\Icon;
 use App\Models\SearchTag;
 use App\Models\Season;
@@ -20,6 +21,7 @@ class Tyre extends Model
     use SoftDeletes;
 
     protected $fillable=[
+        'region_id',
         'country_id',
         'brand_id',
         'search_tag_id',
@@ -43,6 +45,11 @@ class Tyre extends Model
     public function brand(): BelongsTo
     {
         return $this->belongsTo(Brand::class);
+    }
+
+    public function region(): BelongsTo
+    {
+        return $this->belongsTo(Region::class);
     }
 
     public function country(): BelongsTo

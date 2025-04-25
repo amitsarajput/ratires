@@ -62,20 +62,7 @@
                 </div>
             </div>
         </div>
-        <!-- Implement This Text From Brand Database -->
-        <!-- <div class="section bg-gray">
-			<div class="container">
-				<div class="grid">
-					<div class="col-12">
-                        @if($branddetailstext)
-                            @foreach( $branddetailstext as $text)
-                            <p>{{ __($text) }}</p>
-                            @endforeach
-                        @endif
-                    </div>
-				</div>
-			</div>
-        </div> -->
+        
         <!-- Tyres widget -->
         <div class="section bg-white no-padding" id="tires">
             <div class="container "><h2 class="center uppercase black mb-2">TIRES</h2></div>
@@ -147,7 +134,7 @@
                 <div class="grid">
                     <div class="col-12">
                         <div class="center">
-                            <h2 class="uppercase center dark-100 mb-2">OUR COMMITMENT TO THE ENVIRONMENT AND COMMUNITY</h2>
+                            <h2 class="uppercase center dark-100 mb-2">OUR COMMITMENT TO THE COMMUNITY</h2>
                         </div>
                     </div>
                 </div>

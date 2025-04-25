@@ -41,21 +41,26 @@
                         </div>
                     @endif
                 <div class="row">
+                  <div class="form-group col-4">
+                      <label>Region</label>
+                      {{ Form::select('region', $region, $tyre->region_id, ['class'=>'form-control','placeholder' => 'Select region...']) }}
+                  </div>
 
-                  <div class="form-group col-3">
+                  <div class="form-group col-4">
                       <label>Country</label>
-
                       {{ Form::select('country', $country, $tyre->country_id, ['class'=>'form-control','placeholder' => 'Select Country...']) }}
                   </div>
-                  <div class="form-group  col-3">
+                  <div class="form-group  col-4">
                       <label>Brand</label>
                       {{ Form::select('brand', $brand, $tyre->brand_id, ['class'=>'form-control','placeholder' => 'Select Brand...']) }}
                   </div>
-                  <div class="form-group col-3">
+                </div>
+                <div class="row">
+                  <div class="form-group col-6">
                       <label>Search tag</label>
                       {{ Form::select('searchtag', $searchtag, $tyre->search_tag_id, ['class'=>'form-control','placeholder' => 'Select Search Tag...']) }}
                   </div>
-                  <div class="form-group col-3">
+                  <div class="form-group col-6">
                       <label>Season</label>
                       {{ Form::select('season', $season, $tyre->season_id, ['class'=>'form-control','placeholder' => 'Select Season...']) }}
                   </div>

@@ -25,6 +25,8 @@ class Kernel extends HttpKernel
         \App\Http\Middleware\SetSessionData::class,
         \App\Http\Middleware\SetDefaultLocaleForUrls::class,
         \App\Http\Middleware\Localization::class, // <--- Lacalize
+        \App\Http\Middleware\NormalizeDoubleSlashes::class,
+        
         
     ];
 
@@ -70,5 +72,6 @@ class Kernel extends HttpKernel
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
         'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
         'omnisessiondata' => \App\Http\Middleware\SetSessionData::class,
+        //'geo.context' => \GeoRouter\Middleware\SetGeoContext::class,
     ];
 }

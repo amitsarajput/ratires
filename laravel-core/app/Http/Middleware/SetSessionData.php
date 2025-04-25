@@ -2,6 +2,7 @@
 
 namespace App\Http\Middleware;
 
+use App\Models\Region;
 use App\Models\Country;
 use Closure;
 use Illuminate\Http\Request;
@@ -9,53 +10,84 @@ use Symfony\Component\HttpFoundation\Response;
 
 class SetSessionData
 {
-    /**
-     * Handle an incoming request.
-     *
-     * @param  \Closure(\Illuminate\Http\Request): (\Symfony\Component\HttpFoundation\Response)  $next
-     */
     public function handle(Request $request, Closure $next): Response
     {
-        //session()->invalidate();
         //session()->forget(['omni_data','locale']);
-        if(!session()->has('omni_data') || 
-        empty(session('omni_data')) || 
-        empty(session('omni_data.available_locations')) || 
-        empty(session('omni_data.available_locales')) ){ 
-            //
-            //This function is runing on every request session is getting away after every request life cycle. Need to fix it.--fixed by putting start session midleware before the setsessiondata middleware in kernel.php file.
-            //print_r('here');
-            $omnidata=[
-                'available_locations'=>[],
-                'available_locales'=>[],
-                'preffered_location'=>'',
-                'user_location'=>'',
-                'default_location'=>'',//US
-                'default_locale'=>'',//en_US
-                'region'=>'us',
-                'country'=>'us',
-                'brand'=>'radar',
-                'bubble_closed'=>0,
-                'dealerform_open'=>0,
-            ];
-            $all_countries=Country::where('published',1)->orderBy('order', 'asc')->get();
-            $omnidata['available_locations']=$all_countries->pluck('code','name')->toArray();
-            $omnidata['available_locales']=$all_countries->pluck('locale_code','code')->toArray();
-            $omnidata['slugs']=$all_countries->pluck('slug','code')->toArray();
-
-            //set default location and locale
-            $default_country=$all_countries->firstWhere('c_default', 1)->toArray();
-            //dd($default_country);
-            $omnidata['default_location']=$default_country['code'];
-            $omnidata['default_locale']=$default_country['locale_code'];
-            //dd($omnidata);            
-            //End set default location and locale
-
-            session(['omni_data' => $omnidata]);//Set Session
-            session(['locale' => $omnidata['default_locale']]);//Set default locale
-            
+        //session()->invalidate();
+        if ($this->shouldSetOmniData()) {
+            $this->setOmniData();
         }
-        //dd(session('omni_data'));
+
         return $next($request);
+    }
+
+    private function shouldSetOmniData(): bool
+    {
+        $data = session('omni_data');
+
+        return !session()->has('omni_data') ||
+               empty($data) ||
+               empty($data['available_locations'] ?? null) ||
+               empty($data['available_locales'] ?? null);
+    }
+
+    private function setOmniData(): void
+    {
+        $defaultRegion = 'us';
+        $defaultLocale = 'en';
+        $defaultBrand = 'radar';
+
+        try {
+            //$allCountries = Country::where('published', 1)->orderBy('order', 'asc')->get();
+            $allContinents = Region::with(['countries' => function ($query) {
+                $query->where('published', 1);
+            }])->orderBy('order', 'asc')->get();
+        } catch (\Exception $e) {
+            abort(500, 'Error on the server. Please check after refreshing the page.');
+        }
+
+        $omniData = [
+            'all_continents' => $allContinents->toArray(),
+            'available_locations' => $this->extractMap($allContinents, 'name', 'code'),
+            'available_locales' => $this->extractMap($allContinents, 'code', 'locale_code'),
+            'slugs' => $this->extractMap($allContinents, 'code', 'slug'),
+            'default_location' => $defaultRegion,
+            'default_locale' => $defaultLocale,
+            'preffered_location' => '',
+            'user_location' => '',
+            'region' => $defaultRegion,
+            'country' => null,
+            'brand' => $defaultBrand,
+            'bubble_closed' => 0,
+            'dealerform_open' => 0,
+        ];
+
+        session([
+            'omni_data' => $omniData,
+            'locale' => $defaultLocale
+        ]);
+        //dd(session('omni_data'));
+    }
+
+    /**
+     * Extracts key-value maps from regions and their countries.
+     */
+    private function extractMap($regions, string $keyField, string $valueField): array
+    {
+        return $regions->flatMap(function ($region) use ($keyField, $valueField) {
+            $map = [];
+
+            if (isset($region[$keyField], $region[$valueField])) {
+                $map[$region[$keyField]] = $region[$valueField];
+            }
+
+            foreach ($region['countries'] as $country) {
+                if (isset($country[$keyField], $country[$valueField])) {
+                    $map[$country[$keyField]] = $country[$valueField];
+                }
+            }
+
+            return $map;
+        })->toArray();
     }
 }

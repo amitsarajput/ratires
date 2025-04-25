@@ -71,7 +71,7 @@
                   @foreach ($countri as $row)
                     <tr>
                       <td>{{ ucfirst($row->name) }}</td>
-                      <td>{{ $row->region->name }}</td>
+                      <td></td>
                       <td>{{ $row->code }}</td>
                       <td>{{ $row->locale_code }}</td>
                       <td>{{ $row->slug }}</td>
