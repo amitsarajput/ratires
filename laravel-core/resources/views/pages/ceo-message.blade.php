@@ -33,7 +33,7 @@
 
                     Warm regards,<br><br>
 
-                    <img src="{{ asset('images/sig.webp') }}" alt="" width="300"><br><br>
+                    <img src="{{ asset('images/sig.webp') }}" alt="" width="180"><br><br>
 
                     <b>G S Sareen</b><br>
                     President & CEO<br>
