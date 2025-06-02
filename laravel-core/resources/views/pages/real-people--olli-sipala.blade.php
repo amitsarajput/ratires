@@ -1,4 +1,12 @@
 <x-guest-layout>
+    @push('styles') 
+        <style>@media screen and (max-width:767px){
+            #page-title{
+                    height: 200px!important;
+            } 
+            #page-title h2{ font-size: 20px;line-height: 1.2;}
+        }</style>
+    @endpush
     
     <!-- Page Title
     ============================================= -->

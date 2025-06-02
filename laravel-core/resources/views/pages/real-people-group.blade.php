@@ -2,7 +2,13 @@
     @push('styles') 
     <!-- Link Swiper's CSS -->
     <link rel="stylesheet" href="{{asset('css/swiper/swiper-bundle.css')}}" />
-    <link rel="stylesheet" href="{{asset('css/jquery-ui.css')}}">
+    <link rel="stylesheet" href="{{asset('css/jquery-ui.css')}}">    
+        <style>@media screen and (max-width:767px){
+            #page-title{
+                    height: 200px!important;
+            } 
+            #page-title h2{ font-size: 20px;line-height: 1.2;}
+        }</style>
     @endpush
     <!-- Implement Slider From Brand Database -->
     <!-- Page Title

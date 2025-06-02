@@ -9,7 +9,7 @@
 	height: $page-title-height;
 	margin-bottom: $section-spacing;
 	color: #fff;
-	@include mobile{
+	@include touch{
 		height: $page-title-height--sm!important;
 	}
 	.container .grid, {

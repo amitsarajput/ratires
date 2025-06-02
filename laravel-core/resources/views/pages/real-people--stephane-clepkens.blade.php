@@ -1,4 +1,12 @@
 <x-guest-layout>
+    @push('styles') 
+        <style>@media screen and (max-width:767px){
+            #page-title{
+                    height: 200px!important;
+            } 
+            #page-title h2{ font-size: 20px;line-height: 1.2;}
+        }</style>
+    @endpush
     <!-- Page Title
     ============================================= -->
     <x-page-title image-url="{{ asset('images/banner--group-page.webp') }}" container="true" page-title="REAL PEOPLE, REAL PERFORMANCE<br>– THE EXPERTS BEHIND RADAR TYRES" class="page-title--bottom el-height-70 uppercase pb-3" />
