@@ -50,7 +50,7 @@ class StaticPagesController extends Controller
             $this->data['page']='contact';
         }
         if ($request_path === 'warranty') {
-            $this->data['page'] = $region=='apac'?'warranty-radar-apac':'warranty-radar-eu';
+            $this->data['page'] = $region=='us'?'warranty-radar-us':'warranty-radar-ca';
         }
         if ($request_path === 'premium-collection') {
             $this->data['page'] = $request_path;

@@ -56,7 +56,7 @@
                 <div class="col-md-6 col-sm-12">
                     <div class="ma-xxs-2 ma-xs-2 ma-sm-2 ma-md-2 mx-lg-7">
                         <h5>{{ __("REAL PEOPLE. REAL PERFORMANCE.") }}</h5>
-                        <h2 class="dark-100  no-top-margin">{{ __("MEET THE EXPERTS DRIVING RADAR TYRES TO THE NEXT LEVEL") }}</h2>
+                        <h2 class="dark-100  no-top-margin">{{ __("MEET THE EXPERTS DRIVING RADAR TIRES TO THE NEXT LEVEL") }}</h2>
                         <a  class="knopf red heading-font sharp ls-1" href="{{ route('pages.real-people') }}">{{__('READ MORE')}}</a>
                     </div>
                 </div>
@@ -171,6 +171,8 @@
     <!-- Swiper JS -->
     <script src="{{asset('js/swiper/swiper-bundle.js')}}"></script>
     <script src="{{asset('js/jquery-ui.js')}}"></script>
+    <script async src="https://js.testfreaks.com/onpage/omni-united.com-radar/head.js"></script>
+    <script async src="{{asset('js/testfreaks.js')}}"></script>
     
     <script type="text/javascript">
         $( function() {

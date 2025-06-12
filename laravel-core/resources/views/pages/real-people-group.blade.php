@@ -13,7 +13,7 @@
     <!-- Implement Slider From Brand Database -->
     <!-- Page Title
     ============================================= -->
-    <x-page-title image-url="{{ asset('images/banner--group-page.webp') }}" container="true" page-title="REAL PEOPLE, REAL PERFORMANCE<br>– THE EXPERTS BEHIND RADAR TYRES" class="page-title--bottom el-height-70 uppercase pb-3" />
+    <x-page-title image-url="{{ asset('images/banner--group-page.webp') }}" container="true" page-title="REAL PEOPLE, REAL PERFORMANCE<br>– THE EXPERTS BEHIND RADAR TIRES" class="page-title--bottom el-height-70 uppercase pb-3" />
     
     <!-- Content -->
     <section id="content" class="pb-4">

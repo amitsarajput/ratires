@@ -105,12 +105,8 @@
     @push('scripts') 
     <!-- Swiper JS -->
     <script src="{{url('js/swiper/swiper-bundle.js')}}"></script>
-    @if(session('omni_data.country')=='apac')
-    <script async src="https://js.testfreaks.com/onpage/radartyres-apac/head.js"></script>
-    @elseif(session('omni_data.country')=='eu')
-    <script async src="https://js.testfreaks.com/onpage/radartyres-eu/head.js"></script>
-    @endif
-    <script src="{{asset('js/testfreaks.js')}}"></script>
+    <script async src="https://js.testfreaks.com/onpage/omni-united.com-radar/head.js"></script>
+    <script async src="{{asset('js/testfreaks.js')}}"></script>
     <script>
     testFreaks = window.testFreaks || [];
     testFreaks.push(["setProductId", "{{$tyre->slug }}" ]);

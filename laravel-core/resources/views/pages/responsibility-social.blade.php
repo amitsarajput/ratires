@@ -59,7 +59,7 @@
         </div>   
 
             
-        <div class="container mt-5">
+        <!-- <div class="container mt-5">
             <div class="grid align-center">
                 <div class="col-md-6 col-sm-12 col-bleed">
                     <img src="{{asset('images/BCRF_Donating-Banner-2024.webp')}}" alt="Social Responsibility">
@@ -72,11 +72,11 @@
                     </div>
                 </div>
             </div>
-        </div> 
+        </div>
           
         <div class="container">
             <hr class="mt-5 mb-5">
-        </div> 
+        </div>   -->
 
         <div class="container">
             <div class="grid">

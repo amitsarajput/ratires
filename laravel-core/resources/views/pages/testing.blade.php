@@ -17,9 +17,9 @@
             </div>
             <div class="grid">
                 <div class="col-md-12"><p>Click below to download the recent test results. </p>
-                <span class="t700">2024</span> <a  class="knopf red heading-font sharp ls-1 mb-1" href="{{ asset('storage/colletrals/testing_catalog/Product Testing Catalog_24.pdf') }}" download>Download</a>
+                <span class="t700">2024</span> <a target="_blank"  class="knopf red heading-font sharp ls-1 mb-1" href="#" download >Download</a>
                 <br>
-                <span class="t700">2023</span> <a  class="knopf red heading-font sharp ls-1" href="{{ asset('storage/colletrals/testing_catalog/Product Testing Catalog_23.pdf') }}" download>Download</a>
+                <span class="t700">2023</span> <a target="_blank"  class="knopf red heading-font sharp ls-1" href="#" download>Download</a>
                 </div>
             </div>
 
