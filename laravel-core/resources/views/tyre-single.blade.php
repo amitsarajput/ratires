@@ -41,7 +41,8 @@
                     <h5 class="black">{{ __(implode(" | ", json_decode($tyre->tyre_categories->pluck('name')))) }}</h5>
                     <div id="testfreaks-badge"></div>
                     <div class="tyre--description">
-                        <p>{!! __(htmlspecialchars_decode($tyre->description)) !!}</p>
+                        {!! __(preg_replace_array('/:url[a-z_-]+/', [route('pages.warranty')], htmlspecialchars_decode($tyre->description))) !!}
+                        <!-- <p>{!! __(htmlspecialchars_decode($tyre->description)) !!}</p> -->
                     </div>
                     @php
                         $tyre_icons=$tyre->icons;
