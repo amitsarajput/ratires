@@ -86,10 +86,10 @@ if (get_dealerform_status()==1) {
 //console.log(st);
 
 function initMap() {
-    var locations={eu:{lat:53.2443649,lng:-2.4459033},apac:{lat:53.2443649,lng:-2.4459033}};
+    var locations={eu:{lat:53.2443649,lng:-2.4459033},apac:{lat:53.2443649,lng:-2.4459033},us:{lat:19.7872722,lng:-92.0931484}};
     var myOptions = {
-        zoom: 6,
-        center: new google.maps.LatLng(locations['eu']),//"53.2443649","-2.4459033"
+        zoom: 3,
+        center: new google.maps.LatLng(locations['us']),//"53.2443649","-2.4459033"
         mapTypeId: google.maps.MapTypeId.ROADMAP
     }
     map = new google.maps.Map(document.getElementById("map"), myOptions);
@@ -188,7 +188,7 @@ function downloadUrl(stores) {
             var distance = store.distance;
                 distance=getdistancestring(distance);
             var phone = store.phone;
-            var tel = phone.replace(/\D/g, '');
+            var tel = phone!=null?phone.replace(/\D/g, ''):null;
             var name = store.name;
             var html = "<h4 class='color ls-0 ' >"+name+"</h4>";
                 html +="<div class='info-row-withicon phone'><i class='omniicon-phone'></i> <a href='tel:"+tel+"'>"+phone+"</a></div>";
@@ -303,7 +303,7 @@ function makeSidebar(markers=null) {
                 address=address.replace(/,,/g, ",");
             var direction = 'https://www.google.com/maps/dir/Current+Location/'+  address;
             var featuredclass=markers[i].myfeatured!=0?'featured':'';
-            var redpartner=markers[i].myfeatured!=0?"<a class='redpartner-unit' href='"+redpartneruri+"'>Red partner</a>":"";
+            var redpartner=markers[i].myfeatured!=0?"<a class='redpartner-unit' href='"+redpartneruri+"'>Radar Elite Dealer</a>":"";
             html += "<div class='main-add "+featuredclass+"'>";
             html +="<div class='main-add--row'><div class='distance'>"+distance+"</div> "+redpartner+"</div>";
             html += "<h5 class='color' >"+markers[i].myname+"</h5>";

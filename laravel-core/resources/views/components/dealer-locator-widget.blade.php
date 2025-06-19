@@ -41,7 +41,8 @@
     
     <script type="text/javascript">
         
-        var redpartneruri = "{!! route('pages.red-partner') !!}";
+        //var redpartneruri = "{!! route('pages.red-partner') !!}";
+        var redpartneruri = "javascript:void(0)";
         var stores={!! $stores !!};
             //stores=JSON.parse(stores);
             //console.log(stores);
