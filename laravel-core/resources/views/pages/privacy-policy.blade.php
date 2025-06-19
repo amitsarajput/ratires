@@ -99,7 +99,7 @@
                         <p class="bottommargin-xs">Submission of Requests for Information. We have designated the following methods for California residents to submit requests for information:</p>
                         <ul class="list-item bmxx bottommargin-xs">
                             <li>By emailing <a href="mailto:info@radartires.com">info@radartires.com</a> or</li>
-                            <li>By visiting <a href="https://staging.radartires.com/us/contact-us">https://staging.radartires.com/us/contact-us</a> and completing the contact form.</li>
+                            <li>By visiting <a href="https://radartires.com/us/contact-us">https://radartires.com/us/contact-us</a> and completing the contact form.</li>
                         </ul>
                         <p class="bottommargin-xs">Verification After you submit a request, we will promptly take steps to determine whether your request is a verifiable request. We will verify that you are who you say you are.</p>
                         <p class="bottommargin-xs">We will disclose and deliver the required information to you free of charge within 45 days of receiving your verifiable request. If necessary, we will extend the time period to provide the required information once by an additional 45 days, and will provide you with notice of the extension within the first 45-day period. The disclosure shall cover the 12-month period preceding our receipt of the verifiable request.</p>
@@ -136,10 +136,9 @@
 
                         
                         <h4 class="uppercase">HEADQUARTERS</h4>
-                        <p class="bottommargin"><i>2 Central Boulevard,
-#08-04A West Tower,
-IOI Central Boulevard,
-Singapore 018916 </i></p>
+                        <p class="bottommargin"><i>2 3750 S. Watson Rd.,
+Suite 100,
+Arlington, TX 76014 </i></p>
 
                         
                     </div>
