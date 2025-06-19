@@ -136,9 +136,10 @@
 
                         
                         <h4 class="uppercase">HEADQUARTERS</h4>
-                        <p class="bottommargin"><i>2 3750 S. Watson Rd.,
-Suite 100,
-Arlington, TX 76014 </i></p>
+                        <p class="bottommargin"><i>2 Central Boulevard,
+#08-04A West Tower,
+IOI Central Boulevard,
+Singapore 018916   </i></p>
 
                         
                     </div>

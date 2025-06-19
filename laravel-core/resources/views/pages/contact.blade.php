@@ -22,9 +22,9 @@
 								$caddress=[ 
 										[
 										'title'=>"UNITED STATES", 
-										'address'=>"<b>Omni United USA, Inc</b><br> 3750 S. Watson Rd.,<br> Suite 100,<br> Arlington, TX 76014" ,
+										'address'=>"<b>Omnisource United, Inc</b><br> 3750 S. Watson Rd.,<br> Suite 100,<br> Arlington, TX 76014" ,
 										'phone'=>" T: 800-725-1482 (Toll Free) " ,
-										'workingHours'=>"Business Hrs: 0900 – 1800 (UTC-5)<br>
+										'workingHours'=>"Business Hrs: 0900 – 1800 (UTC-6/UTC-5 DST)<br>
 										Monday – Friday" 
 										],[
 										'title'=>"SINGAPORE (HQ)", 
