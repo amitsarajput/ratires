@@ -1,0 +1,1 @@
+(testFreaks = window.testFreaks || []).push(["load", "items"])
