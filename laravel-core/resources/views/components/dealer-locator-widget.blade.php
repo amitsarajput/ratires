@@ -36,7 +36,6 @@
     <div id="side_bar" class="dealer-map--location"></div>
 </div>
 @push('scripts')  
-    <script async="false"  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDWsBUoQKrmNZn2udNYblwL6OKN3yyGYMs&libraries=places,geometry&callback=initMap"&libraries=places,geometry&callback=initMap"></script>
     
     
     <script type="text/javascript">
@@ -53,5 +52,6 @@
         });
     </script>
     <script src="{{asset('js/jquery-gmap.js')}}"></script>
+    <script async="false"  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDWsBUoQKrmNZn2udNYblwL6OKN3yyGYMs&libraries=places,geometry&callback=initMap"></script>
 
 @endpush
