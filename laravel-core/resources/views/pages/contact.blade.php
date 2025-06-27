@@ -11,13 +11,13 @@
 				</div>
 				<div class="container">
 					<div class="grid">
-						<div class="col-md-8">
+						<div class="col-md-10">
 							<p>
 								If you are interested in distributing Radar Tires, looking for a dealer near you or have any other query you can contact us via the below form or you can write to us at <span style="white-space:nowrap;"><a class="blue" href="mailto:info@radartires.com">info@radartires.com</a></span> and we will get back to you as soon as we can.
 							</p>
 							<x-ContactusForm class="mt-2" />
 						</div>
-						<div class="col-md-4">
+						<div class="col-md-2">
 							@php 
 								$caddress=[ 
 										[

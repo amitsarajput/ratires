@@ -19,7 +19,10 @@ class Localization
     {
         // Extract region and country from the first and second URL segments
         $region = extractRegionFromUrl()?? Session::get('omni_data.region');
-        $country = extractCountryFromUrl()??Session::get('omni_data.country');        
+        $country = extractCountryFromUrl()??Session::get('omni_data.country');   
+        
+        //check for redirect first
+        $this->omni_redirect($region,$country);
         
         //if country is present, set the locale for the country other wise set to region
         if ($country !== null) {
@@ -29,6 +32,25 @@ class Localization
         }
 
         return $next($request);
+    }
+    
+
+    /**
+     * We will check if the redirection is needed or not. 
+     * For the url itself.
+     */
+
+    public function omni_redirect($region,$country){
+        $to_url=$country!==null ? $region.'/'.$country : $region;
+        return match ($to_url) {
+            'eu' => redirect()->to('https://radartyres.com/eu')->send(),
+            'eu/es' => redirect()->to('https://radartyres.com/eu/es')->send(),
+            'eu/it' => redirect()->to('https://radartyres.com/eu/it')->send(),
+            'eu/fr' => redirect()->to('https://radartyres.com/eu/fr')->send(),
+            'apac' => redirect()->to('https://radartyres.com/apac')->send(),
+            'ca' => redirect()->to('https://www.omni-united.com/radar-ca')->send(),
+            default => false,
+        };
     }
     
 

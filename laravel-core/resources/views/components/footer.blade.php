@@ -61,7 +61,7 @@
                 <!--<a href="https://www.omni-united.com/dealer-login">Dealer Corner</a>-->
             </div>
             <div class="footer-col">
-                <a href="https://www.omnisourceusa.com/">OMNI UNITED</a>
+                <a href="https://www.omnisourceusa.com/">OMNISOURCE</a>
                 <a href="https://www.omni-united.com/omni-sync">OMNISYNC LOGIN</a>
                 <a href="{{ route('pages.contact')}}">CONTACT US</a>
             </div>

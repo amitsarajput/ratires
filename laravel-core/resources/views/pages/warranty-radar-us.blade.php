@@ -36,12 +36,12 @@
 						<h4 class="mt-2">USA</h4>
 						<ul class="text-md no-bullets li-icons">
 							<li class="mb-xxs-1"><a target="_blank" href="{{ asset('storage/colletrals/radar-us-warranty/Limited Warranty Quick Reference Guide - USA.pdf') }}"><x-icon-download-ico class="dark-100" /> Limited Warranty Quick Reference Guide</a>  – Passenger and Light Truck replacement tires purchased after February 1, 2025</b></li>
-							<li class="mb-xxs-1"><a target="_blank" href="{{ asset('storage/colletrals/radar-us-warranty/Radar-Warranty-Flyer-2025.pdf') }}"><x-icon-download-ico class="dark-100" /> Limited Warranty Booklet</a>  - Passenger and Light Truck replacement tires purchased after February 1, 2025</b></li>
+							<li class="mb-xxs-1"><a target="_blank" href="{{ asset('storage/colletrals/radar-us-warranty/USA-Limited-Warranty-Booklet.pdf') }}"><x-icon-download-ico class="dark-100" /> Limited Warranty Booklet</a>  - Passenger and Light Truck replacement tires purchased after February 1, 2025</b></li>
 						</ul>
 						<h4 class="mt-2">CANADA</h4>
 						<ul class="text-md no-bullets li-icons">
 							<li class="mb-xxs-1"><a target="_blank" href="{{ asset('storage/colletrals/radar-us-warranty/Limited Warranty Quick Reference Guide - Canada.pdf') }}"><x-icon-download-ico class="dark-100" /> Limited Warranty Quick Reference Guide</a>  – Passenger and Light Truck replacement tires purchased after February 1, 2025</b></li>
-							<li class="mb-xxs-1"><a target="_blank" href="{{ asset('storage/colletrals/radar-us-warranty/Radar-Warranty-Flyer-CA-2025.pdf') }}"><x-icon-download-ico class="dark-100" /> Limited Warranty Booklet </a>  - Passenger and Light Truck replacement tires purchased after February 1, 2025</b></li>
+							<li class="mb-xxs-1"><a target="_blank" href="{{ asset('storage/colletrals/radar-us-warranty/CANADA-Limited-Warranty-Booklet.pdf') }}"><x-icon-download-ico class="dark-100" /> Limited Warranty Booklet </a>  - Passenger and Light Truck replacement tires purchased after February 1, 2025</b></li>
 						</ul>
 						<h4 class="mt-2">USA and CANADA</h4>
 						<ul class="text-md no-bullets li-icons">
@@ -58,11 +58,11 @@
 					<div class="col-md-12 col-bleed-y ">
 						<h3 class=" dark-100 uppercase">Download center</h3>
 						<ul class="text-md no-bullets li-icons">
-							<li class="mb-xxs-1"><a target="_blank" href="{{ asset('storage/colletrals/radar-us-warranty/Radar_Limited Warranty Manual.pdf') }}"><x-icon-download-ico class="dark-100" /> Limited Warranty Manual</a></li>
+							<li class="mb-xxs-1"><a target="_blank" href="{{ asset('storage/colletrals/radar-us-warranty/Limited-Warranty-Manual.pdf') }}"><x-icon-download-ico class="dark-100" /> Limited Warranty Manual</a></li>
 							<li class="mb-xxs-1"><a target="_blank" href="{{ asset('storage/colletrals/radar-us-warranty/Retailer Registration Form_Radar Protect Program_REG01 (RANA).xlsx') }}"><x-icon-download-ico class="dark-100" /> 30-Day Satisfaction Guarantee_Retailer Registration Form_REG01(RA/NA)</a></li>
 							<li class="mb-xxs-1"><a target="_blank" href="{{ asset('storage/colletrals/radar-us-warranty/Tire Installation Form - IN01 (NARA).pdf') }}"><x-icon-download-ico class="dark-100" /> Tire Installation Form_IN01(RA/NA)</a></li>
 							<li class="mb-xxs-1"><a target="_blank" href="{{ asset('storage/colletrals/radar-us-warranty/Tire Mounting & Rotation Service Form - RR01 (NARA).pdf') }}"><x-icon-download-ico class="dark-100" /> Tire Mounting and Rotation Form_RR01(RA/NA)</a></li>
-							<li class="mb-xxs-1"><a target="_blank" href="{{ asset('storage/colletrals/radar-us-warranty/Claim Form - CL01 (NARA).pdf') }}"><x-icon-download-ico class="dark-100" /> Claim Form_CL01(RA/NA)</a></li>
+							<li class="mb-xxs-1"><a target="_blank" href="{{ asset('storage/colletrals/radar-us-warranty/Claim-Form-CL01-NARA.pdf') }}"><x-icon-download-ico class="dark-100" /> Claim Form_CL01(RA/NA)</a></li>
 						</ul>
 					</div>
 				</div>

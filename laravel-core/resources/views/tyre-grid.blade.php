@@ -7,7 +7,7 @@
     <!-- Implement Slider From Brand Database -->
     <!-- Page Title
     ============================================= -->
-    <x-page-title image-url="{{ asset('images/tyre-grid-banner.webp') }}" container="true" page-title="EVERYONE SHOULD HAVE THE RIGHT<br>TO ACCESS PREMIUM TIRES AT<br>AFFORDABLE PRICES" button="true" button-text="READ MORE ABOUT RADAR TIRES" button-Link="{{ route('pages.about-us') }}" class="page-title--left el-height-60 uppercase mb-0" />
+    <x-page-title image-url="{{ asset('images/banner--tyre-grid.webp') }}" container="true" page-title="EVERYONE SHOULD HAVE THE RIGHT<br>TO ACCESS PREMIUM TIRES AT<br>AFFORDABLE PRICES" button="true" button-text="READ MORE ABOUT RADAR TIRES" button-Link="{{ route('pages.about-us') }}" class="page-title--left el-height-60 uppercase mb-0" />
     
     <!-- Content -->
     <section id="content">
