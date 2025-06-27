@@ -78,6 +78,8 @@ class FormsController extends Controller
         return match ($to_url) {
             'eu' => redirect()->to('https://radartyres.com/eu')->send(),
             'eu/es' => redirect()->to('https://radartyres.com/eu/es')->send(),
+            'eu/it' => redirect()->to('https://radartyres.com/eu/et')->send(),
+            'eu/fr' => redirect()->to('https://radartyres.com/eu/fr')->send(),
             'apac' => redirect()->to('https://radartyres.com/apac')->send(),
             'ca' => redirect()->to('https://www.omni-united.com/radar-ca')->send(),
             default => false,
