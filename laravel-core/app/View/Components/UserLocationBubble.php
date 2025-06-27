@@ -21,7 +21,7 @@ class UserLocationBubble extends Component
     public function __construct(public bool $bubbleclosed)
     {   
         //session()->forget(['omni_data','locale']);
-        //session()->invalidate();
+        session()->invalidate();
         $omnidata=session('omni_data');
         
         //Set avialable locations in sessions

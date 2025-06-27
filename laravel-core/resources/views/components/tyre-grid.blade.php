@@ -3,7 +3,7 @@
     @foreach ($tyres as $tyre)
         <div class="tyre {{ $tyre->premium_tyre?'premium_tyre':'' }}">
             <h3 class="title">
-                <a href="{{url($tyre->country->slug.'/'.$tyre->brand->slug.'/'.$tyre->slug)}}">
+                <a href="{{safeRoute('tyre.single',['brand' => $tyre->brand->slug, 'tyre' => $tyre->slug])}}">
                     {!! htmlspecialchars_decode($tyre->preview_name) !!}
                 </a>
             </h3>
@@ -14,7 +14,7 @@
                 <a href="{{route('pages.premium-collection')}}" class="premium-tyre--badge">PREMIUM COLLECTION</a>
             @endif
             <div class="image {{ $tyre->country->code==='EU'?'carbon-n':''}}">
-                <a href="{{url($tyre->country->slug.'/'.$tyre->brand->slug.'/'.$tyre->slug)}}">
+                <a href="{{safeRoute('tyre.single',['brand' => $tyre->brand->slug, 'tyre' => $tyre->slug])}}">
                     <img 
                         data-src="{{asset('storage/tire_images/'.$tyre->catalogue_image)}}" 
                         src="{{asset('storage/tire_images/'.$tyre->catalogue_image)}}" 
@@ -22,7 +22,7 @@
                 </a>
             </div>
             <!-- Read more button -->
-            <a class="tyre--readmore" href="{{url($tyre->country->slug.'/'.$tyre->brand->slug.'/'.$tyre->slug)}}">READ MORE  <x-icon-tyre-line-2 /><x-icon-right-angle-arrow class="arrow"/></a>
+            <a class="tyre--readmore" href="{{safeRoute('tyre.single',['brand' => $tyre->brand->slug, 'tyre' => $tyre->slug])}}">READ MORE  <x-icon-tyre-line-2 /><x-icon-right-angle-arrow class="arrow"/></a>
         </div>
     @endforeach
 </div>
