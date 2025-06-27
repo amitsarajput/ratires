@@ -26,12 +26,13 @@
 										'phone'=>" T: 800-725-1482 (Toll Free) " ,
 										'workingHours'=>"Business Hrs: 0900 – 1800 (UTC-6/UTC-5 DST)<br>
 										Monday – Friday" 
-										],[
+										]
+										/*,[
 										'title'=>"SINGAPORE (HQ)", 
 										'address'=>"<b>Omni United (S) Pte Ltd</b><br>2 Central Boulevard, <br>#08-04A West Tower, <br>IOI Central Boulevard, <br>Singapore 018916" ,
 										'phone'=>"T: +65 6423 1431 <br>F: +65 6423 0938" ,
 										'workingHours'=>"Business Hrs: 0900 – 1800 (UTC+8)<br> Monday – Friday" 
-										]
+										]*/
 									];
 							@endphp
 							@foreach($caddress as $address)
