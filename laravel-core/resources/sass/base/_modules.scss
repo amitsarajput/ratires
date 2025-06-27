@@ -1270,6 +1270,7 @@ ol.breadcrumb {
 		letter-spacing: 1px;
 		text-shadow: none;
 		word-spacing: -2px;
+		max-height: 500px !important;
 		.select2-results__option--group{
 			.select2-results__group{padding: 0;}
 			.select2-results__options--nested{}
