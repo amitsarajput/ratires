@@ -74,7 +74,7 @@
 				<div class="grid">
 					<div class="col-md-12 col-bleed-y ">
 						<h3 class=" dark-100 uppercase">Contact Us</h3>
-						<p>For any additional assistance, you can contact us via email at <a href="mailto:claims@omni-united.com">claims@omni-united.com</a></p>
+						<p>For any additional assistance, you can contact us via email at <a href="mailto:claims@omnisourceusa.com">claims@omnisourceusa.com</a></p>
 						<!--  or call us at 800-725-1482 (Business Hrs 9am - 6pm, Monday – Friday) -->
 					</div>
 				</div>

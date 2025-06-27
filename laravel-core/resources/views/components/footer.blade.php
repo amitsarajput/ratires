@@ -61,7 +61,7 @@
                 <!--<a href="https://www.omni-united.com/dealer-login">Dealer Corner</a>-->
             </div>
             <div class="footer-col">
-                <a href="https://www.omni-united.com/">OMNI UNITED</a>
+                <a href="https://www.omnisourceusa.com/">OMNI UNITED</a>
                 <a href="https://www.omni-united.com/omni-sync">OMNISYNC LOGIN</a>
                 <a href="{{ route('pages.contact')}}">CONTACT US</a>
             </div>
@@ -78,7 +78,7 @@
 
                 <div class="grid">
                     <div class="col-auto">
-                        Copyright {{ date("Y") }}. All Rights Reserved with Omni United (S) Pte. Ltd.
+                        Copyright {{ date("Y") }}. All Rights Reserved with Omnisource United, Inc.
                     </div>
 
                     <div class="col-auto tright">
