@@ -182,7 +182,7 @@ jQuery(window).on('scroll', function(){
 
                 el.animate({height:regionHeight}, 300,function(){
                     
-                    $('.location-bubble.location-bubble--closed select').on('change', function(){
+                    $('.location-bubble.location-bubble--closed select,.location-bubble select').on('change', function(){
                         //$('.location-bubble--form').submit();
                         $(this).closest('form').submit();
                     });

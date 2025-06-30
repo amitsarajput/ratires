@@ -31,9 +31,9 @@ $location_locale=[
 				@endforeach
 			</select>
 		</div>
-		<div class="location-bubble--col bubble-button">
+		<!-- <div class="location-bubble--col bubble-button">
 			<button class="button button-dark btn-block" type='submit'>Continue</button>		
-		</div>
+		</div> -->
 	</div>
 	{!! Form::close() !!}
 </div>

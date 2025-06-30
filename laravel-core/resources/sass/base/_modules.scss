@@ -1115,22 +1115,21 @@ ol.breadcrumb {
 		height: 100%;
 		padding: 25px;
 		display: flex;
-		justify-content: center;
+		justify-content: space-between;
 		align-items: center;
 		flex-direction: row;
 		flex-wrap: wrap;
 	}
 	.location-bubble--col {
         display: flex;
-        justify-content: center;
         align-content: center;
         flex-direction: row;
         flex-wrap: wrap;
 		padding: 5px;
 	}
-	.bubble-select, .bubble-button, .bubble-text{ flex:1 1 25%; }
+	.bubble-select, .bubble-button, .bubble-text{ flex:1 1 30%; }
 	.bubble-text{ 
-		min-width: 50%;
+		min-width: 70%;
 		@include mobile { min-width: 100%; }
 	}
 	.bubble-select, .bubble-button{
