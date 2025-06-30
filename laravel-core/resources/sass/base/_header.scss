@@ -172,8 +172,8 @@ header{
 		}
 		&.shown{
 			.select2-container{
-				width: 195px !important;
-				@include mobile{width: 140px!important;}
+				width: 220px !important;
+				@include mobile{width: 160px!important;}
 				opacity: 1;
 				display: block;
 			}
