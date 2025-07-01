@@ -1,13 +1,18 @@
-@props(['imageUrl'=>'','pageTitle'=>'','pageSubTitle'=>'','container'=>false,'button'=>false,'buttonText'=>'READ MORE','buttonLink'=>'#'])
+@props(['imageUrl'=>'','pageTitle'=>'','pageSubTitle'=>'','container'=>false,'button'=>false,'buttonText'=>'READ MORE','buttonLink'=>'#','greet'=>false,'greetText'=>''])
             
 <!-- Page Title Module -->
 <section id="page-title" {{ $attributes->merge(['class' => '']) }} style="background-image: url({{ $imageUrl }})">
+    @if($greet)
+        <div class="greetText">
+            <h3>{!! $greetText !!}</h3>
+        </div>
+    @endif
     @if ($container)
     <div class="container">
         <div class="grid">
     @endif
         <div class="page-title-wrapper">
-            <h2>{!! $pageTitle !!}</h2> 
+            <h2>{!! $greetText !!} {!! $pageTitle !!}</h2> 
             @if ($pageSubTitle)
                 <p >{{$pageSubTitle}}</p>
             @endif

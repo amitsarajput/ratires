@@ -9,6 +9,7 @@
 	height: $page-title-height;
 	margin-bottom: $section-spacing;
 	color: #fff;
+	position: relative;
 	@include touch{
 		height: $page-title-height--sm!important;
 	}
@@ -42,10 +43,20 @@
 		text-align: center;
 		h2{
 			color:inherit;margin: 0;padding: 0;
+			@include mobile{line-height: 1;}
 			.red{color: $red;}
 			.black{color: $black;}
 		}
 		p{color: inherit;font-size: 1.3rem; font-weight: 400;text-align: center;margin: 0;padding: 0;}
+	}
+	.greetText{
+		position: absolute;
+		width: 100%;
+		top: 0;
+		left: 50%;
+		transform: translateX(-50%);
+		text-align: center;
+		h2,h3{color: $white; margin-top: 15px;}
 	}
 	@for $i from 1 through 10 {
 		&.el-height-#{$i}0{
