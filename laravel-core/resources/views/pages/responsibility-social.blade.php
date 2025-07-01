@@ -12,7 +12,7 @@
                     <div class="col-md-12 col-bleed-y">
                         <h2 class="no-top-margin pink uppercase center ">Social Responsibility</h2>
                         <p class="text-lead center"><em> “ We cannot transform the world alone, but we want to demonstrate that if a company like ours can invest the time, effort and resources necessary to make a difference, then anyone can. ” </em></p>
-                        <p class="center dark-50">G.S.Sareen, President and CEO, Omni United</p>
+                        <p class="center dark-50">G.S.Sareen, Director, Radar Tires </p>
                     </div>
                 </div>
             </div>

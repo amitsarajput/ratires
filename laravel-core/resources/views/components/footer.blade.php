@@ -62,7 +62,7 @@
             </div>
             <div class="footer-col">
                 <a href="https://www.omnisourceusa.com/">OMNISOURCE</a>
-                <a href="https://www.omni-united.com/omni-sync">OMNISYNC LOGIN</a>
+                <a href="https://www.omnisourceusa.com/omnisync.html">OMNISYNC LOGIN</a>
                 <a href="{{ route('pages.contact')}}">CONTACT US</a>
             </div>
             

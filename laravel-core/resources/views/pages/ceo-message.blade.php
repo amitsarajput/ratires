@@ -44,8 +44,7 @@
                     <img src="{{ asset('images/sign.webp') }}" alt="" width="180"><br><br>
 
                     <b>G S Sareen</b><br>
-                    President & CEO<br>
-                    Omni United (S) Pte Ltd
+                    Director, Radar Tires
 
 
                     </em>
