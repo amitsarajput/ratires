@@ -182,7 +182,7 @@ jQuery(window).on('scroll', function(){
 
                 el.animate({height:regionHeight}, 300,function(){
                     
-                    $('.location-bubble.location-bubble--closed select,.location-bubble select').on('change', function(){
+                    $('.location-bubble.location-bubble--closed select').on('change', function(){
                         //$('.location-bubble--form').submit();
                         $(this).closest('form').submit();
                     });
@@ -230,7 +230,7 @@ jQuery(window).on('scroll', function(){
             $('.location-bubble .button').on('click', function(){
                 //$('.location-bubble .button');
             });
-            $('.location-bubble.location-bubble--closed select').on('change', function(){
+            $('.location-bubble select').on('change', function(){
                 //$('.location-bubble--form').submit();
                 $(this).closest('form').submit();
             });            
