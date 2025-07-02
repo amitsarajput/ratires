@@ -12,7 +12,7 @@
         <div class="grid">
     @endif
         <div class="page-title-wrapper">
-            <h2>{!! $greetText !!} {!! $pageTitle !!}</h2> 
+            <h2>{!! $pageTitle !!}</h2> 
             @if ($pageSubTitle)
                 <p >{{$pageSubTitle}}</p>
             @endif
