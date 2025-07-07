@@ -32,7 +32,7 @@
                 <!-- Premium tyre badge -->
                  @if($tyre->premium_tyre)
                 <div class="col-lg-12 col-bleed-y">
-                    <a href="{{route('pages.premium-collection')}}" class="premium-tyre--badge">{{__('PREMIUM COLLECTION')}}</a>
+                    <a href="{{safeRoute('pages.premium-collection')}}" class="premium-tyre--badge">{{__('PREMIUM COLLECTION')}}</a>
                 </div>
                 @endif
                 <!-- Tyre Details -->
@@ -41,7 +41,7 @@
                     <h5 class="black">{{ __(implode(" | ", json_decode($tyre->tyre_categories->pluck('name')))) }}</h5>
                     <div id="testfreaks-badge"></div>
                     <div class="tyre--description">
-                        {!! __(preg_replace_array('/:url[a-z_-]+/', [route('pages.warranty')], htmlspecialchars_decode($tyre->description))) !!}
+                        {!! __(preg_replace_array('/:url[a-z_-]+/', [safeRoute('pages.warranty')], htmlspecialchars_decode($tyre->description))) !!}
                         <!-- <p>{!! __(htmlspecialchars_decode($tyre->description)) !!}</p> -->
                     </div>
                     @php
@@ -58,7 +58,7 @@
                     @php
                         $product_images=json_decode($tyre->product_images);
                     @endphp
-                    <x-tyre-image-slider class="tyre--image-slider {{ $tyre->country->code==='EU'?'carbon-n':''}} " :slides="$product_images" />
+                    <x-tyre-image-slider class="tyre--image-slider {{ $tyre->region->code==='EU'?'car-n':''}} " :slides="$product_images" />
                 </div>
             </div>
         </div>

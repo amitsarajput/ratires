@@ -11,7 +11,7 @@
             <div class="meta">{{ implode(" | ", $tyre->tyre_categories->pluck('name')->toArray()) }}</div>
             <div class="testfreaks-item" data-product-id="{{$tyre->slug}}"></div>
             @if($tyre->premium_tyre)
-                <a href="{{route('pages.premium-collection')}}" class="premium-tyre--badge">PREMIUM COLLECTION</a>
+                <a href="{{safeRoute('pages.premium-collection')}}" class="premium-tyre--badge">PREMIUM COLLECTION</a>
             @endif
             <div class="image {{ $tyre->region->code==='eu'?'carbon-n':''}}">
                 <a href="{{safeRoute('tyre.single',['brand' => $tyre->brand->slug, 'tyre' => $tyre->slug])}}">

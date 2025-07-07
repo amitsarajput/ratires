@@ -37,7 +37,7 @@ use Illuminate\Support\Facades\Route;
 //Route::get('/mail',[MailController::class, 'genric_mail']);
 
 Route::get('/dashboard', function () {
-    return view('admin.index');
+    return view('ProductManager::admin.index');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
@@ -46,9 +46,6 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-
-Route::get('/session/{key}/get',[AjaxHandlerController::class, 'get_session_data'])->name('session.get');
-Route::post('/session/{key}/set',[AjaxHandlerController::class, 'set_session_data'])->name('session.set');
 
 Route::post('/location/update',[FormsController::class, 'location_form'])->name('location.update');
 Route::post('/bubble-state/update',[FormsController::class, 'lb_state_update'])->name('location.bubblestate.update');
@@ -61,24 +58,23 @@ Route::post('/bubble-state/update',[FormsController::class, 'lb_state_update'])-
 // });
 
 require __DIR__.'/auth.php';
-require __DIR__.'/admin.php';
+//require __DIR__.'/admin.php';
 require __DIR__.'/staticpages.php';
 
 require __DIR__.'/landingpages.php';
 require __DIR__.'/form_routes.php';
 
 //Normal Routes
-Route::get('/',[TyreController::class, 'tyre_grid'])->name('home');
-//Route::get('/{brand:slug}', [TyreController::class, 'tyre_grid'])->where(['brand'=>'[a-zA-Z\-]{3,}'])->name('tyre.grid');
-//Route::get('/{brand:slug}/{tyre:slug}', [TyreController::class, 'tyre_single'])->where(['brand'=>'[a-zA-Z\-]','tyre'=>'[a-zA-Z0-9\-]{3,}'])->name('tyre.single');
+//Route::get('/',[TyreController::class, 'tyre_grid'])->name('home');
+
 
 
 //Locale routes
-Route::geo(function () {
-    Route::get('/',[TyreController::class, 'tyre_grid'])->name('home');
-    Route::get('/{brand:slug}', [TyreController::class, 'tyre_grid'])->where(['brand'=>'[a-zA-Z\-]{3,}'])->name('tyre.grid');
-    Route::get('/{brand:slug}/{tyre:slug}', [TyreController::class, 'tyre_single'])->where(['brand'=>'[a-zA-Z\-]{3,}','tyre'=>'[a-zA-Z0-9\-]{3,}'])->name('tyre.single');
-});
+// Route::geo(function () {
+//     Route::get('/',[TyreController::class, 'tyre_grid'])->name('home');
+//     Route::get('/{brand:slug}', [TyreController::class, 'tyre_grid'])->where(['brand'=>'[a-zA-Z\-]{3,}'])->name('tyre.grid');
+//     Route::get('/{brand:slug}/{tyre:slug}', [TyreController::class, 'tyre_single'])->where(['brand'=>'[a-zA-Z\-]{3,}','tyre'=>'[a-zA-Z0-9\-]{3,}'])->name('tyre.single');
+// });
 
 
 

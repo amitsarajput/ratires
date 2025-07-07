@@ -2,7 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Forms;
+use ProductManager\Models\Forms;
+use ProductManager\Http\Controllers\XlsxController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -342,6 +343,19 @@ class FormsController extends Controller
     public function index()
     {
         //
+        $old_file='no-file.xlsx';
+        $forms=Forms::all();
+        $formsMapped=$forms->map(function (Forms $form) {
+            $form_data=json_decode($form->form_data,true);
+            $form_data['created_at']=$form->created_at->format('d-m-Y');
+            return $form_data;
+        });
+        $headerkeys=$formsMapped->flatMap(function ($form) {
+            return array_keys($form);
+        })->unique()->values()->toArray();
+        //Export old data to file
+        $old_file=XlsxController::createfile($formsMapped, $headerkeys,'forms','forms');
+        return view('ProductManager::admin.form.index' ,compact('forms','old_file'));
     }
 
     /**

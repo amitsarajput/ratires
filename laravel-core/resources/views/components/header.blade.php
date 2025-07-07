@@ -2,7 +2,7 @@
 <header id="header">
     <div class="inner-header "><!-- search-opened -->
         <div class="logo">
-            <a href="{{route('home')}}"><img src="{{asset('images/logos/radar-tires-light-red.svg')}}" alt="Radar Tires"></a>
+            <a href="{{safeRoute('home')}}"><img src="{{asset('images/logos/radar-tires-light-red.svg')}}" alt="Radar Tires"></a>
         </div>
         <div class="right-menu-wrapper">
             <ul class="menu">
@@ -11,19 +11,19 @@
                                     href="#tires" 
                                     scroll-to="#tires" 
                                 @else
-                                    href="{{ route('home').'#tires'}}"
+                                    href="{{ safeRoute('home').'#tires'}}"
                                 @endif
                                 >Tires</a></li>
-                <li class="menu-item"><a href="{{ route('pages.why-radar')}}">Why Radar</a></li>
+                <li class="menu-item"><a href="{{ safeRoute('pages.why-radar')}}">Why Radar</a></li>
                 <li class="menu-item"><a 
                                         @if( request()->routeIs('home') )
                                             href="#dealer-locator" 
                                             scroll-to="#dealer-locator" 
                                         @else
-                                            href="{{route('home').'#dealer-locator'}}"
+                                            href="{{safeRoute('home').'#dealer-locator'}}"
                                         @endif
                                         >Dealer Locator</a></li>
-                <li class="menu-item"><a href="{{ route('pages.contact')}}">Contact us</a></li>
+                <li class="menu-item"><a href="{{ safeRoute('pages.contact')}}">Contact us</a></li>
             </ul>
             @php
                 $bubble_closed=session('omni_data.bubble_closed');

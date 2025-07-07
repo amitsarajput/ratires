@@ -33,12 +33,20 @@
             "App\\": "app/",
             "Database\\Factories\\": "database/factories/",
             "Database\\Seeders\\": "database/seeders/",
-            "GeoRouter\\": "packages/GeoRouter/"
+            "GeoRouter\\": "packages/GeoRouter/",
+            "ProductManager\\": "packages/ProductManager/src/"
         },
         "files": [
             "app/helpers.php"
         ]
     },
+    "repositories": [
+        {
+            "type": "path",
+            "url": "packages/ProductManager"
+        }
+
+    ],
     "autoload-dev": {
         "psr-4": {
             "Tests\\": "tests/"

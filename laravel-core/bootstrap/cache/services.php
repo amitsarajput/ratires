@@ -45,6 +45,7 @@
     41 => 'Spatie\\Html\\HtmlServiceProvider',
     42 => 'App\\Providers\\CookiesServiceProvider',
     43 => 'App\\Providers\\RecaptchaServiceProvider',
+    44 => 'ProductManager\\ProductManagerServiceProvider',
   ),
   'eager' => 
   array (
@@ -76,6 +77,7 @@
     25 => 'Spatie\\Html\\HtmlServiceProvider',
     26 => 'App\\Providers\\CookiesServiceProvider',
     27 => 'App\\Providers\\RecaptchaServiceProvider',
+    28 => 'ProductManager\\ProductManagerServiceProvider',
   ),
   'deferred' => 
   array (

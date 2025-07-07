@@ -197,6 +197,8 @@ return [
         App\Providers\CookiesServiceProvider::class,
         //Recaptcha Service Provider
         App\Providers\RecaptchaServiceProvider::class,
+        
+        ProductManager\ProductManagerServiceProvider::class,
 
     ])->toArray(),
 

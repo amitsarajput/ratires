@@ -10,12 +10,12 @@ class GeoRouterServiceProvider extends ServiceProvider
 {
     public function boot()
     {
-        Route::macro('geo', function (callable $routes, string $namePrefix = '') {
+        Route::macro('geo', function (callable $routes, string $namePrefix = '', array $middleware = []) {
             // Region-only prefix
             Route::prefix('{region:slug}')
                 ->name($namePrefix)
                 ->where(['region' => '[a-zA-Z]{2,4}'])
-                ->middleware(['geo.context'])
+                ->middleware(array_merge(['geo.context'], $middleware))
                 ->group($routes);
         
             // Region + Country prefix
@@ -25,7 +25,7 @@ class GeoRouterServiceProvider extends ServiceProvider
                     'region' => '[a-zA-Z]{2,4}',
                     'country' => '[a-zA-Z]{2}',
                 ])
-                ->middleware(['geo.context'])
+                ->middleware(array_merge(['geo.context'], $middleware))
                 ->group($routes);
         });
         

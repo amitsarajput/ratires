@@ -7,14 +7,14 @@
     <!-- Implement Slider From Brand Database -->
     <!-- Page Title
     ============================================= -->
-    <x-page-title image-url="{{ asset('images/banner--tyre-grid.webp') }}" container="true" page-title="EVERYONE SHOULD HAVE THE RIGHT<br>TO ACCESS PREMIUM TIRES AT<br>AFFORDABLE PRICES" button="true" button-text="READ MORE ABOUT RADAR TIRES" button-Link="{{ route('pages.about-us') }}" greet="true" greet-text="Welcome to Radar Tires - USA" class="page-title--left el-height-60 uppercase mb-0" />
+    <x-page-title image-url="{{ asset('images/banner--tyre-grid.webp') }}" container="true" page-title="EVERYONE SHOULD HAVE THE RIGHT<br>TO ACCESS PREMIUM TIRES AT<br>AFFORDABLE PRICES" button="true" button-text="READ MORE ABOUT RADAR TIRES" button-Link="{{ safeRoute('pages.about-us') }}" greet="true" greet-text="Welcome to Radar Tires - USA" class="page-title--left el-height-60 uppercase mb-0" />
     
     <!-- Content -->
     <section id="content">
         <div class="section no-padding">
             <div class="grid grid-bleed align-center">
                 <div class="col-md-6 col-sm-12">
-                    <a href="{{ route('pages.premium-collection') }}">
+                    <a href="{{ safeRoute('pages.premium-collection') }}">
                         <img src="{{asset('images/tyre-grid/premium-col.webp')}}" alt="Premium Collection">
                     </a>
                 </div>
@@ -22,7 +22,7 @@
                     <div class="ma-xxs-2 ma-xs-2 ma-sm-2 ma-md-2 mx-lg-7">
                         <h5>{{ __("WHY RADAR") }}</h5>
                         <h2 class="dark-100  no-top-margin">HIGH PERFORMANCE AND SAFETY, BUT WITHOUT THE HEFTY PRICE TAG</h2>
-                        <a  class="knopf red heading-font sharp ls-1" href="{{ route('pages.why-radar') }}">READ MORE</a>
+                        <a  class="knopf red heading-font sharp ls-1" href="{{ safeRoute('pages.why-radar') }}">READ MORE</a>
                         <!-- <h5 class="black">DIMAX SPORT | DIMAX SPRINT | DIMAX ALL SEASON | DIMAX WINTER</h5> -->
                     </div>
                 </div>
@@ -34,7 +34,7 @@
                         <h2 class="white no-top-margin">
                             EXTENSIVELY TESTED AGAINST PREMIUM BRANDS
                         </h2>
-                        <a  class="knopf red heading-font sharp ls-1" href="{{ route('pages.testing') }}">READ MORE</a>
+                        <a  class="knopf red heading-font sharp ls-1" href="{{ safeRoute('pages.testing') }}">READ MORE</a>
                     </div>
                 </div>
                 <div class="col-md-6 col-sm-12">
@@ -43,13 +43,13 @@
                         <h2 class="dark-100 no-top-margin">
                             OUR MISSION IS TO OFFER PREMIUM HIGH-QUALITY TIRES THAT ARE AFFORDABLE FOR ALL
                         </h2>
-                        <a  class="knopf red heading-font sharp ls-1" href="{{route('pages.ceo-message')}}">READ MORE</a>
+                        <a  class="knopf red heading-font sharp ls-1" href="{{safeRoute('pages.ceo-message')}}">READ MORE</a>
                     </div>
                 </div>
             </div>
             <div class="grid grid-bleed align-center">
                 <div class="col-md-6 col-sm-12">
-                    <a href="{{ route('pages.premium-collection') }}">
+                    <a href="{{ safeRoute('pages.real-people') }}">
                         <img src="{{asset('images/tyre-grid/group-t.webp')}}" alt="">
                     </a>
                 </div>
@@ -57,7 +57,7 @@
                     <div class="ma-xxs-2 ma-xs-2 ma-sm-2 ma-md-2 mx-lg-7">
                         <h5>{{ __("REAL PEOPLE. REAL PERFORMANCE.") }}</h5>
                         <h2 class="dark-100  no-top-margin">{{ __("MEET THE EXPERTS DRIVING RADAR TIRES TO THE NEXT LEVEL") }}</h2>
-                        <a  class="knopf red heading-font sharp ls-1" href="{{ route('pages.real-people') }}">{{__('READ MORE')}}</a>
+                        <a  class="knopf red heading-font sharp ls-1" href="{{ safeRoute('pages.real-people') }}">{{__('READ MORE')}}</a>
                     </div>
                 </div>
             </div>
@@ -147,7 +147,7 @@
                         <div class="ma-xxs-0 ma-xs-0 ma-sm-0 ml-md-2">
                             <h5 class="dark-100 mt-0 uppercase">SOCIAL RESPONSIBILITY</h5>
                             <p>We have always believed in giving back and this is one of the pillars that Radar Tires has been built on. It was these beliefs that led us to partner with the Breast Cancer Research Foundation (BCRF) in 2011, the leading and highest-rated breast cancer organization in the US. We have been supporting BCRF in their mission to prevent and cure breast cancer by advancing the world’s most promising research.</p>
-                            <a class="knopf red heading-font sharp ls-1" href="{{ route('pages.responsibility-social') }}">READ MORE</a>
+                            <a class="knopf red heading-font sharp ls-1" href="{{ safeRoute('pages.responsibility-social') }}">READ MORE</a>
                         </div>
                     </div>
                 </div>

@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
 
-if (!function_exists('safe_route')) {
+if (!function_exists('safeRoute')) {
     /**
      * Generate a route URL and clean it from double slashes,
      * safely ignoring empty/null parameters.
