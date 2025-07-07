@@ -299,7 +299,7 @@ function makeSidebar(markers=null) {
                 
             var distance=markers[i].mydistance;
                 distance=getdistancestring(distance);
-            var tel=typeof(myphone)==='undefined'?markers[i].myphone.replace(/\D/g, ''):null;
+            var tel=typeof(markers[i].myphone)!='undefined'?markers[i].myphone.replace(/\D/g, ''):null;
             //var address=markers[i].myaddress+", "+markers[i].mycity+", "+markers[i].mystate+" "+markers[i].mypostal+" "+markers[i].mycountry;
             var address=markers[i].myaddresspreview;            
                 address=address.replace(/, ,/g, ",");
@@ -310,7 +310,7 @@ function makeSidebar(markers=null) {
             html += "<div class='main-add "+featuredclass+"'>";
             html +="<div class='main-add--row'><div class='distance'>"+distance+"</div> "+redpartner+"</div>";
             html += "<h5 class='color' >"+markers[i].myname+"</h5>";
-            html +=typeof(myphone)==='undefined'?"<div class='info-row-withicon phone'><i class='omniicon-phone'></i> <a href='tel:"+tel+"'>"+markers[i].myphone+"</a></div>":"";
+            html +=typeof(markers[i].myphone)!='undefined'?"<div class='info-row-withicon phone'><i class='omniicon-phone'></i> <a href='tel:"+tel+"'>"+markers[i].myphone+"</a></div>":"";
             html +="<div class='info-row-withicon address'><i class='omniicon-location-pin-2'></i> "+address+"</div>";
             html +="<div class='info-row-withicon direction-row'><i class='omniicon-direction-arrow'></i> <a class='direction-link' href='"+direction+"' target='_blank'>Directions</a></div>";
             //html +="<div class='info-row-withicon link-onmap-row'><a href=javascript:myclick(" + i + ")>Show on Map</a></div>";
