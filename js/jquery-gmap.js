@@ -296,9 +296,10 @@ function makeSidebar(markers=null) {
         hide__dealerform(document.getElementById("dealerform"));
         for (var i=0; i<markers.length; i++) {
             if (markers[i].getVisible()) {
+                console.log(markers[i]);
             var distance=markers[i].mydistance;
                 distance=getdistancestring(distance);
-            var tel=myphone!=null?markers[i].myphone.replace(/\D/g, ''):null;
+            var tel=typeof(store.myphone)==='undefined'?markers[i].myphone.replace(/\D/g, ''):null;
             //var address=markers[i].myaddress+", "+markers[i].mycity+", "+markers[i].mystate+" "+markers[i].mypostal+" "+markers[i].mycountry;
             var address=markers[i].myaddresspreview;            
                 address=address.replace(/, ,/g, ",");
@@ -309,7 +310,7 @@ function makeSidebar(markers=null) {
             html += "<div class='main-add "+featuredclass+"'>";
             html +="<div class='main-add--row'><div class='distance'>"+distance+"</div> "+redpartner+"</div>";
             html += "<h5 class='color' >"+markers[i].myname+"</h5>";
-            html +=myphone!=null?"<div class='info-row-withicon phone'><i class='omniicon-phone'></i> <a href='tel:"+tel+"'>"+markers[i].myphone+"</a></div>":"";
+            html +=typeof(store.myphone)==='undefined'?"<div class='info-row-withicon phone'><i class='omniicon-phone'></i> <a href='tel:"+tel+"'>"+markers[i].myphone+"</a></div>":"";
             html +="<div class='info-row-withicon address'><i class='omniicon-location-pin-2'></i> "+address+"</div>";
             html +="<div class='info-row-withicon direction-row'><i class='omniicon-direction-arrow'></i> <a class='direction-link' href='"+direction+"' target='_blank'>Directions</a></div>";
             //html +="<div class='info-row-withicon link-onmap-row'><a href=javascript:myclick(" + i + ")>Show on Map</a></div>";
