@@ -35,10 +35,15 @@ use Illuminate\Support\Facades\Route;
 
 
 //Route::get('/mail',[MailController::class, 'genric_mail']);
+session()->invalidate();
 
 Route::get('/dashboard', function () {
     return view('ProductManager::admin.index');
 })->middleware(['auth', 'verified'])->name('dashboard');
+
+Route::get('/session/invalidate', function () {
+    return session()->invalidate();
+});
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
