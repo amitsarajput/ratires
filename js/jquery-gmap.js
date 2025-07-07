@@ -191,7 +191,7 @@ function downloadUrl(stores) {
             var tel = phone!=null?phone.replace(/\D/g, ''):null;
             var name = store.name;
             var html = "<h4 class='color ls-0 ' >"+name+"</h4>";
-                html +="<div class='info-row-withicon phone'><i class='omniicon-phone'></i> <a href='tel:"+tel+"'>"+phone+"</a></div>";
+                html +=phone!=null?"<div class='info-row-withicon phone'><i class='omniicon-phone'></i> <a href='tel:"+tel+"'>"+phone+"</a></div>": "";
                 html +="<div class='info-row-withicon address'><i class='omniicon-location-pin-2'></i> "+address+"</div>";
                 html +="<div class='info-row-withicon direction-row'><a class='direction-link' href='"+direction+"' target='_blank'><i class='omniicon-direction-arrow'></i> Directions</a> <div class='direction-distance'>"+distance+"</div></div>";
             var category = store.category;
@@ -223,8 +223,8 @@ function createMarker(latlng,name,html,category,store ) {
     marker.setValues({
       mycategory: category,
       myname: name, 
-      myphone: store.phone,
-      myphone2: store.phone2,
+      myphone: store.phone??null,
+      myphone2: store.phone2??null,
       myemail: store.email,
       myaddress: store.address,
       myaddresspreview: store.addresspreview,
@@ -307,7 +307,7 @@ function makeSidebar(markers=null) {
             html += "<div class='main-add "+featuredclass+"'>";
             html +="<div class='main-add--row'><div class='distance'>"+distance+"</div> "+redpartner+"</div>";
             html += "<h5 class='color' >"+markers[i].myname+"</h5>";
-            html +="<div class='info-row-withicon phone'><i class='omniicon-phone'></i> <a href='tel:"+tel+"'>"+markers[i].myphone+"</a></div>";
+            html +=myphone!=null?"<div class='info-row-withicon phone'><i class='omniicon-phone'></i> <a href='tel:"+tel+"'>"+markers[i].myphone+"</a></div>":"";
             html +="<div class='info-row-withicon address'><i class='omniicon-location-pin-2'></i> "+address+"</div>";
             html +="<div class='info-row-withicon direction-row'><i class='omniicon-direction-arrow'></i> <a class='direction-link' href='"+direction+"' target='_blank'>Directions</a></div>";
             //html +="<div class='info-row-withicon link-onmap-row'><a href=javascript:myclick(" + i + ")>Show on Map</a></div>";
