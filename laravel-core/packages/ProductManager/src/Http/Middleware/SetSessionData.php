@@ -33,7 +33,7 @@ class SetSessionData
 
     private function setOmniData(): void
     {
-        $defaultRegion = 'eu';
+        $defaultRegion = 'us';
         $defaultLocale = 'en';
         $defaultBrand = 'radar';
 
