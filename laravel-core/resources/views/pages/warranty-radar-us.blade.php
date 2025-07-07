@@ -35,7 +35,7 @@
 						<h3 class=" dark-100">Warranty information</h3>
 						<h4 class="mt-2">USA</h4>
 						<ul class="text-md no-bullets li-icons">
-							<li class="mb-xxs-1"><a target="_blank" href="{{ asset('storage/colletrals/radar-us-warranty/Limited Warranty Quick Reference Guide - USA.pdf') }}"><x-icon-download-ico class="dark-100" /> Limited Warranty Quick Reference Guide</a>  – Passenger and Light Truck replacement tires purchased after February 1, 2025</b></li>
+							<li class="mb-xxs-1"><a target="_blank" href="{{ asset('storage/colletrals/radar-us-warranty/Warranty-Quick-Ref-Guide-US.pdf') }}"><x-icon-download-ico class="dark-100" /> Limited Warranty Quick Reference Guide</a>  – Passenger and Light Truck replacement tires purchased after February 1, 2025</b></li>
 							<li class="mb-xxs-1"><a target="_blank" href="{{ asset('storage/colletrals/radar-us-warranty/USA-Limited-Warranty-Booklet.pdf') }}"><x-icon-download-ico class="dark-100" /> Limited Warranty Booklet</a>  - Passenger and Light Truck replacement tires purchased after February 1, 2025</b></li>
 						</ul>
 						<h4 class="mt-2">CANADA</h4>
