@@ -179,6 +179,7 @@ function downloadUrl(stores) {
             store.postal=typeof(store.postal)==='undefined'?'':store.postal;
                 //address =address+" "+store.postal;
             store.country=typeof(store.country)==='undefined'?'':store.country;
+            store.phone=(store.phone!==null && store.phone.trim()!=="-")?store.phone:null
                 //address =address+" "+store.country;
             store.addresspreview=typeof(store.addresspreview)==='undefined'?'':store.addresspreview;
                 address=store.addresspreview;
@@ -187,7 +188,7 @@ function downloadUrl(stores) {
             var direction = 'https://www.google.com/maps/dir/Current+Location/'+  address;
             var distance = store.distance;
                 distance=getdistancestring(distance);
-            var phone = store.phone;
+            var phone = store.phone!==null?store.phone:null;
             var tel = phone!=null?phone.replace(/\D/g, ''):null;
             var name = store.name;
             var html = "<h4 class='color ls-0 ' >"+name+"</h4>";
