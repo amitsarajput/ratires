@@ -196,6 +196,7 @@ function downloadUrl(stores) {
                 html +="<div class='info-row-withicon direction-row'><a class='direction-link' href='"+direction+"' target='_blank'><i class='omniicon-direction-arrow'></i> Directions</a> <div class='direction-distance'>"+distance+"</div></div>";
             var category = store.category;
             // create the marker
+            console.log(store);
             var marker = createMarker(point,name,html,category,store);
         });
 }
