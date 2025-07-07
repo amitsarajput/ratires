@@ -223,8 +223,8 @@ function createMarker(latlng,name,html,category,store ) {
     marker.setValues({
       mycategory: category,
       myname: name, 
-      myphone: store.phone??null,
-      myphone2: store.phone2??null,
+      myphone: store.phone,
+      myphone2: store.phone2,
       myemail: store.email,
       myaddress: store.address,
       myaddresspreview: store.addresspreview,
