@@ -1,9 +1,15 @@
 <x-guest-layout>
-    <!-- Page Title
-    ============================================= -->
-    <x-page-title image-url="{{ asset('images/premium-collection--banner.webp') }}" container="true" page-title="" class="page-title--left el-height-70 uppercase" />
-    
-    <!-- Content
+    <div class="mx-auto vid-parent" >
+        <div class="video-wrap ">
+            <video id="" poster="{{ asset('images/landing-pages/premium/OMNI -Landing-Page-Hero-1.webp') }}" preload="auto" autoplay muted loop  >
+                <source src="{{ asset('images/landing-pages/premium/videos/radartire-video-1.mp4') }}" type='video/mp4' />
+                <source src="{{ asset('images/landing-pages/premium/videos/radartire-video-1.webm') }}" type='video/webm' />
+                <source src="{{ asset('images/landing-pages/premium/videos/radartire-video-1.ogv') }}" type="video/ogg" />
+            </video>
+            <div class="video-overlay" style="background-color: rgba(0,0,0,0);"></div>
+        </div>
+    </div>
+<!-- Content
     ============================================= -->
     <section id="content">
         <div class="nogimmick-section">
@@ -201,6 +207,7 @@
     </section><!-- #content end -->
     @push('styles')
     <style>
+
         /* COMMON STYLES */
         /*  section-title  */
         .section-title{
@@ -270,7 +277,21 @@
         }
                 
         /* COMMON STYLES */
-
+        
+        /* Video section */
+        .vid-parent {
+            position: relative;
+            width: 100%;
+            background-color: #000;
+            overflow: hidden;
+            .video-wrap{
+                max-width: 1000px;
+                margin: 0 auto;
+                video{
+                    width: 100%;
+                }
+            }
+        }
         /*nogimmick SECTION*/
         .nogimmick-section, .top-banner,.icons-section{
             background-color: #000000;
