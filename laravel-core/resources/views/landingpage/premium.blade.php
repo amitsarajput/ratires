@@ -339,17 +339,17 @@
         .nogimmick-section{
             margin-top:0;
         }
-        @media (min-width: 768px) and (max-width: 991.98px){
-            .large-heading .large-heading--text {font-size: 190px;}
-            .large-heading .large-heading--sub-text {  font-size: 14px; letter-spacing: 2px; }
-        }
-        @media screen and (max-width:510px) {
-            .large-heading .large-heading--text {font-size: 100px;}
+        @media screen and (max-width:767px) {
+            .large-heading .large-heading--text {font-size: 85px;}
             .large-heading .large-heading--sub-text {  font-size: 12px; letter-spacing: 3px; }
             
             .nogimmick-section{
                 margin-top:-10px;
             }
+        }
+        @media (min-width: 768px) and (max-width: 991.98px){
+            .large-heading .large-heading--text {font-size: 190px;}
+            .large-heading .large-heading--sub-text {  font-size: 14px; letter-spacing: 2px; }
         }
 
     /* 
@@ -480,7 +480,7 @@
             z-index:1;
         }
         #floating-button.top{
-            top: 90px;
+            top: 190px;
         }
         
         #floating-button.right{
