@@ -337,6 +337,67 @@ class FormsController extends Controller
         return back()->with('status','Sorry! Please try again later');
 
     }
+
+    public function form_landing_premium(Request $request) {
+        //dd($request->all());
+        $request->validate([
+            'g-recaptcha-response' => 'required',
+            'name' => ['required','string'],
+            'company' => ['required','string'],
+            'email' => ['required','email'],
+            'phone' => ['required','string'],
+            'address' => ['required','string'],
+            'message' => ['required','string'],
+            'url_current' => ['required','string', 'url:http,https'],
+        ]);
+        
+        $recaptcha = app('recaptcha');
+        if (!$recaptcha->verify($request->input('g-recaptcha-response'))) {
+            return back()->withErrors(['captcha' => 'Captcha verification failed.']);
+        }
+        $form_data=[
+            'name' => $request->name,
+            'company' => $request->company,
+            'email' => $request->email,
+            'company_website' => $request->company_website,
+            'phone' => $request->phone,
+            'city' => $request->city,
+            'message' => $request->message,
+            'url_current' => $request->url_current,
+        ];
+        
+        $i_am_a= [];
+        if($request->has('wholeseller') || $request->has('retailer') || $request->has('consumer')) {
+            $request->has('wholeseller')? $i_am_a[]='wholeseller':null;
+            $request->has('retailer')? $i_am_a[]='retailer':null;
+            $request->has('consumer')? $i_am_a[]='consumer':null;
+            $form_data['i_am_a'] = implode(',', $i_am_a);
+        } 
+
+        $form = Forms::create([
+            'type' => 'landing-form--premium',
+            'form_data' => json_encode($form_data)
+        ]);
+
+        $form_data['subject']='Radar Premium Inquiry from '.$form_data['name'];
+
+        $to=['amit@lopamudracreative.com'];
+        //$to=['carlosortigosa@omni-united.com'];
+        $to=['manavsuri@omni-united.com'];
+        //$to=['info@radartires.com'];
+        try {
+            Mail::to($to)->send(new GenricMail($form_data));
+            return back()->with('status','Message sent successfully.');
+        } catch (\Exception $e) {
+            return back()->with('status','Sorry! Please try again later.');
+        }
+        
+        //Mail::to($to)->send(new GenricMail($form_data));
+
+
+        return back()->with('status','Sorry! Please try again later');
+
+    }
     /**
      * Display a listing of the resource.
      */

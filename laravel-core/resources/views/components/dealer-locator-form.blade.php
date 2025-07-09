@@ -3,7 +3,7 @@
             {{ Form::hidden('phone', '') }}
             {{ Form::hidden('url_current', url()->current()) }}
             {{ Form::hidden('g-recaptcha-response', '',['id'=>'g-recaptcha-response']) }}
-            @if ($errors && $errors->any())
+            @if ($errors->any())
                 <div class="alert alert-danger  error horizontal" role="alert">
                     <ul>
                         @foreach ($errors->all() as $error)

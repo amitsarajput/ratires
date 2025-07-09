@@ -31,6 +31,14 @@
     "file": "assets/fa-v4compatibility-Gkfbzimj.woff2",
     "src": "node_modules/@fortawesome/fontawesome-free/webfonts/fa-v4compatibility.woff2"
   },
+  "resources/fonts/GoboldHighBold.eot": {
+    "file": "assets/GoboldHighBold-gTs1EK8n.eot",
+    "src": "resources/fonts/GoboldHighBold.eot"
+  },
+  "resources/fonts/GoboldHighBold.woff": {
+    "file": "assets/GoboldHighBold-GoORJE_E.woff",
+    "src": "resources/fonts/GoboldHighBold.woff"
+  },
   "resources/fonts/Gotham Condensed Bold.eot": {
     "file": "assets/Gotham Condensed Bold-KPLneC-B.eot",
     "src": "resources/fonts/Gotham Condensed Bold.eot"
@@ -229,7 +237,7 @@
     "src": "resources/js/app.js"
   },
   "resources/sass/style.scss": {
-    "file": "assets/style-D0-0FC79.css",
+    "file": "assets/style-eixDv0FS.css",
     "isEntry": true,
     "src": "resources/sass/style.scss"
   }

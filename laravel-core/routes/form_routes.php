@@ -9,4 +9,5 @@ Route::name('form.')->group(function () {
     Route::post('dealerlocator/submit',[FormsController::class, 'form_dealerlocator'])->name('dealerlocator');
     
     Route::post('landing-red/submit',[FormsController::class, 'form_landing_red'])->name('landing-red');
+    Route::post('landing-premium/submit',[FormsController::class, 'form_landing_premium'])->name('landing-premium');
 });

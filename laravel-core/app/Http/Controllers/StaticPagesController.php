@@ -106,9 +106,11 @@ class StaticPagesController extends Controller
         //dd($request->path());
         
         $request_path=$this->get_request_path($request, $country);
-        if ($request_path==='radar/eu-renegade-x') {
-            $this->data['page']='eu-renegade-x';
+        
+        if ($request_path==='premium') {
+            $this->data['page']='premium';
         }
+        
         return view('landingpage/' . $this->data['page'], ['data'=>$this->data]);
     }
 }
