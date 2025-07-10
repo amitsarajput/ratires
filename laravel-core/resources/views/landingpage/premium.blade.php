@@ -284,14 +284,15 @@
             width: 100%;
             background-color: #000;
             overflow: hidden;
-            .video-wrap{
-                max-width: 1000px;
-                margin: 0 auto;
-                video{
-                    width: 100%;
-                }
-            }
         }
+        .vid-parent .video-wrap{
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .vid-parent .video-wrap video{
+            width: 100%;
+        }
+        
         /*nogimmick SECTION*/
         .nogimmick-section, .top-banner,.icons-section{
             background-color: #000000;
