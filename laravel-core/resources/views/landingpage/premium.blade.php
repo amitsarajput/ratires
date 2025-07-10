@@ -741,22 +741,23 @@
             display: flex;
             flex-flow: row wrap;
             align-items: center;
-            &.justify-content-start {
-                justify-content: flex-start;
-            }
-            &.justify-content-end {
-                justify-content: flex-end;
-            }
-            .form-group{
-                display: flex;
-                align-items: center;
-                margin-bottom: 0;
-                width: auto;
-                .form-check-input{
-                    margin-right: .25rem;
-                }
-            }
         }
+        .form-inline.justify-content-start{
+            justify-content: flex-start;
+        }
+        .form-inline.justify-content-end{
+            justify-content: flex-end;
+        }
+        .form-inline .form-group{
+            display: flex;
+            align-items: center;
+            margin-bottom: 0;
+            width: auto;
+        }
+        .form-inline .form-group .form-check-input{
+            margin-right: .25rem;
+        }
+        
         
         
         @media screen and (max-width:768px) {
