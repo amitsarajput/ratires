@@ -758,6 +758,7 @@
         .form-inline .form-group .form-check-input{
             margin-right: .25rem;
         }
+        small{ margin: 5px; }
         
         
         
@@ -771,7 +772,7 @@
             .form-inline { display: flex; flex-flow: column wrap;}            
             .form-inline.justify-content-start{ align-items: flex-start; }
             .form-inline.justify-content-end{ align-items: flex-end; }
-            small{ margin-bottom: 5px;}
+            small{ margin-bottom: 5px; margin-right: 0;}
         }
         
         @media screen and (max-width:510px) {
