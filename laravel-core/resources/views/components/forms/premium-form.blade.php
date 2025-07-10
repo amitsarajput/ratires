@@ -36,7 +36,7 @@
             </div>
             <div class="grid">
                 <div class="col-7 ">
-                    <div class="form-inline">
+                    <div class="form-inline justify-content-start">
                         <div class="form-group mb-2">
                             <label>I AM A</label>
                         </div>

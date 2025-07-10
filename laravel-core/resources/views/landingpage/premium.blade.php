@@ -763,11 +763,15 @@
         
         @media screen and (max-width:768px) {
             #contact-section.section-two-col { padding: 60px 0; }
-        .section-title.x-large .section-title--heading { font-size: 90px; }
-        #contact-section.section-col form {margin-bottom: 0; }
-        #contact-section.section-col .flex-columns .flex-col{ max-width:100%; }
-        #contact-section.section-col .flex-columns .flex-col .formfooter .col-5 .form-inline{ flex-wrap: initial; }
-        #contact-section.section-col form label.req-field-text { font-size: 10px; }
+            .section-title.x-large .section-title--heading { font-size: 90px; }
+            #contact-section.section-col form {margin-bottom: 0; }
+            #contact-section.section-col .flex-columns .flex-col{ max-width:100%; }
+            #contact-section.section-col .flex-columns .flex-col .formfooter .col-5 .form-inline{ flex-wrap: initial; }
+            #contact-section.section-col form label.req-field-text { font-size: 10px; }
+            .form-inline { display: flex; flex-flow: column wrap;}            
+            .form-inline.justify-content-start{ align-items: flex-start; }
+            .form-inline.justify-content-end{ align-items: flex-end; }
+            small{ margin-bottom: 5px;}
         }
         
         @media screen and (max-width:510px) {
