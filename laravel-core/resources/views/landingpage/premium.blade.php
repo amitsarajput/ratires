@@ -188,7 +188,7 @@
         <div id="contact-section" class="section-col">
             <div class="container">
                 <div class="flex-columns">
-                    <div class="flex-col ">
+                    <div class="flex-col">
                         <div class="section-title extrafont x-large underline">
                             <div class="section-title--heading">contact us</div>
                         </div>
@@ -741,6 +741,12 @@
             display: flex;
             flex-flow: row wrap;
             align-items: center;
+            &.justify-content-start {
+                justify-content: flex-start;
+            }
+            &.justify-content-end {
+                justify-content: flex-end;
+            }
             .form-group{
                 display: flex;
                 align-items: center;

@@ -34,7 +34,7 @@
                     {{ Form::textarea('message', '', ['class'=>'sm-form-control valid','cols'=>'30','rows'=>'4','placeholder'=>'INQUIRY*']) }}
                 </div>                
             </div>
-            <div class="grid align-end">
+            <div class="grid">
                 <div class="col-7 ">
                     <div class="form-inline">
                         <div class="form-group mb-2">
@@ -55,11 +55,11 @@
                     </div>
                 </div>
                 <div class="col-5 tright">
-                    
-                            <small class="mandatory">*Required Fields</small>
-                        
+                    <div class="form-inline justify-content-end">
+                            <small class="mandatory">*Required Fields</small>                        
                             {{ Form::button('SUBMIT',['type'=>'submit','id'=>'submit','class'=>"knopf red sharp heading-font ls-1 p"]); }}
                         
+                    </div>
                 </div>
                 
             </div>

@@ -11,5 +11,6 @@ xlsx/
 .cpanel.yml
 /storage/
 storage
+/storage
 *.env
 /laravel-core/.env

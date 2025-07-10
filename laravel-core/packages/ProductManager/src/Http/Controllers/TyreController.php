@@ -22,7 +22,7 @@ use PhpOffice\PhpSpreadsheet\Spreadsheet;
 use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
 use Stevebauman\Location\Facades\Location;
 
-use App\Http\Controllers\XlsxController;
+use ProductManager\Http\Controllers\XlsxController;
 use Illuminate\Support\Facades\Route;
 
 class TyreController extends Controller
