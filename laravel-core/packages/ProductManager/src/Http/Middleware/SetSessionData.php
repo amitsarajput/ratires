@@ -33,9 +33,10 @@ class SetSessionData
 
     private function setOmniData(): void
     {
-        $defaultRegion = 'us';
-        $defaultLocale = 'en';
-        $defaultBrand = 'radar';
+        $defaultRegion = env('DEFAULT_REGION', 'us');
+        $defaultLocale = env('DEFAULT_LOCALE', 'en');
+        $defaultBrand = env('DEFAULT_BRAND', 'radar');
+
 
         try {
             //$allCountries = Country::where('published', 1)->orderBy('order', 'asc')->get();
