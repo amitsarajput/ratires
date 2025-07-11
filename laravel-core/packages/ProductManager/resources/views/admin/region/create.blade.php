@@ -52,6 +52,10 @@
                 {{ Form::text('slug', '', ['class'=>'form-control','placeholder'=>'Enter Slug'] ) }}
               </div>
               <div class="form-group">
+                <label for="exampleInputPassword1">Redirect</label>
+                {{ Form::text('redirect', '', ['class'=>'form-control','placeholder'=>'Enter Redirect'] ) }}
+              </div>
+              <div class="form-group">
                 <label for="exampleInputPassword1">Locale Code</label>
                 {{ Form::text('locale_code', '', ['class'=>'form-control','placeholder'=>'Enter Locale CODE'] ) }}
               </div>

@@ -59,6 +59,10 @@
                 {{ Form::text('slug', $countri->slug, ['class'=>'form-control','placeholder'=>'Enter Slug'] ) }}
               </div>
               <div class="form-group">
+                <label for="exampleInputPassword1">Redirect</label>
+                {{ Form::text('redirect', $countri->redirect, ['class'=>'form-control','placeholder'=>'Enter Redirect'] ) }}
+              </div>
+              <div class="form-group">
                   <label>Brand</label>
                   <div class="select2-purple sortable-option" data-options="{{$brand}}" data-selected-options="{{$countri->brands->pluck('id')}}">
                     {{ Form::select('brand[]', $brand, $countri->brands, ['multiple' => true, 'class'=>'select2 form-control', 'data-dropdown-css-class'=>'select2-purple']) }}

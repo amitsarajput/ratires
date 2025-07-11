@@ -12,7 +12,7 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 class Region extends Model
 {
     use HasFactory;
-    protected $fillable=['name','code','locale_code','slug','order','published'];
+    protected $fillable=['name','code','locale_code','slug','redirect','order','published'];
     
     public function countries():HasMany
     {

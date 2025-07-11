@@ -49,6 +49,8 @@ class SetSessionData
         $omniData = [
             'all_continents' => $allContinents->toArray(),
             'available_locations' => $this->extractMap($allContinents, 'name', 'code'),
+            'region_country_map' => $this->extractRegionCountryMap($allContinents, 'code'),
+            'all_redirects' => $this->extractMap($allContinents, 'slug', 'redirect'),
             'available_locales' => $this->extractMap($allContinents, 'code', 'locale_code'),
             'slugs' => $this->extractMap($allContinents, 'code', 'slug'),
             'default_location' => $defaultRegion,
@@ -66,7 +68,7 @@ class SetSessionData
             'omni_data' => $omniData,
             'locale' => $defaultLocale
         ]);
-        //dd(session('omni_data'));
+        //dd(session('omni_data.all_continents'), session('omni_data.all_redirects'));
     }
 
     /**
@@ -89,5 +91,22 @@ class SetSessionData
 
             return $map;
         })->toArray();
+    }
+
+    public function extractRegionCountryMap($regions, string $keyField): array
+    {
+        // You can add any cleanup or finalization logic here if needed.
+        $regions_map = [];
+        foreach ($regions as $region) {
+            if ($keyField) {
+                $regions_map[$region[$keyField]] = [];
+            }
+            if(!empty($region['countries'])){
+                foreach ($region['countries'] as $country) {
+                    $regions_map[$region[$keyField]][] = $country['code'];
+                }
+            }
+        }
+        return $regions_map;
     }
 }

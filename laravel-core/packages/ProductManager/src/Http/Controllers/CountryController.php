@@ -47,6 +47,7 @@ class CountryController extends Controller
             'code' => ['required', 'string', 'max:255'],
             'locale_code' => ['required', 'string', 'max:255'],
             'slug' => ['required', 'string', 'max:255', 'unique:'.Country::class],
+            'redirect' => ['nullable', 'string', 'max:255'],
             'brand' => ['required', 'array' ],
             'search_tags' => ['required','array'],
             'search_tags.*' => ['string', 'max:255'],
@@ -58,6 +59,7 @@ class CountryController extends Controller
             'code' => strtolower($request->code),
             'locale_code' => strtolower($request->locale_code),
             'slug' => strtolower($request->slug),
+            'redirect' => $request->redirect ?? null,
             'published'=>0,
             'order' => $request->order,
         ];
@@ -108,6 +110,7 @@ class CountryController extends Controller
             'code' => ['required', 'string', 'max:255'],
             'locale_code' => ['required', 'string', 'max:255'],
             'slug' => ['required', 'string', 'max:255'],
+            'redirect' => ['nullable', 'string', 'max:255'],
             'brand' => ['required', 'array' ],
             'search_tags' => ['required','array'],
             'search_tags.*' => ['string', 'max:255'],
@@ -119,6 +122,7 @@ class CountryController extends Controller
             'code' => strtolower($request->code),
             'locale_code' => strtolower($request->locale_code),
             'slug' => strtolower($request->slug),
+            'redirect' => strtolower($request->redirect) ?? null,
             'published'=>0,
             'order' => $request->order,
         ];

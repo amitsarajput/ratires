@@ -56,6 +56,10 @@
                 {{ Form::text('slug', $rgn->slug, ['class'=>'form-control','placeholder'=>'Enter Slug'] ) }}
               </div>
               <div class="form-group">
+                <label for="exampleInputPassword1">Redirect</label>
+                {{ Form::text('redirect', $rgn->redirect, ['class'=>'form-control','placeholder'=>'Enter Redirect'] ) }}
+              </div>
+              <div class="form-group">
                 <label for="exampleInputPassword1">Search Tags</label>
                 <div class="select2-purple sortable-option"  data-options="{{$search_tags_all}}" data-selected-options="{{$rgn->search_tags->pluck('id')}}">
                   {{ Form::select('search_tags[]', $search_tags_all, $rgn->search_tags, ['multiple'=>'true','class'=>'form-control select2', 'data-dropdown-css-class'=>'select2-purple'] ) }}

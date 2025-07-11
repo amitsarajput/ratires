@@ -42,6 +42,7 @@ class RegionController extends Controller
             'code' => ['required', 'string', 'max:255'],
             'locale_code' => ['required', 'string', 'max:255'],
             'slug' => ['required', 'string', 'max:255','unique:'.Region::class],
+            'redirect' => ['nullable', 'string', 'max:255'],
             'search_tags' => ['required','array'],
             'search_tags.*' => ['string', 'max:255'],
             'order' => ['required'],
@@ -51,6 +52,7 @@ class RegionController extends Controller
             'code' => strtolower($request->code),
             'locale_code' => strtolower($request->locale_code),
             'slug' => strtolower($request->slug),
+            'redirect' => strtolower($request->redirect) ?? null,
             'published'=>0,
             'order' => $request->order,
         ];
@@ -98,6 +100,7 @@ class RegionController extends Controller
             'code' => ['required', 'string', 'max:255'],
             'locale_code' => ['required', 'string', 'max:255'],
             'slug' => ['required', 'string', 'max:255'],
+            'redirect' => ['nullable', 'string', 'max:255'],
             'search_tags' => ['required','array'],
             'search_tags.*' => ['string', 'max:255'],
             'order' => ['required'],
@@ -107,6 +110,7 @@ class RegionController extends Controller
             'code' => strtolower($request->code),
             'locale_code' => strtolower($request->locale_code),
             'slug' => strtolower($request->slug),
+            'redirect' => strtolower($request->redirect) ?? null,
             'published'=>0,
             'order' => $request->order,
         ];
