@@ -76,15 +76,21 @@ class FormsController extends Controller
     }
 
     public function omni_redirect($to_url){
-        return match ($to_url) {
-            'eu' => redirect()->to('https://radartyres.com/eu')->send(),
-            'eu/es' => redirect()->to('https://radartyres.com/eu/es')->send(),
-            'eu/it' => redirect()->to('https://radartyres.com/eu/it')->send(),
-            'eu/fr' => redirect()->to('https://radartyres.com/eu/fr')->send(),
-            'apac' => redirect()->to('https://radartyres.com/apac')->send(),
-            'ca' => redirect()->to('https://www.omni-united.com/radar-ca')->send(),
-            default => false,
-        };
+        $redirects=session('omni_data.all_redirects');
+        if ( array_key_exists($to_url, $redirects)) {
+                return redirect()->to($redirects[$to_url])->send();
+        }
+        return false;
+
+        // return match ($to_url) {
+        //     'eu' => redirect()->to('https://radartyres.com/eu')->send(),
+        //     'eu/es' => redirect()->to('https://radartyres.com/eu/es')->send(),
+        //     'eu/it' => redirect()->to('https://radartyres.com/eu/it')->send(),
+        //     'eu/fr' => redirect()->to('https://radartyres.com/eu/fr')->send(),
+        //     'apac' => redirect()->to('https://radartyres.com/apac')->send(),
+        //     'ca' => redirect()->to('https://www.omni-united.com/radar-ca')->send(),
+        //     default => false,
+        // };
     }
 
     public function set_session_region_country($to_url,$omni_data){
