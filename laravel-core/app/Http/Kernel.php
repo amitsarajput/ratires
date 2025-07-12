@@ -24,9 +24,7 @@ class Kernel extends HttpKernel
         
         //\App\Http\Middleware\SetSessionData::class,
         \ProductManager\Http\Middleware\SetSessionData::class,
-
         \ProductManager\Http\Middleware\RedirectCountryFromUrl::class, //Redirects country from URL
-
         \ProductManager\Http\Middleware\SetDefaultLocaleForUrls::class,
         \ProductManager\Http\Middleware\Localization::class, // <--- Lacalize
         //\App\Http\Middleware\NormalizeDoubleSlashes::class,

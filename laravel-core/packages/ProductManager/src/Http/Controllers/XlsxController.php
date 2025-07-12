@@ -73,8 +73,9 @@ class XlsxController extends Controller
         return $sizes;
     }
     //Create file to download
-    public static  function createfile( $data , $headerkeys=null, $filename, $sheetname='sizes', $path='./storage/xlsx/')
-	{        
+    public static  function createfile( $data , $headerkeys=null, $filename, $sheetname='sizes', $path='xlsx/')
+	{  
+        $path = $_SERVER['DOCUMENT_ROOT'] . "/laravel-core/storage/app/public/".$path;
         $spreadsheet = new Spreadsheet();
         $sheet = $spreadsheet->getActiveSheet();
         $sheet->setTitle($sheetname);
@@ -110,6 +111,7 @@ class XlsxController extends Controller
         }
         $writer = new Xlsx($spreadsheet);
         $filename = $filename.'.xlsx';
+        //dd($path.$filename);
         $writer->save($path.$filename);
         return $filename;
 	}
