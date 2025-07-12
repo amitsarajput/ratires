@@ -102,14 +102,22 @@ class StaticPagesController extends Controller
 
         }
     }
-    public function landingpage(Request $request,  ?string $country=null){
+    public function landingpage(Request $request, $region=null,  ?string $country=null){
         //dd($request->path());
-        
+
         $request_path=$this->get_request_path($request, $country);
+
+        if ($region!==null) {
+            $request_path=str_replace($region.'/','',$request_path);
+        }
+        if ($country!==null) {
+            $request_path=str_replace($country.'/','',$request_path);
+        }
         
         if ($request_path==='premium') {
             $this->data['page']='premium';
         }
+        dd($request_path);
         
         return view('landingpage/' . $this->data['page'], ['data'=>$this->data]);
     }

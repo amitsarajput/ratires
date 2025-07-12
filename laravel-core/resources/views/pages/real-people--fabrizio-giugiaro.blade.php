@@ -17,6 +17,10 @@
         <div class="container">
             <div class="grid">
                 <div class="col-md-12 col-bleed-y  mb-4">
+                    <h3 class="no-top-margin dark-100 uppercase">{!! __("ABOUT GFG STYLE AND RADAR TIRES COLLABORATION") !!}</h3>
+                    <p>{!! __("Iconic automotive designers Giorgetto & Fabrizio Giugiaro bring six decades of design expertise to Radar Tires.  They have been directly responsible for creating over 300 standard production models and more than 200 research prototypes for numerous different manufacturers. From shaping some of the world’s most celebrated vehicles such as <b>Alfa Romeo, Aston Martin, Audi, Bentley, Bizzarrini, BMW, Bugatti, Chevrolet, Delorean, Ducati,  Ferrari, Ford, Jaguar, Lamborghini, Lancia, Lexus, Lotus, Maserati, Mini, Nissan, Porsche, Subaru, Toyota, Volkswagen</b> to designing Radar Tires, Giorgetto & Fabrizio Giugiaro continue to drive innovation through GFG style.") !!}</p>
+                </div>
+                <div class="col-md-12 col-bleed-y  mb-4">
                     <h3 class="no-top-margin dark-100 uppercase">{{ __("Shaping the future of tire design: Fabrizio Giugiaro and Radar Tires") }}</h3>
                     <p>{{ __("Meet Fabrizio Giugiaro, the visionary designer behind some of the world’s most iconic automotive creations and the founder of GFG Style. Now, he brings his expertise to Radar Tires, redefining what tire design means in terms of aesthetics, performance, and accessibility.") }}</p>
                 </div>

@@ -68,7 +68,7 @@ class FormsController extends Controller
             } catch (\Exception $e) {
                     // Catch other possible exceptions
             }
-                           // dd(session('omni_data'));
+            // dd(session('omni_data'));
             //dd($request->location,$omni_data);
             //return redirect($to_url);
             return redirect()->route('home');
