@@ -117,7 +117,7 @@ class StaticPagesController extends Controller
         if ($request_path==='premium') {
             $this->data['page']='premium';
         }
-        dd($request_path);
+        //dd($request_path);
         
         return view('landingpage/' . $this->data['page'], ['data'=>$this->data]);
     }
