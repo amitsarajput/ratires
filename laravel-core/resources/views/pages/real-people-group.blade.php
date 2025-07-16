@@ -27,28 +27,28 @@
             
             <div class="grid grid-bleed align-center">
                 <div class="col-md-6 col-sm-12">
-                    <a href="{{ route('pages.olli-seppala') }}">
+                    <a href="{{ safeRoute('pages.olli-seppala') }}">
                         <img src="{{asset('images/Olli.webp')}}" alt="">
                     </a>
                 </div>
                 <div class="col-md-6 col-sm-12">
                     <div class="ma-xxs-2 ma-xs-2 ma-sm-2 ma-md-2 mx-lg-7">
                         <h3 class="dark-100  no-top-margin">{{ __("CUTTING-EDGE R&D") }}</h3>
-                        <p>{{ __("Olli Seppälä, Head of R&D, leads the charge in engineering tires that combine state-of-the-art materials and advanced manufacturing techniques. His vision is to deliver premium quality through a world-class global manufacturing network—without the premium price. ") }}<br><a class="knopf link red heading-font sharp ls-1" href="{{ route('pages.olli-seppala') }}">{{ __("READ MORE") }}</a></p>
+                        <p>{{ __("Olli Seppälä, Head of R&D, leads the charge in engineering tires that combine state-of-the-art materials and advanced manufacturing techniques. His vision is to deliver premium quality through a world-class global manufacturing network—without the premium price. ") }}<br><a class="knopf link red heading-font sharp ls-1" href="{{ safeRoute('pages.olli-seppala') }}">{{ __("READ MORE") }}</a></p>
                         <a class="knopf red heading-font sharp ls-1" href="https://youtu.be/LVP-xecALQk" target="_blank">{{__('WATCH VIDEO')}}</a>
                     </div>
                 </div>
             </div>
             <div class="grid grid-bleed align-center">
                 <div class="col-md-6 col-sm-12 order-md-2" >
-                    <a href="{{ route('pages.stephane-clepkens') }}">
+                    <a href="{{ safeRoute('pages.stephane-clepkens') }}">
                         <img src="{{asset('images/Stephane.webp')}}" alt="">
                     </a>
                 </div>
                 <div class="col-md-6 col-sm-12">
                     <div class="ma-xxs-2 mx-lg-7">
                         <h3 class="dark-100  no-top-margin">{{ __("TESTING EXCELLENCE") }}</h3>
-                        <p>{{ __("Test driver Stéphane Clepkens pushes every Radar tire to the limit, rejecting anything that doesn’t outperform expectations. His mission? To ensure Radar Tires rival and even surpass premium brands in real-world performance.") }} <br><a class="knopf link red heading-font sharp ls-1" href="{{ route('pages.stephane-clepkens') }}">{{ __("READ MORE") }}</a></p>
+                        <p>{{ __("Test driver Stéphane Clepkens pushes every Radar tire to the limit, rejecting anything that doesn’t outperform expectations. His mission? To ensure Radar Tires rival and even surpass premium brands in real-world performance.") }} <br><a class="knopf link red heading-font sharp ls-1" href="{{ safeRoute('pages.stephane-clepkens') }}">{{ __("READ MORE") }}</a></p>
                         <a class="knopf red heading-font sharp ls-1" href="https://youtu.be/WiIYifeGdIY" target="_blank">{{__('WATCH VIDEO')}}</a>
                         <!-- <h5 class="black">DIMAX SPORT | DIMAX SPRINT | DIMAX ALL SEASON | DIMAX WINTER</h5> -->
                     </div>
@@ -56,14 +56,14 @@
             </div>
             <div class="grid grid-bleed align-center">
                 <div class="col-md-6 col-sm-12">
-                    <a href="{{ route('pages.fabrizio-giugiaro') }}">
+                    <a href="{{ safeRoute('pages.fabrizio-giugiaro') }}">
                         <img src="{{asset('images/Fabrizio.webp')}}" alt="">
                     </a>
                 </div>
                 <div class="col-md-6 col-sm-12">
                     <div class="ma-xxs-2 ma-xs-2 ma-sm-2 ma-md-2 mx-lg-7">
                         <h3 class="dark-100  no-top-margin">{{ __("ICONIC DESIGN") }}</h3>
-                        <p>{{ __("Fabrizio Giugiaro, the visionary designer behind some of the world’s most iconic automotive creations and the founder of GFG Style. Now, he brings his expertise to Radar Tires, redefining what tire design means in terms of aesthetics, performance, and accessibility.") }} <br><a class="knopf link red heading-font sharp ls-1" href="{{ route('pages.fabrizio-giugiaro') }}">{{ __("READ MORE") }}</a></p>
+                        <p>{{ __("Fabrizio Giugiaro, the visionary designer behind some of the world’s most iconic automotive creations and the founder of GFG Style. Now, he brings his expertise to Radar Tires, redefining what tire design means in terms of aesthetics, performance, and accessibility.") }} <br><a class="knopf link red heading-font sharp ls-1" href="{{ safeRoute('pages.fabrizio-giugiaro') }}">{{ __("READ MORE") }}</a></p>
                         <a class="knopf red heading-font sharp ls-1" href="https://youtu.be/oGc5hAfOeIA" target="_blank">{{__('WATCH VIDEO')}}</a>
                         <!-- <h5 class="black">DIMAX SPORT | DIMAX SPRINT | DIMAX ALL SEASON | DIMAX WINTER</h5> -->
                     </div>

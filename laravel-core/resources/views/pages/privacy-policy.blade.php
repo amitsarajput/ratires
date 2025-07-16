@@ -16,7 +16,7 @@
 			<div class="container">
 				<div class="grid">
                     <div class="col-md-12">
-                        <p class="bottommargin">Your privacy is important to Omni United (S) Pte Ltd ("Client", "we", "us" ). This privacy policy ("Policy") applies to this website <a href="https://www.omni-united.com">https://www.omni-united.com</a> (the "Site") and tells you how personal information is collected, used, disclosed, and protected by us. The Site and our offline collection are collectively referred to as the "Services". This Policy applies to our current information collection, use, and disclosure practices, as well as those that have been in place for the last 12 months. By using the Services you consent that we may process the data that we collect from you in accordance with this Privacy Policy.</p>
+                        <p class="bottommargin">Your privacy is important to Omni United (S) Pte Ltd ("Client", "we", "us" ). This privacy policy ("Policy") applies to this website <a target="_blank" href="https://www.omni-united.com">https://www.omni-united.com</a> (the "Site") and tells you how personal information is collected, used, disclosed, and protected by us. The Site and our offline collection are collectively referred to as the "Services". This Policy applies to our current information collection, use, and disclosure practices, as well as those that have been in place for the last 12 months. By using the Services you consent that we may process the data that we collect from you in accordance with this Privacy Policy.</p>
                         
                         <h4 class="uppercase">Changes to This Policy</h4>
                         <p class="bottommargin">We may change this Policy from time to time. If we make any changes to this Policy, we will change the “last updated” date above. We encourage you to check this Policy whenever you use any of Services to understand how your personal information is used.</p>
@@ -116,7 +116,7 @@
                         
                         <h4 class="uppercase">Choice/Opt-Out</h4>
                         <p class="bottommargin-xs">Subject to advance consent where required by law, we may send you communications or data regarding our Services in various formats, including email and/or text. These communications may include, but are not limited to: (i) notices about your use of our Services, including any notices concerning violations of use; (ii) updates; (iii) promotional information and materials regarding our Services; You may opt-out of receiving promotional communications from Us by following the opt-out instructions provided in those emails.</p>
-                        <p class="bottommargin">Targeted ads: You may opt out of personalized advertising by visiting your google Ads Settings. (Alternatively, you can opt out of a third-party vendor's use of cookies for personalized advertising by visiting <a href="www.aboutads.info">www.aboutads.info</a>.)</p>
+                        <p class="bottommargin">Targeted ads: You may opt out of personalized advertising by visiting your google Ads Settings. (Alternatively, you can opt out of a third-party vendor's use of cookies for personalized advertising by visiting <a target="_blank" href="https://www.aboutads.info">www.aboutads.info</a>.)</p>
 
                         
                         <h4 class="uppercase">Third Party Links</h4>
@@ -132,7 +132,7 @@
 
                         
                         <h4 class="uppercase">Questions about this policy</h4>
-                        <p class="bottommargin">Any questions about this Policy should be addressed to <a href="info@radartires.com"><i>info@radartires.com</i></a></p>
+                        <p class="bottommargin">Any questions about this Policy should be addressed to <a href="mailto:info@radartires.com"><i>info@radartires.com</i></a></p>
 
                         
                         <h4 class="uppercase">HEADQUARTERS</h4>

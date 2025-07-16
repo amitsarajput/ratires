@@ -69,7 +69,7 @@ class SetSessionData
             'omni_data' => $omniData,
             'locale' => $defaultLocale
         ]);
-        //dd(session('omni_data.all_continents'), session('omni_data.all_redirects'));
+        //dd(session('omni_data.all_redirects'));
     }
 
     /**

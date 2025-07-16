@@ -242,7 +242,7 @@ class TyreController extends Controller
         //dd($request);
         $request->validate([
             'region' => ['required', 'integer'],
-            'country' => ['required', 'integer'],
+            'country' => ['nullable', 'integer'],
             'brand' => ['required', 'integer'],
             'searchtag' => ['required', 'integer'],
             'season' => ['required', 'integer'],
@@ -251,7 +251,7 @@ class TyreController extends Controller
             'previewname' => ['required', 'string', 'max:255'],
             'tyrecategory' => ['required', 'array'],
             'externallink' => ['string', 'max:255'],
-            'description' => ['required', 'string', 'max:1000'],
+            'description' => ['required', 'string', 'max:2000'],
             'slug' => ['required', 'string', 'max:255', 'unique:'.Tyre::class],
             'catalogue_image' => ['file','mimes:webp,jpg,png','max:6024'],
             'product_images' => ['array','nullable'],
@@ -259,7 +259,7 @@ class TyreController extends Controller
         ]);
         $createtyrearray =[
                 'region_id' => $request->region,
-                'country_id' => $request->country,
+                'country_id' => 0,//$request->country,
                 'brand_id' => $request->brand,
                 'search_tag_id' => $request->searchtag,
                 'season_id' => $request->season,
@@ -351,7 +351,7 @@ class TyreController extends Controller
         //dd($request);
         $request->validate([
             'region' => ['required', 'integer'],
-            'country' => ['required', 'integer'],
+            'country' => ['nullable', 'integer'],
             'brand' => ['required', 'integer'],
             'searchtag' => ['required', 'integer'],
             'season' => ['required', 'integer'],
@@ -361,14 +361,14 @@ class TyreController extends Controller
             'tyrecategory' => ['required', 'array'],
             'externallink' => ['string', 'max:255'],
             'slug' => ['required', 'string', 'max:255'],
-            'description' => ['required', 'string', 'max:1000'],
+            'description' => ['required', 'string', 'max:2000'],
             'catalogue_image' => ['file','mimes:webp,jpg,png','max:6024'],
             'product_images' => ['array'],
             'product_images.*' => ['file','mimes:webp,jpg,png','max:6024'],
         ]);
         $tyreupdataarray=[
             'region_id' => $request->region,
-            'country_id' => $request->country,
+            'country_id' => 0,
             'brand_id' => $request->brand,
             'search_tag_id' => $request->searchtag,
             'season_id' => $request->season,
